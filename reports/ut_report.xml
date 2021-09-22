@@ -1,0 +1,7 @@
+<testExecutions version="1">
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should create the app" duration="96"/>
+    <testCase name="AppComponent should have as title 'front'" duration="14"/>
+    <testCase name="AppComponent should render title" duration="16"/>
+  </file>
+</testExecutions>
