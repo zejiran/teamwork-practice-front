@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Insurance } from '../insurance';
 
 @Component({
   selector: 'app-insurance-listar',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class InsuranceListarComponent implements OnInit {
 
   constructor() { }
-
+  insurances : Array<Insurance>;
   ngOnInit() {
   }
 
