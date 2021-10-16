@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import { OutingModule } from './outing/outing.module';
+import { InsuranceModule } from './insurance/insurance.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { OutingModule } from './outing/outing.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    OutingModule
+    OutingModule,
+    InsuranceModule
   ],
   providers: [],
   bootstrap: [AppComponent]
