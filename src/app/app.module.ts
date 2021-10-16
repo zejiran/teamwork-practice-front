@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import { OutingModule } from './outing/outing.module';
 import { InsuranceModule } from './insurance/insurance.module';
+import { QuotationModule } from './quotation/quotation.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { InsuranceModule } from './insurance/insurance.module';
     AppRoutingModule,
     HttpClientModule,
     OutingModule,
-    InsuranceModule
+    InsuranceModule,
+    QuotationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
