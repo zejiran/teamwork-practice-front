@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <table class = "table table-striped">
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">text</th>
+      <th scope="col">likes</th>
+      <th scope="col">dislikes</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let b of comments">
+      <tr >
+        <td id = "t">{{b.text}}</td>
+        <td id = "l">{{b.likes}}</td>
+        <td id = "dl">{{b.dislikes}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
