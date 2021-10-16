@@ -2,15 +2,14 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-const host = '157.253.238.75';
-const port = '8084';
-const appName = 'frontstepbystep-api';
-const rootApi = 'api';
-
+const host = 'localhost';
+const port = '8080';
+const appName = 'api';
 export const environment = {
   production: false,
-  baseUrl: `http://${host}:${port}/${appName}/${rootApi}/`
+  baseUrl: `http://${host}:${port}/${appName}/`
 };
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
