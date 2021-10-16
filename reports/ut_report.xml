@@ -1,7 +1,13 @@
 <testExecutions version="1">
+  <file path="src/app/outing/outing.service.spec.ts">
+    <testCase name="Service: Outing getPost() should return 10 records" duration="54"/>
+  </file>
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should create the app" duration="96"/>
-    <testCase name="AppComponent should have as title 'front'" duration="14"/>
-    <testCase name="AppComponent should render title" duration="16"/>
+    <testCase name="AppComponent should create the app" duration="85"/>
+    <testCase name="AppComponent should have as title 'front'" duration="20"/>
+  </file>
+  <file path="src/app/outing/outing-listar/outing-listar.component.spec.ts">
+    <testCase name="OutingListarComponent should create" duration="105"/>
+    <testCase name="OutingListarComponent Should have an td element " duration="27"/>
   </file>
 </testExecutions>

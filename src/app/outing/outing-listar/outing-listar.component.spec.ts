@@ -1,28 +1,67 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { By } from "@angular/platform-browser";
+import { DebugElement } from "@angular/core";
 
-import { OutingListarComponent } from './outing-listar.component';
+import { OutingListarComponent } from "./outing-listar.component";
+import { HttpClientTestingModule } from "@angular/common/http/testing";
+import * as faker from "faker";
+import { Outing } from "../outing";
+//import { Itinerary } from "../itinerary/itinerary";
+//import { Activity } from "../activity/activity";
+//import { Guide } from "../guide/guide";
+//import { ComplementaryInformation } from "../complementaryInformation/complementaryInformation";
+//import { Review } from "../review/review";
+//import { Route } from "../route/route"
 
-describe('OutingListarComponent', () => {
-  let component: OutingListarComponent;
-  let fixture: ComponentFixture<OutingListarComponent>;
+describe("OutingListarComponent", () => {
+ let component: OutingListarComponent;
+ let fixture: ComponentFixture<OutingListarComponent>;
+ let debug: DebugElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ OutingListarComponent ]
-    })
-    .compileComponents();
-  }));
+ beforeEach(async(() => {
+   TestBed.configureTestingModule({
+     declarations: [OutingListarComponent],
+     imports: [HttpClientTestingModule],
+   }).compileComponents();
+ }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(OutingListarComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+ beforeEach(() => {
+   fixture = TestBed.createComponent(OutingListarComponent);
+   component = fixture.componentInstance;
+   /*
+   FALTA INICIALIZAR CLASES
+   let editorial = new Editorial(
+     faker.random.number(),
+     faker.lorem.sentence()
+   );
+   */
+   component.outings = [
+     new Outing(
+      faker.lorem.sentence(),
+      faker.date.past(),
+      faker.lorem.sentence(),
+      faker.datatype.number()/*,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,*/
+     ),
+   ];
+   fixture.detectChanges();
+   debug = fixture.debugElement;
+ });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+ it("should create", () => {
+   expect(component).toBeTruthy();
+ });
+
+ it("Should have an td element ", () => {
+   expect(debug.query(By.css("td")).nativeElement.innerText).toContain(
+     component.outings[0].name
+   );
+
+ });
 });
