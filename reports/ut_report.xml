@@ -1,13 +1,20 @@
 <testExecutions version="1">
+  <file path="src/app/insurance/insurance.service.spec.ts">
+    <testCase name="Service: Insurance getPost() should return 10 records" duration="59"/>
+  </file>
   <file path="src/app/outing/outing-listar/outing-listar.component.spec.ts">
-    <testCase name="OutingListarComponent should create" duration="193"/>
-    <testCase name="OutingListarComponent Should have an td element " duration="38"/>
+    <testCase name="OutingListarComponent should create" duration="145"/>
+    <testCase name="OutingListarComponent Should have an td element " duration="41"/>
   </file>
   <file path="src/app/outing/outing.service.spec.ts">
-    <testCase name="Service: Outing getPost() should return 10 records" duration="16"/>
+    <testCase name="Service: Outing getPost() should return 10 records" duration="14"/>
   </file>
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should have as title 'front'" duration="48"/>
-    <testCase name="AppComponent should create the app" duration="17"/>
+    <testCase name="AppComponent should create the app" duration="31"/>
+    <testCase name="AppComponent should have as title 'front'" duration="21"/>
+  </file>
+  <file path="src/app/insurance/insurance-listar/insurance-listar.component.spec.ts">
+    <testCase name="InsuranceListarComponent should create" duration="37"/>
+    <testCase name="InsuranceListarComponent Should have an td element " duration="23"/>
   </file>
 </testExecutions>
