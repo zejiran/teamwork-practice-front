@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Outing } from '../outing';
+import { OutingService } from '../outing.service';
 
 @Component({
   selector: 'app-outing-listar',
@@ -8,9 +9,19 @@ import { Outing } from '../outing';
 })
 export class OutingListarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private outingService:OutingService) { }
   outings:Array<Outing>;
-  ngOnInit() {
+
+  getOutings(): void {
+    this.outingService.getOutings()
+      .subscribe(outings => {
+        this.outings = outings;
+      });
   }
+
+  ngOnInit() {
+    this.getOutings();
+  }
+
 
 }
