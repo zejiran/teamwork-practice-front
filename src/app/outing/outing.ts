@@ -26,6 +26,7 @@ export class Outing {
     complementaryInformation: ComplementaryInformation,
     review: Review,
     routes: Array<Route>*/){
+      this.name = name;
       this.date = date;
       this.place = place;
       this.participationCost = participationCost;
