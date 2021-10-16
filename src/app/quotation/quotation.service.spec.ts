@@ -39,7 +39,7 @@ describe("Service: Quotation", () => {
      let quotation = new Quotation(
        faker.datatype.number(),
        faker.datatype.number(),
-       null,
+       faker.datatype.number(2),
        null
      );
 

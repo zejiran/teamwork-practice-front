@@ -1,3 +1,29 @@
-<p>
-  quotation-listar works!
-</p>
+<div class="container-fluid">
+  <div class="card m-5">
+    <div class="card-header p-3">
+      <p class="h2 text-center">Cotizaciones</p>
+    </div>
+    <div class="card-body m-3">
+      <table class="table resposive table-bordered text-center">
+        <thead>
+          <tr>
+            <th scope="col">Participantes</th>
+            <th scope="col">Costo total</th>
+            <th scope="col">Estado de cotización</th>
+            <!--<th scope="col">Seguro</th>-->
+            <th scope="col">Salida</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let b of quotations">
+            <td id="p">{{ b.participants }}</td>
+            <td id ="tc">{{ b.totalCost }}</td>
+            <td id = "s">{{ b.status }}</td>
+            <!--<td>{{ b.insurance.name }}</td>-->
+            <td id = "o">{{ b.outing.name }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

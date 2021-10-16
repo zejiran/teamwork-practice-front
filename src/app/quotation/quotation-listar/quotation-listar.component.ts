@@ -17,6 +17,7 @@ export class QuotationListarComponent implements OnInit {
     this.quotationService.getQuotations()
       .subscribe(quotations => {
         this.quotations = quotations;
+        console.log(quotations);
       });
   }
 
