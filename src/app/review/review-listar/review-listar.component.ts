@@ -8,7 +8,7 @@ import {ReviewService} from '../review.service';
   styleUrls: ['./review-listar.component.css']
 })
 export class ReviewListarComponent implements OnInit {
-  reviews!: Array<Review>;
+  reviews: Array<Review>;
   constructor(private reviewService: ReviewService) { }
   getReviews(): void{
     this.reviewService.getReviews()

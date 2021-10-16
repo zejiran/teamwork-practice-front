@@ -1,31 +1,20 @@
 <testExecutions version="1">
   <file path="src/app/review/review.service.spec.ts">
-    <testCase name="Service: Review getPost() should return 10 records" duration="1">
-      <skipped message="Skipped"/>
-    </testCase>
+    <testCase name="Service: Review getPost() should return 10 records" duration="12"/>
   </file>
-  <file path="src/app/comment/comment-listar/comment-listar.component.spec.ts">
-    <testCase name="CommentListarComponent Should have a text element " duration="39"/>
-    <testCase name="CommentListarComponent should create" duration="6"/>
+  <file path="src/app/review/review-listar/review-listar.component.spec.ts">
+    <testCase name="CommentListarComponent should create" duration="33"/>
+    <testCase name="CommentListarComponent Should have a text element " duration="24"/>
   </file>
   <file path="src/app/comment/comment.service.spec.ts">
-    <testCase name="Service: Comment getPost() should return 10 records" duration="1">
-      <skipped message="Skipped"/>
-    </testCase>
+    <testCase name="Service: Comment getPost() should return 10 records" duration="4"/>
+  </file>
+  <file path="src/app/review/review-listar/review-listar.component.spec.ts">
+    <testCase name="CommentListarComponent Should have a text element " duration="9"/>
+    <testCase name="CommentListarComponent should create" duration="5"/>
   </file>
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should render title" duration="1">
-      <skipped message="Skipped"/>
-    </testCase>
-    <testCase name="AppComponent should have as title 'front'" duration="1">
-      <skipped message="Skipped"/>
-    </testCase>
-    <testCase name="AppComponent should create the app" duration="1">
-      <skipped message="Skipped"/>
-    </testCase>
-  </file>
-  <file path="src/app/comment/comment-listar/comment-listar.component.spec.ts">
-    <testCase name="CommentListarComponent Should have a text element " duration="10"/>
-    <testCase name="CommentListarComponent should create" duration="7"/>
+    <testCase name="AppComponent should create the app" duration="5"/>
+    <testCase name="AppComponent should have as title 'front'" duration="6"/>
   </file>
 </testExecutions>
