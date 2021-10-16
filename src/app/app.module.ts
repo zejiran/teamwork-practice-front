@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
+import { OutingModule } from './outing/outing.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    OutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
