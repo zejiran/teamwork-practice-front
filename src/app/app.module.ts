@@ -23,7 +23,7 @@ import { ClientModule } from './client/client.module';
     InsuranceModule,
     QuotationModule,
     ReviewModule,
-    CommentModule
+    CommentModule,
     ClientModule
   ],
 
