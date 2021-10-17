@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PersonListarComponent } from './person-listar/multimedia-listar.component';
+import { PersonListarComponent } from './person-listar/person-listar.component';
 
 @NgModule({
   imports: [
