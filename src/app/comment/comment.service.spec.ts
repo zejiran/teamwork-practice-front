@@ -35,8 +35,8 @@ describe('Service: Comment', () => {
       mockPosts.push(comment);
     }
 
-    service.getComments().subscribe((books) => {
-      expect(books.length).toBe(10);
+    service.getComments().subscribe((comments) => {
+      expect(comments.length).toBe(10);
     });
 
     const req = httpMock.expectOne(apiUrl);
