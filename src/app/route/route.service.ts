@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Locationn } from './locationn';
+import { Route } from './route';
 import { environment } from '../../environments/environment';
 
 
@@ -9,12 +9,12 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class LocationService {
-  private apiUrl: string = environment.baseUrl + 'locations';
+  private apiUrl: string = environment.baseUrl + 'routes';
 
   constructor(private http: HttpClient) {
   }
 
-  getLocations(): Observable<Locationn[]> {
-    return this.http.get<Locationn[]>(this.apiUrl);
+  getLocations(): Observable<Route[]> {
+    return this.http.get<Route[]>(this.apiUrl);
   }
 }

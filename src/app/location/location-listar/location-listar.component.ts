@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LocationService } from '../location.service';
+import { Locationn } from '../locationn';
 
 @Component({
   selector: 'app-location-listar',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LocationListarComponent implements OnInit {
 
-  constructor() { }
+  locations: Array<Locationn>;
+
+  constructor(private locationService: LocationService) {
+
+  }
+
+
+  getLocations(): void {
+    this.locationService.getLocations().subscribe(locations => {
+      this.locations = locations;
+    })
+  }
 
   ngOnInit(): void {
+    this.getLocations();
   }
 
 }

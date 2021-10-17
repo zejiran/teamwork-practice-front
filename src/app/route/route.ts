@@ -1,4 +1,4 @@
-export class location {
+export class Route {
   idLocation:number;
   latitude:number;
   longitude:number;

@@ -18,6 +18,7 @@ import { PersonModule } from './person/person.module';
 import { MultimediaModule } from './multimedia/multimedia.module';
 import { NaturalPersonModule } from './naturalPerson/naturalPerson.module';
 import { UserModule } from './user/user.module';
+import { LocationModule } from './location/location.module'
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { UserModule } from './user/user.module';
     MultimediaModule,
     PersonModule,
     NaturalPersonModule,
-    UserModule
+    UserModule,
+    LocationModule
   ],
 
   providers: [],

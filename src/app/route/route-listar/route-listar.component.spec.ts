@@ -3,8 +3,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { Locationn } from '../locationn';
-import { LocationListarComponent } from './location-listar.component';
+import { Route } from '../route';
+import { LocationListarComponent } from './route-listar.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import * as faker from 'faker';
 
@@ -24,8 +24,8 @@ describe('LocationListarComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(LocationListarComponent);
     component = fixture.componentInstance;
-    component.locations = [
-      new Locationn(
+    component.routes = [
+      new Route(
         faker.datatype.number(),
         faker.datatype.number(),
         faker.datatype.number()
@@ -41,7 +41,7 @@ describe('LocationListarComponent', () => {
 
   it('Should have an td element ', () => {
     expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
-      component.locations[0].idLocation
+      component.routes[0].idLocation
     );
 
   });
