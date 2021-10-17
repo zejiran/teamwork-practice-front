@@ -13,6 +13,7 @@ import { ClientModule } from './client/client.module';
 import { MultimediaModule } from './multimedia/multimedia.module';
 import { PersonModule } from './person/person.module';
 import { NaturalPersonModule } from './naturalPerson/naturalPerson.module';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NaturalPersonModule } from './naturalPerson/naturalPerson.module';
     ClientModule,
     MultimediaModule,
     PersonModule,
-    NaturalPersonModule
+    NaturalPersonModule,
+    UserModule
   ],
 
   providers: [],
