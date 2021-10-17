@@ -21,7 +21,7 @@ export class MultimediaListarComponent implements OnInit {
       });
   }
 
-  ngOnInit(): void  {
+  ngOnInit(): void {
     this.getMultimedias();
   }
 

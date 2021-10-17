@@ -21,7 +21,7 @@ export class OutingListarComponent implements OnInit {
       });
   }
 
-  ngOnInit(): void  {
+  ngOnInit(): void {
     this.getOutings();
   }
 

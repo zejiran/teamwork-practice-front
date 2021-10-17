@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="card m-5">
+    <div class="card-header p-3">
+      <p class="h2 text-center">Persons</p>
+    </div>
+    <div class="card-body m-3">
+      <table class="table resposive table-bordered text-center">
+        <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">ID</th>
+          <th scope="col">Tipo de ID</th>
+          <th scope="col">Dirección</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let p of persons">
+          <td>{{ p.name }}</td>
+          <td>{{ p.idNumber }}</td>
+          <td>{{ p.idType }}</td>
+          <td>{{ p.address }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

@@ -10,7 +10,8 @@ import { OutingModule } from './outing/outing.module';
 import { InsuranceModule } from './insurance/insurance.module';
 import { QuotationModule } from './quotation/quotation.module';
 import { ClientModule } from './client/client.module';
-import { MultimediaModule } from "./multimedia/multimedia.module";
+import { MultimediaModule } from './multimedia/multimedia.module';
+import { PersonModule } from './person/person.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MultimediaModule } from "./multimedia/multimedia.module";
     ReviewModule,
     CommentModule,
     ClientModule,
-    MultimediaModule
+    MultimediaModule,
+    PersonModule
   ],
 
   providers: [],
