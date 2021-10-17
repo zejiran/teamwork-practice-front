@@ -9,4 +9,5 @@ import { PostListarComponent } from './post-listar/post-listar.component';
   declarations: [PostListarComponent],
   exports: [PostListarComponent],
 })
-export class PostModule { }
+export class PostModule {
+}

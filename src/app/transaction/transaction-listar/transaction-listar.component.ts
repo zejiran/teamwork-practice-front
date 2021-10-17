@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Transaction } from "../transaction";
+import { Transaction } from '../transaction';
 import { TransactionService } from '../transaction.service';
-
 
 
 @Component({
@@ -10,9 +9,10 @@ import { TransactionService } from '../transaction.service';
   styleUrls: ['./transaction-listar.component.css']
 })
 export class TransactionListarComponent implements OnInit {
-  constructor(private transactionService: TransactionService) { }
-
   transactions: Array<Transaction>;
+
+  constructor(private transactionService: TransactionService) {
+  }
 
   getTransactions(): void {
     this.transactionService.getTransactions()
@@ -20,10 +20,11 @@ export class TransactionListarComponent implements OnInit {
         this.transactions = transactions;
       });
   }
-  ngOnInit() {
+
+  ngOnInit(): void {
     this.getTransactions();
   }
 
-  }
+}
 
 

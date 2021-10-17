@@ -10,4 +10,5 @@ import { EnterpriseListarComponent } from './enterprise-listar/enterprise-listar
   declarations: [EnterpriseListarComponent],
 
 })
-export class EnterpriseModule { }
+export class EnterpriseModule {
+}

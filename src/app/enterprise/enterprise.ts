@@ -1,13 +1,10 @@
-import { Person } from "../person/Person";
-
-
 export class Enterprise {
- representative: String;
+  representative: string;
 
-	constructor(
-    representative: String
-    ) {
+  constructor(
+    representative: string
+  ) {
     this.representative = representative;
-	}
+  }
 
 }

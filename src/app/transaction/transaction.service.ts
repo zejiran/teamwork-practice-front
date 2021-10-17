@@ -9,8 +9,11 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class TransactionService {
-  private apiUrl:string = environment.baseUrl + 'transactions';
-  constructor(private http: HttpClient) { }
+  private apiUrl: string = environment.baseUrl + 'transactions';
+
+  constructor(private http: HttpClient) {
+  }
+
   getTransactions(): Observable<Transaction[]> {
     return this.http.get<Transaction[]>(this.apiUrl);
   }

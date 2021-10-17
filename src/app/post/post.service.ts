@@ -9,8 +9,11 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class PostService {
-  private apiUrl:string = environment.baseUrl + 'posts';
-  constructor(private http: HttpClient) { }
+  private apiUrl: string = environment.baseUrl + 'posts';
+
+  constructor(private http: HttpClient) {
+  }
+
   getPosts(): Observable<Post[]> {
     return this.http.get<Post[]>(this.apiUrl);
   }

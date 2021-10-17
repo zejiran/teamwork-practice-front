@@ -4,9 +4,9 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { PostListarComponent } from './post-listar.component';
-import { HttpClientTestingModule } from "@angular/common/http/testing";
-import * as faker from "faker";
-import { Post } from "../post";
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import * as faker from 'faker';
+import { Post } from '../post';
 
 
 describe('PostListarComponent', () => {
@@ -34,7 +34,7 @@ describe('PostListarComponent', () => {
     debug = fixture.debugElement;
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 
@@ -44,4 +44,4 @@ describe('PostListarComponent', () => {
     );
 
   });
- });
+});

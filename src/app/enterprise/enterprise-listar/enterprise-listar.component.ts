@@ -9,9 +9,10 @@ import { EnterpriseService } from '../enterprise.service';
 })
 export class EnterpriseListarComponent implements OnInit {
 
-  constructor(private enterpriseService: EnterpriseService) { }
-
   enterprises: Array<Enterprise>;
+
+  constructor(private enterpriseService: EnterpriseService) {
+  }
 
   getEnterprises(): void {
     this.enterpriseService.getEnterprises()
@@ -19,7 +20,8 @@ export class EnterpriseListarComponent implements OnInit {
         this.enterprises = enterprises;
       });
   }
-  ngOnInit() {
+
+  ngOnInit(): void {
     this.getEnterprises();
   }
 

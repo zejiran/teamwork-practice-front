@@ -4,8 +4,8 @@ export class Post {
 
   constructor(
     ratings: number,
-) {
-    this.ratings = ratings
+  ) {
+    this.ratings = ratings;
   }
 
 }

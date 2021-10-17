@@ -9,4 +9,5 @@ import { TransactionListarComponent } from './transaction-listar/transaction-lis
   declarations: [TransactionListarComponent],
   exports: [TransactionListarComponent],
 })
-export class TransactionModule { }
+export class TransactionModule {
+}

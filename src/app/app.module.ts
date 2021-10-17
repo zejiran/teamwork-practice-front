@@ -10,10 +10,10 @@ import { OutingModule } from './outing/outing.module';
 import { InsuranceModule } from './insurance/insurance.module';
 import { QuotationModule } from './quotation/quotation.module';
 import { ClientModule } from './client/client.module';
-import {EnterpriseModule} from './enterprise/enterprise.module';
-import {PostModule} from './post/post.module';
-import {TransactionModule} from './transaction/transaction.module';
-import {PersonModule} from './person/person.module';
+import { EnterpriseModule } from './enterprise/enterprise.module';
+import { PostModule } from './post/post.module';
+import { TransactionModule } from './transaction/transaction.module';
+import { PersonModule } from './person/person.module';
 
 import { MultimediaModule } from './multimedia/multimedia.module';
 import { NaturalPersonModule } from './naturalPerson/naturalPerson.module';

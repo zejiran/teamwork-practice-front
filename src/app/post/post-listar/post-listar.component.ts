@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from "../Post";
+import { Post } from '../post';
 import { PostService } from '../post.service';
-
 
 
 @Component({
@@ -10,9 +9,10 @@ import { PostService } from '../post.service';
   styleUrls: ['./post-listar.component.css']
 })
 export class PostListarComponent implements OnInit {
-  constructor(private postService: PostService) { }
-
   posts: Array<Post>;
+
+  constructor(private postService: PostService) {
+  }
 
   getPosts(): void {
     this.postService.getPosts()
@@ -20,7 +20,8 @@ export class PostListarComponent implements OnInit {
         this.posts = posts;
       });
   }
-  ngOnInit() {
+
+  ngOnInit(): void {
     this.getPosts();
   }
 }

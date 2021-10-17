@@ -3,10 +3,10 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { Enterprise } from "../enterprise";
+import { Enterprise } from '../enterprise';
 import { EnterpriseListarComponent } from './enterprise-listar.component';
-import { HttpClientTestingModule } from "@angular/common/http/testing";
-import * as faker from "faker";
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import * as faker from 'faker';
 
 describe('EnterpriseListarComponent', () => {
   let component: EnterpriseListarComponent;
@@ -33,7 +33,7 @@ describe('EnterpriseListarComponent', () => {
     debug = fixture.debugElement;
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 
@@ -43,4 +43,4 @@ describe('EnterpriseListarComponent', () => {
     );
 
   });
- });
+});

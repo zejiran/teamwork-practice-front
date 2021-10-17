@@ -4,9 +4,9 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { TransactionListarComponent } from './transaction-listar.component';
-import { HttpClientTestingModule } from "@angular/common/http/testing";
-import * as faker from "faker";
-import { Transaction } from "../transaction";
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import * as faker from 'faker';
+import { Transaction } from '../transaction';
 
 describe('TransactionListarComponent', () => {
   let component: TransactionListarComponent;
@@ -22,9 +22,10 @@ describe('TransactionListarComponent', () => {
   }));
 
   enum PaymentType {
-    "CREDITCARD",
-    "DEBITCARD"
+    'CREDITCARD',
+    'DEBITCARD'
   }
+
   beforeEach(() => {
     fixture = TestBed.createComponent(TransactionListarComponent);
     component = fixture.componentInstance;
@@ -32,16 +33,16 @@ describe('TransactionListarComponent', () => {
       new Transaction(
         PaymentType[
           faker.random.arrayElement(Object.getOwnPropertyNames(PaymentType))
-         ],
-         faker.datatype.number(),
-         faker.date.past()
+          ],
+        faker.datatype.number(),
+        faker.date.past()
       ),
     ];
     fixture.detectChanges();
     debug = fixture.debugElement;
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 
@@ -51,4 +52,4 @@ describe('TransactionListarComponent', () => {
     );
 
   });
- });
+});
