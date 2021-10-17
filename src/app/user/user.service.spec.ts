@@ -1,15 +1,15 @@
 import * as faker from 'faker';
 import { getTestBed, TestBed } from '@angular/core/testing';
-import { UserService } from './person.service';
+import { UserService } from './user.service';
 import { environment } from '../../environments/environment';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { User } from './person';
+import { User } from './user';
 
-describe('Service: Person', () => {
+describe('Service: User', () => {
   let injector: TestBed;
   let service: UserService;
   let httpMock: HttpTestingController;
-  const apiUrl = environment.baseUrl + 'persons';
+  const apiUrl = environment.baseUrl + 'users';
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
@@ -27,18 +27,17 @@ describe('Service: Person', () => {
     const mockPosts: User[] = [];
 
     for (let i = 1; i < 11; i++) {
-      const person = new User(
-        faker.lorem.sentence(),
+      const user = new User(
         faker.lorem.sentence(),
         faker.lorem.sentence(),
         faker.lorem.sentence()
       );
 
-      mockPosts.push(person);
+      mockPosts.push(user);
     }
 
-    service.getPersons().subscribe((persons) => {
-      expect(persons.length).toBe(10);
+    service.getUsers().subscribe((users) => {
+      expect(users.length).toBe(10);
     });
 
     const req = httpMock.expectOne(apiUrl);
