@@ -14,7 +14,34 @@
     <testCase name="CommentListarComponent should create" duration="5"/>
   </file>
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should create the app" duration="5"/>
-    <testCase name="AppComponent should have as title 'front'" duration="6"/>
+    <testCase name="AppComponent should create the app" duration="137"/>
+    <testCase name="AppComponent should have as title 'front'" duration="28"/>
+  </file>
+  <file path="src/app/client/client-listar/client-listar.component.spec.ts">
+    <testCase name="ClientListarComponent should create" duration="87"/>
+  </file>
+  <file path="src/app/client/client.service.spec.ts">
+    <testCase name="Service: Client getPost() should return 10 records" duration="11"/>
+  </file>
+  <file path="src/app/insurance/insurance-listar/insurance-listar.component.spec.ts">
+    <testCase name="InsuranceListarComponent Should have an td element " duration="85"/>
+    <testCase name="InsuranceListarComponent should create" duration="17"/>
+  </file>
+  <file path="src/app/quotation/quotation.service.spec.ts">
+    <testCase name="Service: Quotation getPost() should return 10 records" duration="9"/>
+  </file>
+  <file path="src/app/insurance/insurance.service.spec.ts">
+    <testCase name="Service: Insurance getPost() should return 10 records" duration="8"/>
+  </file>
+  <file path="src/app/outing/outing-listar/outing-listar.component.spec.ts">
+    <testCase name="OutingListarComponent should create" duration="72"/>
+    <testCase name="OutingListarComponent Should have an td element " duration="19"/>
+  </file>
+  <file path="src/app/outing/outing.service.spec.ts">
+    <testCase name="Service: Outing getPost() should return 10 records" duration="9"/>
+  </file>
+  <file path="src/app/quotation/quotation-listar/quotation-listar.component.spec.ts">
+    <testCase name="QuotationListarComponent should create" duration="40"/>
+    <testCase name="QuotationListarComponent Should have an td element " duration="20"/>
   </file>
 </testExecutions>
