@@ -3,12 +3,12 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { PersonListarComponent } from './multimedia-listar.component';
+import { PersonListarComponent } from './person-listar.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import * as faker from 'faker';
-import { Person } from '../multimedia';
+import { Person } from '../person';
 
-describe('MultimediaListarComponent', () => {
+describe('PersonListarComponent', () => {
   let component: PersonListarComponent;
   let fixture: ComponentFixture<PersonListarComponent>;
   let debug: DebugElement;
@@ -23,11 +23,12 @@ describe('MultimediaListarComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(PersonListarComponent);
     component = fixture.componentInstance;
-    component.multimedias = [
+    component.persons = [
       new Person(
         faker.lorem.sentence(),
-        faker.datatype.number(),
         faker.lorem.sentence(),
+        faker.lorem.sentence(),
+        faker.lorem.sentence()
       ),
     ];
     fixture.detectChanges();
@@ -40,7 +41,7 @@ describe('MultimediaListarComponent', () => {
 
   it('Should have an td element ', () => {
     expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
-      component.multimedias[0].fileName
+      component.persons[0].name
     );
 
   });

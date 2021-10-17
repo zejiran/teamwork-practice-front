@@ -1,28 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { Person } from '../multimedia';
-import { PersonService } from '../multimedia.service';
+import { Person } from '../person';
+import { PersonService } from '../person.service';
 
 @Component({
-  selector: 'app-multimedia-listar',
-  templateUrl: './multimedia-listar.component.html',
-  styleUrls: ['./multimedia-listar.component.css']
+  selector: 'app-person-listar',
+  templateUrl: './person-listar.component.html',
+  styleUrls: ['./person-listar.component.css']
 })
 export class PersonListarComponent implements OnInit {
 
-  multimedias: Array<Person>;
+  persons: Array<Person>;
 
-  constructor(private multimediaService: PersonService) {
+  constructor(private personService: PersonService) {
   }
 
-  getMultimedias(): void {
-    this.multimediaService.getMultimedias()
-      .subscribe(multimedias => {
-        this.multimedias = multimedias;
+  getPersons(): void {
+    this.personService.getPersons()
+      .subscribe(persons => {
+        this.persons = persons;
       });
   }
 
   ngOnInit(): void {
-    this.getMultimedias();
+    this.getPersons();
   }
 
 }
