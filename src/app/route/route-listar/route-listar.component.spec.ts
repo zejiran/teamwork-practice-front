@@ -7,6 +7,7 @@ import { Route } from '../route';
 import { LocationListarComponent } from './route-listar.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import * as faker from 'faker';
+import { Outing } from 'src/app/outing/outing';
 
 describe('LocationListarComponent', () => {
   let component: LocationListarComponent;
@@ -26,9 +27,14 @@ describe('LocationListarComponent', () => {
     component = fixture.componentInstance;
     component.routes = [
       new Route(
+        faker.lorem.sentence(),
         faker.datatype.number(),
-        faker.datatype.number(),
-        faker.datatype.number()
+        new Outing(
+          faker.lorem.sentence(),
+          faker.datatype.datetime(),
+          faker.lorem.sentence(),
+          faker.datatype.number()
+        )
       ),
     ];
     fixture.detectChanges();

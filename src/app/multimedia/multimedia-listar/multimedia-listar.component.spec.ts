@@ -7,6 +7,9 @@ import { MultimediaListarComponent } from './multimedia-listar.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import * as faker from 'faker';
 import { Multimedia } from '../multimedia';
+import { Route } from 'src/app/route/route';
+import { Outing } from 'src/app/outing/outing';
+
 
 describe('MultimediaListarComponent', () => {
   let component: MultimediaListarComponent;
@@ -28,6 +31,16 @@ describe('MultimediaListarComponent', () => {
         faker.lorem.sentence(),
         faker.datatype.number(),
         faker.lorem.sentence(),
+        new Route(
+          faker.lorem.sentence(),
+          faker.datatype.number(),
+          new Outing(
+            faker.lorem.sentence(),
+            faker.datatype.datetime(),
+            faker.lorem.sentence(),
+            faker.datatype.number()
+          )
+        )
       ),
     ];
     fixture.detectChanges();

@@ -1,12 +1,21 @@
-export class Route {
-  idLocation:number;
-  latitude:number;
-  longitude:number;
+import { Outing } from "../outing/outing";
 
-  constructor(idLocation:number, latitude:number, longitude: number){
-    this.idLocation=idLocation;
-    this.latitude=latitude;
-    this.longitude=longitude;
+enum Difficulty {
+  EASY, AMATEUR, EXPERIMENTED
+}
+
+export class Route {
+  difficulty:string;
+  estimatedDuration:number;
+  outing:Outing;
+
+  constructor(difficulty: string, estimatedDuration:number,outing:Outing){
+
+    this.difficulty=difficulty;
+    this.estimatedDuration=estimatedDuration;
+    this.outing=outing;
   }
 
+
 }
+
