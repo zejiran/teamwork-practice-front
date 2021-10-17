@@ -9,8 +9,11 @@ import { environment } from '../../environments/environment';
 })
 export class OutingService {
 
-  private apiUrl:string = environment.baseUrl + 'outings';
-  constructor(private http: HttpClient) { }
+  private apiUrl: string = environment.baseUrl + 'outings';
+
+  constructor(private http: HttpClient) {
+  }
+
   getOutings(): Observable<Outing[]> {
     return this.http.get<Outing[]>(this.apiUrl);
   }

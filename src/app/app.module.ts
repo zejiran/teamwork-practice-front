@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {ReviewModule} from './review/review.module';
-import {CommentModule} from './comment/comment.module';
-import {HttpClientModule} from '@angular/common/http';
+import { ReviewModule } from './review/review.module';
+import { CommentModule } from './comment/comment.module';
+import { HttpClientModule } from '@angular/common/http';
 import { OutingModule } from './outing/outing.module';
 import { InsuranceModule } from './insurance/insurance.module';
 import { QuotationModule } from './quotation/quotation.module';
@@ -30,4 +30,5 @@ import { ClientModule } from './client/client.module';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

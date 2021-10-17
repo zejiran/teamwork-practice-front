@@ -6,20 +6,20 @@
     <div class="card-body m-3">
       <table class="table resposive table-bordered text-center">
         <thead>
-          <tr>
-            <th scope="col">Participantes</th>
-            <th scope="col">Costo total</th>
-            <th scope="col">Estado de cotización</th>
-            <th scope="col">Salida</th>
-          </tr>
+        <tr>
+          <th scope="col">Participantes</th>
+          <th scope="col">Costo total</th>
+          <th scope="col">Estado de cotización</th>
+          <th scope="col">Salida</th>
+        </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let b of quotations">
-            <td id="p">{{ b.participants }}</td>
-            <td id ="tc">{{ b.totalCost }}</td>
-            <td id = "s">{{ b.status }}</td>
-            <td id = "o">{{ b.outing.name }}</td>
-          </tr>
+        <tr *ngFor="let b of quotations">
+          <td id="p">{{ b.participants }}</td>
+          <td id="tc">{{ b.totalCost }}</td>
+          <td id="s">{{ b.status }}</td>
+          <td id="o">{{ b.outing.name }}</td>
+        </tr>
         </tbody>
       </table>
     </div>

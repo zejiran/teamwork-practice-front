@@ -1,6 +1,6 @@
-import { Outing } from "../outing/outing";
+import { Outing } from '../outing/outing';
 
-enum Status{
+enum Status {
   REGISTERED,
   SEARCHED,
   PAST
@@ -8,19 +8,19 @@ enum Status{
 
 export class Quotation {
 
-  participants:number;
-  totalCost:number;
-  status:Status;
-  outing:Outing;
+  participants: number;
+  totalCost: number;
+  status: Status;
+  outing: Outing;
 
-  constructor(participants:number,
-    totalCost:number,
-    status:Status,
-    outing:Outing){
-      this.participants = participants;
-      this.totalCost = totalCost;
-      this.status = status;
-      this.outing = outing;
-    }
+  constructor(participants: number,
+              totalCost: number,
+              status: Status,
+              outing: Outing) {
+    this.participants = participants;
+    this.totalCost = totalCost;
+    this.status = status;
+    this.outing = outing;
+  }
 
 }

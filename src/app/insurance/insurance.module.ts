@@ -9,4 +9,5 @@ import { InsuranceListarComponent } from './insurance-listar/insurance-listar.co
   declarations: [InsuranceListarComponent],
   exports: [InsuranceListarComponent]
 })
-export class InsuranceModule { }
+export class InsuranceModule {
+}
