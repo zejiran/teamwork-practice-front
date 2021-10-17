@@ -15,6 +15,8 @@ import {PostModule} from './post/post.module';
 import {TransactionModule} from './transaction/transaction.module';
 import {PersonModule} from './person/person.module';
 
+import { MultimediaModule } from './multimedia/multimedia.module';
+import { NaturalPersonModule } from './naturalPerson/naturalPerson.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,10 @@ import {PersonModule} from './person/person.module';
     PostModule,
     TransactionModule,
     PersonModule,
-    HttpClientModule
+    HttpClientModule,
+    MultimediaModule,
+    PersonModule,
+    NaturalPersonModule
   ],
 
   providers: [],

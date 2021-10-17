@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PersonComponent } from './person.component';
+import { PersonListarComponent } from './person-listar/person-listar.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [PersonComponent]
+  declarations: [PersonListarComponent],
+  exports: [PersonListarComponent]
 })
-export class PersonModule { }
+export class PersonModule {
+}

@@ -1,22 +1,22 @@
 import * as faker from 'faker';
 import { getTestBed, TestBed } from '@angular/core/testing';
-import { CommentService } from './comment.service';
+import { MultimediaService } from './multimedia.service';
 import { environment } from '../../environments/environment';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { Comment } from './comment';
+import { Multimedia } from './multimedia';
 
-describe('Service: Comment', () => {
+describe('Service: Multimedia', () => {
   let injector: TestBed;
-  let service: CommentService;
+  let service: MultimediaService;
   let httpMock: HttpTestingController;
-  const apiUrl = environment.baseUrl + 'comments';
+  const apiUrl = environment.baseUrl + 'multimedias';
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [CommentService],
+      providers: [MultimediaService],
     });
     injector = getTestBed();
-    service = injector.get(CommentService);
+    service = injector.get(MultimediaService);
     httpMock = injector.get(HttpTestingController);
   });
   afterEach(() => {
@@ -24,19 +24,20 @@ describe('Service: Comment', () => {
   });
 
   it('getPost() should return 10 records', () => {
-    const mockPosts: Comment[] = [];
+    const mockPosts: Multimedia[] = [];
 
     for (let i = 1; i < 11; i++) {
-      const comment = new Comment(
+      const multimedia = new Multimedia(
         faker.lorem.sentence(),
         faker.datatype.number(),
-        faker.datatype.number());
+        faker.lorem.sentence()
+      );
 
-      mockPosts.push(comment);
+      mockPosts.push(multimedia);
     }
 
-    service.getComments().subscribe((comments) => {
-      expect(comments.length).toBe(10);
+    service.getMultimedias().subscribe((multimedias) => {
+      expect(multimedias.length).toBe(10);
     });
 
     const req = httpMock.expectOne(apiUrl);

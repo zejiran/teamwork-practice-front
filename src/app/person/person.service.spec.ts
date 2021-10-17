@@ -1,22 +1,22 @@
 import * as faker from 'faker';
 import { getTestBed, TestBed } from '@angular/core/testing';
-import { CommentService } from './comment.service';
+import { PersonService } from './person.service';
 import { environment } from '../../environments/environment';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { Comment } from './comment';
+import { Person } from './person';
 
-describe('Service: Comment', () => {
+describe('Service: Person', () => {
   let injector: TestBed;
-  let service: CommentService;
+  let service: PersonService;
   let httpMock: HttpTestingController;
-  const apiUrl = environment.baseUrl + 'comments';
+  const apiUrl = environment.baseUrl + 'persons';
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [CommentService],
+      providers: [PersonService],
     });
     injector = getTestBed();
-    service = injector.get(CommentService);
+    service = injector.get(PersonService);
     httpMock = injector.get(HttpTestingController);
   });
   afterEach(() => {
@@ -24,19 +24,21 @@ describe('Service: Comment', () => {
   });
 
   it('getPost() should return 10 records', () => {
-    const mockPosts: Comment[] = [];
+    const mockPosts: Person[] = [];
 
     for (let i = 1; i < 11; i++) {
-      const comment = new Comment(
+      const person = new Person(
         faker.lorem.sentence(),
-        faker.datatype.number(),
-        faker.datatype.number());
+        faker.lorem.sentence(),
+        faker.lorem.sentence(),
+        faker.lorem.sentence()
+      );
 
-      mockPosts.push(comment);
+      mockPosts.push(person);
     }
 
-    service.getComments().subscribe((comments) => {
-      expect(comments.length).toBe(10);
+    service.getPersons().subscribe((persons) => {
+      expect(persons.length).toBe(10);
     });
 
     const req = httpMock.expectOne(apiUrl);

@@ -1,22 +1,23 @@
 import * as faker from 'faker';
 import { getTestBed, TestBed } from '@angular/core/testing';
-import { CommentService } from './comment.service';
+import { NaturalPersonService } from './naturalPerson.service';
 import { environment } from '../../environments/environment';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { Comment } from './comment';
+import { NaturalPerson } from './naturalPerson';
+import { Person } from '../person/person';
 
-describe('Service: Comment', () => {
+describe('Service: naturalPerson', () => {
   let injector: TestBed;
-  let service: CommentService;
+  let service: NaturalPersonService;
   let httpMock: HttpTestingController;
-  const apiUrl = environment.baseUrl + 'comments';
+  const apiUrl = environment.baseUrl + 'persons/natural';
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [CommentService],
+      providers: [NaturalPersonService],
     });
     injector = getTestBed();
-    service = injector.get(CommentService);
+    service = injector.get(NaturalPersonService);
     httpMock = injector.get(HttpTestingController);
   });
   afterEach(() => {
@@ -24,19 +25,22 @@ describe('Service: Comment', () => {
   });
 
   it('getPost() should return 10 records', () => {
-    const mockPosts: Comment[] = [];
+    const mockPosts: NaturalPerson[] = [];
 
     for (let i = 1; i < 11; i++) {
-      const comment = new Comment(
+      const person = new Person(
         faker.lorem.sentence(),
-        faker.datatype.number(),
-        faker.datatype.number());
+        faker.lorem.sentence(),
+        faker.lorem.sentence(),
+        faker.lorem.sentence()
+      );
+      const naturalPerson = new NaturalPerson(person);
 
-      mockPosts.push(comment);
+      mockPosts.push(naturalPerson);
     }
 
-    service.getComments().subscribe((comments) => {
-      expect(comments.length).toBe(10);
+    service.getNaturalPersons().subscribe((naturalPersons) => {
+      expect(naturalPersons.length).toBe(10);
     });
 
     const req = httpMock.expectOne(apiUrl);
