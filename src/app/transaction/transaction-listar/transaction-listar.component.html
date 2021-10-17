@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="card m-5">
+    <div class="card-header p-3">
+      <p class="h2 text-center">Transactions</p>
+    </div>
+    <div class="card-body m-3">
+      <table class="table resposive table-bordered text-center">
+        <thead>
+        <tr>
+          <th scope="col">Payment</th>
+          <th scope="col">Value</th>
+          <th scope="col">Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let b of transactions">
+          <td>{{ b.payment }}</td>
+          <td>{{ b.value }}</td>
+          <td>{{ b.date }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
