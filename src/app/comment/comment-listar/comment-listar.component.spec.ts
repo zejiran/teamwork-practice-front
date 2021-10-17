@@ -3,8 +3,8 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { CommentListarComponent } from './comment-listar.component';
-import {HttpClientTestingModule} from '@angular/common/http/testing';
-import {Comment} from '../comment';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { Comment } from '../comment';
 import * as faker from 'faker';
 
 
@@ -15,7 +15,7 @@ describe('CommentListarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CommentListarComponent ],
+      declarations: [CommentListarComponent],
       imports: [HttpClientTestingModule],
     }).compileComponents();
   }));

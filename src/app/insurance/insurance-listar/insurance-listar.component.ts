@@ -9,8 +9,10 @@ import { InsuranceService } from '../insurance.service';
 })
 export class InsuranceListarComponent implements OnInit {
 
-  constructor(private insuranceService: InsuranceService) { }
-  insurances : Array<Insurance>;
+  insurances: Array<Insurance>;
+
+  constructor(private insuranceService: InsuranceService) {
+  }
 
   getInsurances(): void {
     this.insuranceService.getInsurances()
@@ -18,7 +20,8 @@ export class InsuranceListarComponent implements OnInit {
         this.insurances = insurances;
       });
   }
-  ngOnInit() {
+
+  ngOnInit(): void  {
     this.getInsurances();
   }
 

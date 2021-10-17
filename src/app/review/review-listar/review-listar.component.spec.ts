@@ -3,10 +3,10 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { ReviewListarComponent } from './review-listar.component';
-import {HttpClientTestingModule} from '@angular/common/http/testing';
-import {Review} from '../review';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { Review } from '../review';
 import * as faker from 'faker';
-import {Comment} from '../../comment/comment';
+import { Comment } from '../../comment/comment';
 
 
 describe('CommentListarComponent', () => {
@@ -16,7 +16,7 @@ describe('CommentListarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ReviewListarComponent ],
+      declarations: [ReviewListarComponent],
       imports: [HttpClientTestingModule],
     }).compileComponents();
   }));
@@ -26,11 +26,11 @@ describe('CommentListarComponent', () => {
     component = fixture.componentInstance;
     component.reviews = [
       new Review(
-      new Comment(
-        faker.lorem.sentence(),
-        faker.datatype.number(),
-        faker.datatype.number(),
-      ),
+        new Comment(
+          faker.lorem.sentence(),
+          faker.datatype.number(),
+          faker.datatype.number(),
+        ),
         faker.datatype.number()
       )
     ];

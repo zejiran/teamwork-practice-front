@@ -1,10 +1,10 @@
 import * as faker from 'faker';
-import {TestBed, getTestBed} from '@angular/core/testing';
+import { getTestBed, TestBed } from '@angular/core/testing';
 import { ReviewService } from './review.service';
-import {environment} from '../../environments/environment';
-import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
-import {Review} from './review';
-import {Comment} from '../comment/comment';
+import { environment } from '../../environments/environment';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { Review } from './review';
+import { Comment } from '../comment/comment';
 
 describe('Service: Review', () => {
   let injector: TestBed;

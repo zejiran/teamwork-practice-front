@@ -1,25 +1,26 @@
-//import { Itinerary } from "../itinerary/itinerary";
+// import { Itinerary } from "../itinerary/itinerary";
 export class Outing {
-  name:string;
-  date:any;
+  name: string;
+  date: any;
   place: string;
-  participationCost:number;
-  //itinerary:Itinerary;
+  participationCost: number;
+
+  // itinerary:Itinerary;
 
 
-  constructor(name:string,
-    date:any,
-    place:string,
-    participationCost:number/*,
+  constructor(name: string,
+              date: any,
+              place: string,
+              participationCost: number/*,
     itinerary:Itinerary
-    */){
-      this.name = name;
-      this.date = date;
-      this.place = place;
-      this.participationCost = participationCost;
-      /*
-      this.itinerary = itinerary;
-      */
-    }
+    */) {
+    this.name = name;
+    this.date = date;
+    this.place = place;
+    this.participationCost = participationCost;
+    /*
+    this.itinerary = itinerary;
+    */
+  }
 
 }

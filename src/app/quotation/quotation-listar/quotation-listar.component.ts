@@ -9,9 +9,10 @@ import { QuotationService } from '../quotation.service';
 })
 export class QuotationListarComponent implements OnInit {
 
-  constructor(private quotationService: QuotationService) { }
-
   quotations: Array<Quotation>;
+
+  constructor(private quotationService: QuotationService) {
+  }
 
   getQuotations(): void {
     this.quotationService.getQuotations()
@@ -21,7 +22,7 @@ export class QuotationListarComponent implements OnInit {
       });
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getQuotations();
   }
 
