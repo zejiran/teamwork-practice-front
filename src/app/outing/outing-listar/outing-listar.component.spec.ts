@@ -8,11 +8,7 @@ import { HttpClientTestingModule } from "@angular/common/http/testing";
 import * as faker from "faker";
 import { Outing } from "../outing";
 //import { Itinerary } from "../itinerary/itinerary";
-//import { Activity } from "../activity/activity";
-//import { Guide } from "../guide/guide";
-//import { ComplementaryInformation } from "../complementaryInformation/complementaryInformation";
-//import { Review } from "../review/review";
-//import { Route } from "../route/route"
+
 
 describe("OutingListarComponent", () => {
  let component: OutingListarComponent;
@@ -42,12 +38,7 @@ describe("OutingListarComponent", () => {
       faker.date.past(),
       faker.lorem.sentence(),
       faker.datatype.number()/*,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,*/
+      null*/
      ),
    ];
    fixture.detectChanges();
