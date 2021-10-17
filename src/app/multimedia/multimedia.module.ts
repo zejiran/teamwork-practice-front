@@ -9,4 +9,5 @@ import { MultimediaListarComponent } from './multimedia-listar/multimedia-listar
   declarations: [MultimediaListarComponent],
   exports: [MultimediaListarComponent]
 })
-export class MultimediaModule { }
+export class MultimediaModule {
+}

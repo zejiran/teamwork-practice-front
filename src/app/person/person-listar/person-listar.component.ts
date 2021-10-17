@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { Multimedia } from '../multimedia';
-import { MultimediaService } from '../multimedia.service';
+import { Person } from '../multimedia';
+import { PersonService } from '../multimedia.service';
 
 @Component({
   selector: 'app-multimedia-listar',
   templateUrl: './multimedia-listar.component.html',
   styleUrls: ['./multimedia-listar.component.css']
 })
-export class MultimediaListarComponent implements OnInit {
+export class PersonListarComponent implements OnInit {
 
-  multimedias: Array<Multimedia>;
+  multimedias: Array<Person>;
 
-  constructor(private multimediaService: MultimediaService) {
+  constructor(private multimediaService: PersonService) {
   }
 
   getMultimedias(): void {
