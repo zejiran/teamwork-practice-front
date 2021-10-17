@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Multimedia } from '../multimedia';
+import { MultimediaService } from '../multimedia.service';
 
 @Component({
   selector: 'app-multimedia-listar',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MultimediaListarComponent implements OnInit {
 
-  constructor() { }
+  multimedias: Array<Multimedia>;
 
-  ngOnInit(): void {
+  constructor(private multimediaService: MultimediaService) {
+  }
+
+  getMultimedias(): void {
+    this.multimediaService.getMultimedias()
+      .subscribe(multimedias => {
+        this.multimedias = multimedias;
+      });
+  }
+
+  ngOnInit(): void  {
+    this.getMultimedias();
   }
 
 }
