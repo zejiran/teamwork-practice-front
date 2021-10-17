@@ -3,12 +3,12 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { UserListarComponent } from './person-listar.component';
+import { UserListarComponent } from './user-listar.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import * as faker from 'faker';
-import { User } from '../person';
+import { User } from '../user';
 
-describe('PersonListarComponent', () => {
+describe('UserListarComponent', () => {
   let component: UserListarComponent;
   let fixture: ComponentFixture<UserListarComponent>;
   let debug: DebugElement;
@@ -23,9 +23,8 @@ describe('PersonListarComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(UserListarComponent);
     component = fixture.componentInstance;
-    component.persons = [
+    component.users = [
       new User(
-        faker.lorem.sentence(),
         faker.lorem.sentence(),
         faker.lorem.sentence(),
         faker.lorem.sentence()
@@ -41,7 +40,7 @@ describe('PersonListarComponent', () => {
 
   it('Should have an td element ', () => {
     expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
-      component.persons[0].name
+      component.users[0].user
     );
 
   });

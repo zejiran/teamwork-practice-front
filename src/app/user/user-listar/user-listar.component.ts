@@ -1,28 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../person';
-import { UserService } from '../person.service';
+import { User } from '../user';
+import { UserService } from '../user.service';
 
 @Component({
-  selector: 'app-person-listar',
-  templateUrl: './person-listar.component.html',
-  styleUrls: ['./person-listar.component.css']
+  selector: 'app-user-listar',
+  templateUrl: './user-listar.component.html',
+  styleUrls: ['./user-listar.component.css']
 })
 export class UserListarComponent implements OnInit {
 
-  persons: Array<User>;
+  users: Array<User>;
 
-  constructor(private personService: UserService) {
+  constructor(private userService: UserService) {
   }
 
-  getPersons(): void {
-    this.personService.getPersons()
-      .subscribe(persons => {
-        this.persons = persons;
+  getUsers(): void {
+    this.userService.getUsers()
+      .subscribe(users => {
+        this.users = users;
       });
   }
 
   ngOnInit(): void {
-    this.getPersons();
+    this.getUsers();
   }
 
 }

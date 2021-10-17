@@ -1,24 +1,22 @@
 <div class="container-fluid">
   <div class="card m-5">
     <div class="card-header p-3">
-      <p class="h2 text-center">Persons</p>
+      <p class="h2 text-center">Usuarios</p>
     </div>
     <div class="card-body m-3">
       <table class="table resposive table-bordered text-center">
         <thead>
         <tr>
-          <th scope="col">Nombre</th>
-          <th scope="col">ID</th>
-          <th scope="col">Tipo de ID</th>
-          <th scope="col">Dirección</th>
+          <th scope="col">Usuario</th>
+          <th scope="col">Contraseña</th>
+          <th scope="col">Email</th>
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let p of persons">
-          <td>{{ p.name }}</td>
-          <td>{{ p.idNumber }}</td>
-          <td>{{ p.idType }}</td>
-          <td>{{ p.address }}</td>
+        <tr *ngFor="let u of users">
+          <td>{{ u.user }}</td>
+          <td>{{ u.password }}</td>
+          <td>{{ u.mail }}</td>
         </tr>
         </tbody>
       </table>

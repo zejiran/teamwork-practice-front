@@ -1,7 +1,7 @@
 export class User {
-    user: string;
-    password: string;
-    mail: string;
+  user: string;
+  password: string;
+  mail: string;
 
   constructor(
     user: string,
