@@ -12,6 +12,7 @@ import { QuotationModule } from './quotation/quotation.module';
 import { ClientModule } from './client/client.module';
 import { MultimediaModule } from './multimedia/multimedia.module';
 import { PersonModule } from './person/person.module';
+import { NaturalPersonModule } from './naturalPerson/naturalPerson.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PersonModule } from './person/person.module';
     CommentModule,
     ClientModule,
     MultimediaModule,
-    PersonModule
+    PersonModule,
+    NaturalPersonModule
   ],
 
   providers: [],
