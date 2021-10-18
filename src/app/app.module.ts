@@ -24,6 +24,7 @@ import { CalendarModule } from './calendar/calendar.module';
 import {AdminModule} from './admin/admin.module';
 import {BlogModule} from './blog/blog.module';
 import {ActivityModule} from './activity/activity.module';
+import {GuideModule} from "./guide/guide.module";
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import {ActivityModule} from './activity/activity.module';
     CalendarModule,
     AdminModule,
     BlogModule,
-    ActivityModule
+    ActivityModule,
+    GuideModule
   ],
 
   providers: [],
