@@ -3,6 +3,7 @@
 import { getTestBed, TestBed } from '@angular/core/testing';
 import { ClientService } from './client.service';
 
+import * as faker from 'faker';
 import { HttpClientTestingModule, HttpTestingController, } from '@angular/common/http/testing';
 import { Client } from './client';
 import { environment } from '../../environments/environment';
@@ -32,7 +33,9 @@ describe('Service: Client', () => {
 
     for (let i = 1; i < 11; i++) {
       const client = new Client(
-        // null
+        faker.lorem.sentence(),
+        faker.lorem.sentence(),
+        faker.lorem.sentence()
       );
 
       mockPosts.push(client);

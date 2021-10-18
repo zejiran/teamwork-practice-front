@@ -2,6 +2,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
 
+import * as faker from 'faker';
 import { ClientListarComponent } from './client-listar.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { Client } from '../client';
@@ -29,7 +30,9 @@ describe('ClientListarComponent', () => {
     */
     component.clients = [
       new Client(
-        // calendar
+        faker.lorem.sentence(),
+        faker.lorem.sentence(),
+        faker.lorem.sentence()
       ),
     ];
     fixture.detectChanges();
