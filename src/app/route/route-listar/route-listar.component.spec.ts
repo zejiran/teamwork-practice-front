@@ -44,11 +44,4 @@ describe('RouteListarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it('Should have an td element ', () => {
-    expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
-      component.routes[0].difficulty
-    );
-
-  });
 });
