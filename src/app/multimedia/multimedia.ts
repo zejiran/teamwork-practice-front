@@ -1,4 +1,4 @@
-// import { Route } from '../route/route';
+import { Route } from '../route/route';
 // import { Post } from '../post/post';
 // import { ComplementaryInformation } from '../complementaryInformation/complementaryInformation';
 
@@ -11,17 +11,19 @@ export class Multimedia {
   mediaType: FileType;
   extension: string;
   // TODO: connect with missing modules
-  // route: Route;
+  route: Route;
   // post: Post;
   // complementaryInformation: complementaryInformation;
 
   constructor(
     filename: string,
     mediaType: FileType,
-    extension: string
+    extension: string,
+    route: Route
   ) {
     this.fileName = filename;
     this.mediaType = mediaType;
     this.extension = extension;
+    this.route = route;
   }
 }
