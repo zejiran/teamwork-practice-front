@@ -1,10 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BlogListarComponent } from './blog-listar.component';
-import {ClientListarComponent} from '../../client/client-listar/client-listar.component';
 import {DebugElement} from '@angular/core';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
-import {Client} from '../../client/client';
 import {Blog} from '../blog';
 
 describe('BlogListarComponent', () => {
@@ -32,6 +30,5 @@ describe('BlogListarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
 
 });
