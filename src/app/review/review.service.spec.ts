@@ -5,6 +5,8 @@ import { environment } from '../../environments/environment';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { Review } from './review';
 import { Comment } from '../comment/comment';
+import { Route } from '../route/route';
+import { Outing } from '../outing/outing';
 
 describe('Service: Review', () => {
   let injector: TestBed;
@@ -30,7 +32,7 @@ describe('Service: Review', () => {
     for (let i = 1; i < 11; i++) {
       const review = new Review(
         new Comment(faker.lorem.sentence(), faker.datatype.number(), faker.datatype.number()),
-        faker.datatype.number()
+        faker.datatype.number(),new Route(faker.lorem.sentence(),faker.datatype.number(),new Outing(faker.lorem.sentence(),faker.datatype.datetime(),faker.lorem.sentence(),faker.datatype.number()))
       );
 
       mockPosts.push(review);

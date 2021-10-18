@@ -1,27 +1,26 @@
 /* tslint:disable:no-unused-variable */
 
 import { getTestBed, TestBed } from '@angular/core/testing';
-import { ClientService } from './client.service';
+import { CalendarService } from './calendar.service';
 
-import * as faker from 'faker';
 import { HttpClientTestingModule, HttpTestingController, } from '@angular/common/http/testing';
-import { Client } from './client';
-import { environment } from '../../environments/environment';
-//import { Calendar } from '../calendar/calendar';
 
-describe('Service: Client', () => {
+import { Calendar } from './calendar';
+import { environment } from '../../environments/environment';
+
+describe('Service: Calendar', () => {
   let injector: TestBed;
-  let service: ClientService;
+  let service: CalendarService;
   let httpMock: HttpTestingController;
-  const apiUrl = environment.baseUrl + 'clients';
+  const apiUrl = environment.baseUrl + 'calendars';
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [ClientService],
+      providers: [CalendarService],
     });
     injector = getTestBed();
-    service = injector.get(ClientService);
+    service = injector.get(CalendarService);
     httpMock = injector.get(HttpTestingController);
   });
 
@@ -30,20 +29,16 @@ describe('Service: Client', () => {
   });
 
   it('getPost() should return 10 records', () => {
-    const mockPosts: Client[] = [];
+    const mockPosts: Calendar[] = [];
 
     for (let i = 1; i < 11; i++) {
-      const client = new Client(
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
-        faker.lorem.sentence()
-      );
+      const calendar = new Calendar();
 
-      mockPosts.push(client);
+      mockPosts.push(calendar);
     }
 
-    service.getClients().subscribe((clients) => {
-      expect(clients.length).toBe(10);
+    service.getCalendars().subscribe((calendars) => {
+      expect(calendars.length).toBe(10);
     });
 
     const req = httpMock.expectOne(apiUrl);

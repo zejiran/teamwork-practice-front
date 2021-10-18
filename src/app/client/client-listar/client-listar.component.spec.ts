@@ -6,6 +6,7 @@ import * as faker from 'faker';
 import { ClientListarComponent } from './client-listar.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { Client } from '../client';
+import { Calendar } from 'src/app/calendar/calendar';
 // import { Calendar } from "src/app/calendar/calendar";
 
 describe('ClientListarComponent', () => {

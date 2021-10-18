@@ -1,38 +1,44 @@
-import * as faker from 'faker';
+/* tslint:disable:no-unused-variable */
+
 import { getTestBed, TestBed } from '@angular/core/testing';
-import { MultimediaService } from './multimedia.service';
+import { LocationService } from './location.service';
+
+import { HttpClientTestingModule, HttpTestingController, } from '@angular/common/http/testing';
+
+import * as faker from 'faker';
+import { Locationn } from './locationn';
 import { environment } from '../../environments/environment';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { Multimedia } from './multimedia';
 import { Route } from '../route/route';
 import { Outing } from '../outing/outing';
 
-describe('Service: Multimedia', () => {
+describe('Service: Location', () => {
   let injector: TestBed;
-  let service: MultimediaService;
+  let service: LocationService;
   let httpMock: HttpTestingController;
-  const apiUrl = environment.baseUrl + 'multimedias';
+  const apiUrl = environment.baseUrl + 'locations';
+
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [MultimediaService],
+      providers: [LocationService],
     });
     injector = getTestBed();
-    service = injector.get(MultimediaService);
+    service = injector.get(LocationService);
     httpMock = injector.get(HttpTestingController);
   });
+
   afterEach(() => {
     httpMock.verify();
   });
 
   it('getPost() should return 10 records', () => {
-    const mockPosts: Multimedia[] = [];
+    const mockPosts: Locationn[] = [];
 
     for (let i = 1; i < 11; i++) {
-      const multimedia = new Multimedia(
-        faker.lorem.sentence(),
+      const location = new Locationn(
         faker.datatype.number(),
-        faker.lorem.sentence(),
+        faker.datatype.number(),
+        faker.datatype.number(),
         new Route(
           faker.lorem.sentence(),
           faker.datatype.number(),
@@ -45,16 +51,15 @@ describe('Service: Multimedia', () => {
         )
       );
 
-      mockPosts.push(multimedia);
+      mockPosts.push(location);
     }
 
-    service.getMultimedias().subscribe((multimedias) => {
-      expect(multimedias.length).toBe(10);
+    service.getLocations().subscribe((locations) => {
+      expect(locations.length).toBe(10);
     });
 
     const req = httpMock.expectOne(apiUrl);
     expect(req.request.method).toBe('GET');
     req.flush(mockPosts);
   });
-
 });
