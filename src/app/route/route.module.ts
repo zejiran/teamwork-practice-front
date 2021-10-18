@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LocationListarComponent } from './route-listar/route-listar.component';
+import { RouteListarComponent } from './route-listar/route-listar.component';
 
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [LocationListarComponent],
-  exports: [LocationListarComponent]
+  declarations: [RouteListarComponent],
+  exports: [RouteListarComponent]
 })
-export class LocationModule {
+export class RouteModule {
 
 }

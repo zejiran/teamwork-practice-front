@@ -5,6 +5,7 @@ import { DebugElement } from '@angular/core';
 import { ClientListarComponent } from './client-listar.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { Client } from '../client';
+import { Calendar } from 'src/app/calendar/calendar';
 // import { Calendar } from "src/app/calendar/calendar";
 
 describe('ClientListarComponent', () => {
@@ -29,7 +30,7 @@ describe('ClientListarComponent', () => {
     */
     component.clients = [
       new Client(
-        // calendar
+        new Calendar()
       ),
     ];
     fixture.detectChanges();

@@ -1,28 +1,26 @@
 /* tslint:disable:no-unused-variable */
 
 import { getTestBed, TestBed } from '@angular/core/testing';
-import { RouteService } from './route.service';
+import { CalendarService } from './calendar.service';
 
 import { HttpClientTestingModule, HttpTestingController, } from '@angular/common/http/testing';
 
-import * as faker from 'faker';
-import { Route } from './route';
+import { Calendar } from './calendar';
 import { environment } from '../../environments/environment';
-import { Outing } from '../outing/outing';
 
-describe('Service: Location', () => {
+describe('Service: Calendar', () => {
   let injector: TestBed;
-  let service: RouteService;
+  let service: CalendarService;
   let httpMock: HttpTestingController;
-  const apiUrl = environment.baseUrl + 'routes';
+  const apiUrl = environment.baseUrl + 'calendars';
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [RouteService],
+      providers: [CalendarService],
     });
     injector = getTestBed();
-    service = injector.get(RouteService);
+    service = injector.get(CalendarService);
     httpMock = injector.get(HttpTestingController);
   });
 
@@ -31,25 +29,16 @@ describe('Service: Location', () => {
   });
 
   it('getPost() should return 10 records', () => {
-    const mockPosts: Route[] = [];
+    const mockPosts: Calendar[] = [];
 
     for (let i = 1; i < 11; i++) {
-      const route = new Route(
-        faker.lorem.sentence(),
-        faker.datatype.number(),
-        new Outing(
-          faker.lorem.sentence(),
-          faker.datatype.datetime(),
-          faker.lorem.sentence(),
-          faker.datatype.number()
-        )
-      );
+      const calendar = new Calendar();
 
-      mockPosts.push(route);
+      mockPosts.push(calendar);
     }
 
-    service.getRoutes().subscribe((routes) => {
-      expect(routes.length).toBe(10);
+    service.getCalendars().subscribe((calendars) => {
+      expect(calendars.length).toBe(10);
     });
 
     const req = httpMock.expectOne(apiUrl);
