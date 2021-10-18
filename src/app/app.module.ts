@@ -21,6 +21,8 @@ import { UserModule } from './user/user.module';
 import { LocationModule } from './location/location.module'
 import { RouteModule } from './route/route.module'
 import { CalendarModule } from './calendar/calendar.module'
+import {AdminModule} from './admin/admin.module';
+import {BlogModule} from './blog/blog.module';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { CalendarModule } from './calendar/calendar.module'
     UserModule,
     LocationModule,
     RouteModule,
-    CalendarModule
+    CalendarModule,
+    AdminModule,
+    BlogModule
   ],
 
   providers: [],

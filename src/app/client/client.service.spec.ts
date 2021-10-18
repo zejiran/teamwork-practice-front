@@ -3,10 +3,11 @@
 import { getTestBed, TestBed } from '@angular/core/testing';
 import { ClientService } from './client.service';
 
+import * as faker from 'faker';
 import { HttpClientTestingModule, HttpTestingController, } from '@angular/common/http/testing';
 import { Client } from './client';
 import { environment } from '../../environments/environment';
-import { Calendar } from '../calendar/calendar';
+//import { Calendar } from '../calendar/calendar';
 
 describe('Service: Client', () => {
   let injector: TestBed;
@@ -33,7 +34,10 @@ describe('Service: Client', () => {
 
     for (let i = 1; i < 11; i++) {
       const client = new Client(
-        new Calendar()
+        faker.lorem.sentence(),
+        faker.lorem.sentence(),
+        faker.lorem.sentence(),
+        null
       );
 
       mockPosts.push(client);

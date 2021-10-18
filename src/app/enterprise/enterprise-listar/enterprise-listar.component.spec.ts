@@ -26,6 +26,10 @@ describe('EnterpriseListarComponent', () => {
     component = fixture.componentInstance;
     component.enterprises = [
       new Enterprise(
+        faker.lorem.sentence(),
+        faker.lorem.sentence(),
+        faker.lorem.sentence(),
+        faker.lorem.sentence(),
         faker.lorem.sentence()
       ),
     ];
@@ -39,7 +43,7 @@ describe('EnterpriseListarComponent', () => {
 
   it('Should have an td element ', () => {
     expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
-      component.enterprises[0].representative
+      component.enterprises[0].name
     );
 
   });

@@ -35,6 +35,10 @@ describe('Service: Enterprise', () => {
     for (let i = 1; i < 11; i++) {
       const enterprise = new Enterprise(
         faker.lorem.sentence(),
+        faker.lorem.sentence(),
+        faker.lorem.sentence(),
+        faker.lorem.sentence(),
+        faker.lorem.sentence()
       );
 
       mockPosts.push(enterprise);
