@@ -10,7 +10,7 @@ import {Activty} from './activity';
   providedIn: 'root'
 })
 export class ActivityService {
-  private apiUrl: string = environment.baseUrl + 'admins';
+  private apiUrl: string = environment.baseUrl + 'activities';
   constructor(private http: HttpClient) { }
   getActivities(): Observable<Activty[]> {
     return this.http.get<Activty[]>(this.apiUrl);
