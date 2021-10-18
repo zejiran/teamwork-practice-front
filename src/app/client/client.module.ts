@@ -10,4 +10,5 @@ import { ClientListarComponent } from './client-listar/client-listar.component';
   declarations: [ClientListarComponent],
   exports: [ClientListarComponent]
 })
-export class ClientModule { }
+export class ClientModule {
+}

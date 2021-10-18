@@ -1,9 +1,7 @@
-//import { Calendar } from "../calendar/calendar";
+import { Calendar } from "../calendar/calendar";
 export class Client {
-  //calendar:Calendar;
-  constructor(/*calendar:Calendar*/){
-    /*
+  calendar:Calendar;
+  constructor(calendar:Calendar) {
     this.calendar = calendar;
-    */
   }
 }

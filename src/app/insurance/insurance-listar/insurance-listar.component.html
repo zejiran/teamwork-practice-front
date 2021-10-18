@@ -6,20 +6,20 @@
     <div class="card-body m-3">
       <table class="table resposive table-bordered text-center">
         <thead>
-          <tr>
-            <th scope="col">Nombre</th>
-            <th scope="col">Condiciones</th>
-            <th scope="col">Features</th>
-            <th scope="col">Precio</th>
-          </tr>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Condiciones</th>
+          <th scope="col">Features</th>
+          <th scope="col">Precio</th>
+        </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let b of insurances">
-            <td>{{ b.name }}</td>
-            <td>{{ b.conditions }}</td>
-            <td>{{ b.features }}</td>
-            <td>{{ b.price }}</td>
-          </tr>
+        <tr *ngFor="let b of insurances">
+          <td>{{ b.name }}</td>
+          <td>{{ b.conditions }}</td>
+          <td>{{ b.features }}</td>
+          <td>{{ b.price }}</td>
+        </tr>
         </tbody>
       </table>
     </div>

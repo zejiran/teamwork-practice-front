@@ -8,10 +8,13 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class InsuranceService {
-  private apiUrl:string = environment.baseUrl + 'insurances';
+  private apiUrl: string = environment.baseUrl + 'insurances';
+
+  constructor(private http: HttpClient) {
+  }
+
   getInsurances(): Observable<Insurance[]> {
     return this.http.get<Insurance[]>(this.apiUrl);
   }
-  constructor(private http: HttpClient) { }
 
 }

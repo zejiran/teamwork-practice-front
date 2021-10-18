@@ -6,36 +6,26 @@
     <div class="card-body m-3">
       <table class="table resposive table-bordered text-center">
         <thead>
-          <tr>
-            <th scope="col">Nombre</th>
-            <th scope="col">Fecha</th>
-            <th scope="col">Lugar</th>
-            <th scope="col">Costo de participación</th>
-            <!--
-            <th scope="col">Itinerario</th>
-            <th scope="col">Actividades</th>
-            <th scope="col">Guías</th>
-            <th scope="col">Información complementaria</th>
-            <th scope="col">Reviews</th>
-            <th scope="col">Rutas</th>
-            -->
-          </tr>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Lugar</th>
+          <th scope="col">Costo de participación</th>
+          <!--
+          <th scope="col">Itinerario</th>
+          -->
+        </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let b of outings">
-            <td>{{ b.name }}</td>
-            <td>{{ b.date }}</td>
-            <td>{{ b.place }}</td>
-            <td>{{ b.participationCost }}</td>
-            <!--
-            <td>{{ b.itinerary }}</td>
-            <td>{{ b.activities }}</td>
-            <td>{{ b.guides }}</td>
-            <td>{{ b.complementaryInformation }}</td>
-            <td>{{ b.reviews }}</td>
-            <td>{{ b.routes }}</td>
-            -->
-          </tr>
+        <tr *ngFor="let b of outings">
+          <td>{{ b.name }}</td>
+          <td>{{ b.date }}</td>
+          <td>{{ b.place }}</td>
+          <td>{{ b.participationCost }}</td>
+          <!--
+          <td>{{ b.itinerary }}</td>
+          -->
+        </tr>
         </tbody>
       </table>
     </div>

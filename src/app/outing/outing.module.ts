@@ -11,4 +11,5 @@ import { OutingListarComponent } from './outing-listar/outing-listar.component';
   declarations: [OutingListarComponent],
   exports: [OutingListarComponent],
 })
-export class OutingModule { }
+export class OutingModule {
+}

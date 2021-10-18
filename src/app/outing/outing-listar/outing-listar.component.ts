@@ -9,8 +9,10 @@ import { OutingService } from '../outing.service';
 })
 export class OutingListarComponent implements OnInit {
 
-  constructor(private outingService:OutingService) { }
-  outings:Array<Outing>;
+  outings: Array<Outing>;
+
+  constructor(private outingService: OutingService) {
+  }
 
   getOutings(): void {
     this.outingService.getOutings()
@@ -19,7 +21,7 @@ export class OutingListarComponent implements OnInit {
       });
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getOutings();
   }
 

@@ -9,4 +9,5 @@ import { QuotationListarComponent } from './quotation-listar/quotation-listar.co
   declarations: [QuotationListarComponent],
   exports: [QuotationListarComponent]
 })
-export class QuotationModule { }
+export class QuotationModule {
+}

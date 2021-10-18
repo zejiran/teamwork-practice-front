@@ -3,14 +3,14 @@ import { CommonModule } from '@angular/common';
 import { ReviewListarComponent } from './review-listar/review-listar.component';
 
 
-
 @NgModule({
-    declarations: [ReviewListarComponent],
-    exports: [
-        ReviewListarComponent
-    ],
-    imports: [
-        CommonModule
-    ]
+  declarations: [ReviewListarComponent],
+  exports: [
+    ReviewListarComponent
+  ],
+  imports: [
+    CommonModule
+  ]
 })
-export class ReviewModule { }
+export class ReviewModule {
+}

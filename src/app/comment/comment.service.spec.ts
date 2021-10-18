@@ -1,9 +1,9 @@
 import * as faker from 'faker';
-import {TestBed, getTestBed} from '@angular/core/testing';
+import { getTestBed, TestBed } from '@angular/core/testing';
 import { CommentService } from './comment.service';
-import {environment} from '../../environments/environment';
-import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
-import {Comment} from './comment';
+import { environment } from '../../environments/environment';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { Comment } from './comment';
 
 describe('Service: Comment', () => {
   let injector: TestBed;
@@ -35,8 +35,8 @@ describe('Service: Comment', () => {
       mockPosts.push(comment);
     }
 
-    service.getComments().subscribe((books) => {
-      expect(books.length).toBe(10);
+    service.getComments().subscribe((comments) => {
+      expect(comments.length).toBe(10);
     });
 
     const req = httpMock.expectOne(apiUrl);

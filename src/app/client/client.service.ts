@@ -9,8 +9,11 @@ import { environment } from '../../environments/environment';
 })
 export class ClientService {
 
-  private apiUrl:string = environment.baseUrl + 'clients';
-  constructor(private http: HttpClient) { }
+  private apiUrl: string = environment.baseUrl + 'clients';
+
+  constructor(private http: HttpClient) {
+  }
+
   getClients(): Observable<Client[]> {
     return this.http.get<Client[]>(this.apiUrl);
   }

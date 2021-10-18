@@ -9,8 +9,11 @@ import { environment } from '../../environments/environment';
 })
 export class QuotationService {
 
-  private apiUrl:string = environment.baseUrl + 'quotations';
-  constructor(private http: HttpClient) { }
+  private apiUrl: string = environment.baseUrl + 'quotations';
+
+  constructor(private http: HttpClient) {
+  }
+
   getQuotations(): Observable<Quotation[]> {
     return this.http.get<Quotation[]>(this.apiUrl);
   }
