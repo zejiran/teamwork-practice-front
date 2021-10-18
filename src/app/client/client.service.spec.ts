@@ -36,7 +36,8 @@ describe('Service: Client', () => {
       const client = new Client(
         faker.lorem.sentence(),
         faker.lorem.sentence(),
-        faker.lorem.sentence()
+        faker.lorem.sentence(),
+        null
       );
 
       mockPosts.push(client);

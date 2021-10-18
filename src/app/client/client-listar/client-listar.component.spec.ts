@@ -7,7 +7,6 @@ import { ClientListarComponent } from './client-listar.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { Client } from '../client';
 import { Calendar } from 'src/app/calendar/calendar';
-// import { Calendar } from "src/app/calendar/calendar";
 
 describe('ClientListarComponent', () => {
   let component: ClientListarComponent;
@@ -24,16 +23,14 @@ describe('ClientListarComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ClientListarComponent);
     component = fixture.componentInstance;
-    /*
     let calendar = new Calendar(
-      //TO DO: colocar los random de calendar.
     );
-    */
     component.clients = [
       new Client(
         faker.lorem.sentence(),
         faker.lorem.sentence(),
-        faker.lorem.sentence()
+        faker.lorem.sentence(),
+        calendar
       ),
     ];
     fixture.detectChanges();
@@ -43,12 +40,4 @@ describe('ClientListarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  /*
-  it("Should have an td element ", () => {
-    expect(debug.query(By.css("td")).nativeElement.innerText).toContain(
-      component.clients[0].calendar.id
-    );
-  });
-  */
 });
