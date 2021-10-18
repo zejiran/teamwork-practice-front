@@ -7,6 +7,8 @@ import { Locationn } from '../locationn';
 import { LocationListarComponent } from './location-listar.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import * as faker from 'faker';
+import { Route } from 'src/app/route/route';
+import { Outing } from 'src/app/outing/outing';
 
 describe('LocationListarComponent', () => {
   let component: LocationListarComponent;
@@ -28,7 +30,17 @@ describe('LocationListarComponent', () => {
       new Locationn(
         faker.datatype.number(),
         faker.datatype.number(),
-        faker.datatype.number()
+        faker.datatype.number(),
+        new Route(
+          faker.lorem.paragraph(),
+          faker.datatype.number(),
+          new Outing(
+            faker.lorem.sentence(),
+            faker.datatype.datetime(),
+            faker.lorem.sentence(),
+            faker.datatype.number()
+          )
+        )
       ),
     ];
     fixture.detectChanges();
