@@ -9,6 +9,7 @@ import * as faker from 'faker';
 import { Multimedia } from '../multimedia';
 import { Route } from 'src/app/route/route';
 import { Outing } from 'src/app/outing/outing';
+import { Post } from 'src/app/post/post';
 
 
 describe('MultimediaListarComponent', () => {
@@ -40,7 +41,8 @@ describe('MultimediaListarComponent', () => {
             faker.lorem.sentence(),
             faker.datatype.number()
           )
-        )
+        ),
+        new Post(1)
       ),
     ];
     fixture.detectChanges();

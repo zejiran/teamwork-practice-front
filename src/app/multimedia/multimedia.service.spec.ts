@@ -6,6 +6,7 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { Multimedia } from './multimedia';
 import { Route } from '../route/route';
 import { Outing } from '../outing/outing';
+import { Post } from '../post/post';
 
 describe('Service: Multimedia', () => {
   let injector: TestBed;
@@ -42,7 +43,8 @@ describe('Service: Multimedia', () => {
             faker.lorem.sentence(),
             faker.datatype.number()
           )
-        )
+        ),
+        new Post(1)
       );
 
       mockPosts.push(multimedia);

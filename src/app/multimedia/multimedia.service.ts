@@ -16,5 +16,4 @@ export class MultimediaService {
   getMultimedias(): Observable<Multimedia[]> {
     return this.http.get<Multimedia[]>(this.apiUrl);
   }
-
 }
