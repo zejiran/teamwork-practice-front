@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="card m-5">
+    <div class="card-header p-3">
+      <p class="h2 text-center">Comments</p>
+    </div>
+    <div class="card-body m-3">
+      <table class="table resposive table-bordered text-center">
+        <thead>
+        <tr>
+          <th scope="col">Text</th>
+          <th scope="col">Likes</th>
+          <th scope="col">Dislikes</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let u of comments">
+          <td>{{ u.text }}</td>
+          <td>{{ u.likes }}</td>
+          <td>{{ u.dislikes }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

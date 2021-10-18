@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class="card m-5">
+    <div class="card-header p-3">
+      <p class="h2 text-center">Enterprises</p>
+    </div>
+    <div class="card-body m-3">
+      <table class="table resposive table-bordered text-center">
+        <thead>
+        <tr>
+          <th scope="col">Representative</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let b of enterprises">
+          <td>{{ b.user }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
