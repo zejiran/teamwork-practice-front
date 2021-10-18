@@ -1,6 +1,6 @@
 import { Route } from '../route/route';
 import { Post } from '../post/post';
-// import { ComplementaryInformation } from '../complementaryInformation/complementaryInformation';
+import { ComplementaryInformation } from '../complementaryInformation/complementaryInformation';
 
 enum FileType {
   VIDEO, IMAGE, AUDIO
@@ -12,14 +12,14 @@ export class Multimedia {
   extension: string;
   route: Route;
   post: Post;
-  // complementaryInformation: complementaryInformation;
+  complementaryInformation: ComplementaryInformation;
 
   constructor(
     filename: string,
     mediaType: FileType,
     extension: string,
     route: Route,
-    post: Post
+    post: Post,
   ) {
     this.fileName = filename;
     this.mediaType = mediaType;
