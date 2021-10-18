@@ -7,6 +7,6 @@ import {ActivityListarComponent} from './activity-listar/activity-listar.compone
     CommonModule
   ],
   declarations: [ActivityListarComponent],
-  exports:[ActivityListarComponent]
+  exports: [ActivityListarComponent]
 })
 export class ActivityModule { }

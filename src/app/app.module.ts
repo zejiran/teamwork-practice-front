@@ -18,11 +18,12 @@ import { PersonModule } from './person/person.module';
 import { MultimediaModule } from './multimedia/multimedia.module';
 import { NaturalPersonModule } from './naturalPerson/naturalPerson.module';
 import { UserModule } from './user/user.module';
-import { LocationModule } from './location/location.module'
-import { RouteModule } from './route/route.module'
-import { CalendarModule } from './calendar/calendar.module'
+import { LocationModule } from './location/location.module';
+import { RouteModule } from './route/route.module';
+import { CalendarModule } from './calendar/calendar.module';
 import {AdminModule} from './admin/admin.module';
 import {BlogModule} from './blog/blog.module';
+import {ActivityModule} from './activity/activity.module';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import {BlogModule} from './blog/blog.module';
     RouteModule,
     CalendarModule,
     AdminModule,
-    BlogModule
+    BlogModule,
+    ActivityModule
   ],
 
   providers: [],

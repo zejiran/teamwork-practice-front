@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Activity } from '../activity';
 import { ActivityService } from '../activity.service';
+import {Activty} from '../activity';
 
 @Component({
   selector: 'app-activity-listar',
@@ -10,16 +10,18 @@ import { ActivityService } from '../activity.service';
 })
 export class ActivityListarComponent implements OnInit {
 
-  constructor(private activityService:ActivityService) { }
-  activities:Array<Activity>
+  activities: Array<Activty>;
+  constructor(private activityService: ActivityService) { }
 
-  ngOnInit() {
-    this.activities;
-  }
-  getGuides(): void {
+  getActivities(): void {
     this.activityService.getActivities()
       .subscribe(activities => {
         this.activities = activities;
       });
   }
+
+  ngOnInit(): void {
+    this.getActivities();
+  }
+
 }

@@ -1,7 +1,25 @@
 <div class="container-fluid">
-  <div class="row p-5">
-      <div class="col border" *ngFor= "let b of guides">
-         {{b.name}}. {{b.age}} . {{b.rating}}
-      </div>
+  <div class="card m-5">
+    <div class="card-header p-3">
+      <p class="h2 text-center">Usuarios</p>
+    </div>
+    <div class="card-body m-3">
+      <table class="table resposive table-bordered text-center">
+        <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Age</th>
+          <th scope="col">Rating</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let u of guides">
+          <td>{{ u.name }}</td>
+          <td>{{ u.age }}</td>
+          <td>{{ u.rating }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

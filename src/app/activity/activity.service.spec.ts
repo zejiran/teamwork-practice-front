@@ -1,16 +1,51 @@
 /* tslint:disable:no-unused-variable */
 
-import { TestBed, async, inject } from '@angular/core/testing';
+import {TestBed, async, inject, getTestBed} from '@angular/core/testing';
 import { ActivityService } from './activity.service';
+import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
+import {environment} from '../../environments/environment';
+import * as faker from 'faker';
+import {Activty} from './activity';
 
 describe('Service: Activity', () => {
+  let injector: TestBed;
+  let service: ActivityService;
+  let httpMock: HttpTestingController;
+  const apiUrl = environment.baseUrl + 'activities';
+
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [ActivityService]
+      imports: [HttpClientTestingModule],
+      providers: [ActivityService],
     });
+    injector = getTestBed();
+    service = injector.get(ActivityService);
+    httpMock = injector.get(HttpTestingController);
   });
 
-  it('should ...', inject([ActivityService], (service: ActivityService) => {
-    expect(service).toBeTruthy();
-  }));
+  afterEach(() => {
+    httpMock.verify();
+  });
+
+  it('getPost() should return 10 records', () => {
+    const mockPosts: Activty[] = [];
+
+    for (let i = 1; i < 11; i++) {
+      const activity = new Activty(
+        faker.lorem.sentence(),
+        faker.datatype.number(),
+        faker.datatype.number(),
+      );
+
+      mockPosts.push(activity);
+    }
+
+    service.getActivities().subscribe((activities) => {
+      expect(activities.length).toBe(10);
+    });
+
+    const req = httpMock.expectOne(apiUrl);
+    expect(req.request.method).toBe('GET');
+    req.flush(mockPosts);
+  });
 });

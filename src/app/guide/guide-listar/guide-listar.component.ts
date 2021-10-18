@@ -10,17 +10,21 @@ import { GuideService } from '../guide.service';
 })
 export class GuideListarComponent implements OnInit {
 
-  constructor(private guideService:GuideService) { }
-  guides:Array<Guide>
+  constructor(private guideService: GuideService) { }
+  guides: Array<Guide>;
 
-  ngOnInit() {
-    this.guides
-  }
   getGuides(): void {
     this.guideService.getGuides()
       .subscribe(guides => {
         this.guides = guides;
       });
   }
+
+  ngOnInit(): void {
+    this.getGuides();
+  }
 }
+
+
+
 
