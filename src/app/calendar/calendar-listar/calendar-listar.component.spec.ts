@@ -4,25 +4,25 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { Calendar } from '../calendar';
-import { LocationListarComponent } from './calendar-listar.component';
+import { CalendarListarComponent } from './calendar-listar.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import * as faker from 'faker';
 
-describe('LocationListarComponent', () => {
-  let component: LocationListarComponent;
-  let fixture: ComponentFixture<LocationListarComponent>;
+describe('CalendarListarComponent', () => {
+  let component: CalendarListarComponent;
+  let fixture: ComponentFixture<CalendarListarComponent>;
 
   let debug: DebugElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [LocationListarComponent],
+      declarations: [CalendarListarComponent],
       imports: [HttpClientTestingModule],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LocationListarComponent);
+    fixture = TestBed.createComponent(CalendarListarComponent);
     component = fixture.componentInstance;
     component.calendars = [
       new Calendar(),

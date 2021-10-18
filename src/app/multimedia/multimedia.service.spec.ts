@@ -4,6 +4,8 @@ import { MultimediaService } from './multimedia.service';
 import { environment } from '../../environments/environment';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { Multimedia } from './multimedia';
+import { Route } from '../route/route';
+import { Outing } from '../outing/outing';
 
 describe('Service: Multimedia', () => {
   let injector: TestBed;
@@ -30,7 +32,17 @@ describe('Service: Multimedia', () => {
       const multimedia = new Multimedia(
         faker.lorem.sentence(),
         faker.datatype.number(),
-        faker.lorem.sentence()
+        faker.lorem.sentence(),
+        new Route(
+          faker.lorem.sentence(),
+          faker.datatype.number(),
+          new Outing(
+            faker.lorem.sentence(),
+            faker.datatype.datetime(),
+            faker.lorem.sentence(),
+            faker.datatype.number()
+          )
+        )
       );
 
       mockPosts.push(multimedia);

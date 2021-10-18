@@ -4,26 +4,26 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { Route } from '../route';
-import { LocationListarComponent } from './route-listar.component';
+import { RouteListarComponent } from './route-listar.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import * as faker from 'faker';
 import { Outing } from 'src/app/outing/outing';
 
-describe('LocationListarComponent', () => {
-  let component: LocationListarComponent;
-  let fixture: ComponentFixture<LocationListarComponent>;
+describe('RouteListarComponent', () => {
+  let component: RouteListarComponent;
+  let fixture: ComponentFixture<RouteListarComponent>;
 
   let debug: DebugElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [LocationListarComponent],
+      declarations: [RouteListarComponent],
       imports: [HttpClientTestingModule],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LocationListarComponent);
+    fixture = TestBed.createComponent(RouteListarComponent);
     component = fixture.componentInstance;
     component.routes = [
       new Route(
@@ -47,7 +47,7 @@ describe('LocationListarComponent', () => {
 
   it('Should have an td element ', () => {
     expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
-      component.routes[0].idLocation
+      component.routes[0].difficulty
     );
 
   });
