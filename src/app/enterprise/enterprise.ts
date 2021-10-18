@@ -1,16 +1,16 @@
-import { Person } from "../person/person";
+import { Client } from "../client/client";
 
-export class Enterprise extends Person{
+export class Enterprise extends Client{
   representative: string;
 
   constructor(
     representative: string,
-    name: string,
+    user: string,
     idNumber: string,
     idType: string,
     address: string
   ) {
-    super(name, idNumber, idType, address);
+    super(user, idNumber, idType, address);
     this.representative = representative;
   }
 
