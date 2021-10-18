@@ -11,7 +11,7 @@ import { Route } from 'src/app/route/route';
 import { Outing } from 'src/app/outing/outing';
 
 
-describe('CommentListarComponent', () => {
+describe('ReviewListarComponent', () => {
   let component: ReviewListarComponent;
   let fixture: ComponentFixture<ReviewListarComponent>;
   let debug: DebugElement;
@@ -54,18 +54,10 @@ describe('CommentListarComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('Should have a text element ', () => {
-    expect(debug.query(By.css('#t')).nativeElement.innerText).toContain(
+  it('Should have an td element ', () => {
+    expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
       component.reviews[0].comment.text
     );
-    expect(debug.query(By.css('#s')).nativeElement.innerText).toContain(
-      component.reviews[0].score
-    );
-    expect(debug.query(By.css('#l')).nativeElement.innerText).toContain(
-      component.reviews[0].comment.likes
-    );
-    expect(debug.query(By.css('#dl')).nativeElement.innerText).toContain(
-      component.reviews[0].comment.dislikes
-    );
+
   });
 });
