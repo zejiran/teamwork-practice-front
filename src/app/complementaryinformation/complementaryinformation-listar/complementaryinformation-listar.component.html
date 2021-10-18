@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="card m-5">
+    <div class="card-header p-3">
+      <p class="h2 text-center">Complementary Information</p>
+    </div>
+    <div class="card-body m-3">
+      <table class="table resposive table-bordered text-center">
+        <thead>
+        <tr>
+          <th scope="col">idComplementary</th>
+          <th scope="col">Descripción</th>
+          <th scope="col">Recomendación</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let b of complementaryinformations">
+          <td>{{ b.id }}</td>
+          <td>{{ b.description }}</td>
+          <td>{{ b.recomendation }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
