@@ -25,6 +25,7 @@ import {AdminModule} from './admin/admin.module';
 import {BlogModule} from './blog/blog.module';
 import {ActivityModule} from './activity/activity.module';
 import {GuideModule} from "./guide/guide.module";
+import { ComplementaryInformationModule } from "./complementaryinformation/complementaryinformation.module"
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import {GuideModule} from "./guide/guide.module";
     AdminModule,
     BlogModule,
     ActivityModule,
-    GuideModule
+    GuideModule,
+    ComplementaryInformationModule
   ],
 
   providers: [],
