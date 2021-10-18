@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="card m-5">
+    <div class="card-header p-3">
+      <p class="h2 text-center">Locations</p>
+    </div>
+    <div class="card-body m-3">
+      <table class="table resposive table-bordered text-center">
+        <thead>
+        <tr>
+          <th scope="col">idLocation</th>
+          <th scope="col">latitude</th>
+          <th scope="col">longitude</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let b of locations">
+          <td>{{ b.idLocation }}</td>
+          <td>{{ b.latitude }}</td>
+          <td>{{ b.longitude }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

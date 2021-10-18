@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="card m-5">
+    <div class="card-header p-3">
+      <p class="h2 text-center">Multimedias</p>
+    </div>
+    <div class="card-body m-3">
+      <table class="table resposive table-bordered text-center">
+        <thead>
+        <tr>
+          <th scope="col">Nombre del archivo</th>
+          <th scope="col">Tipo de archivo</th>
+          <th scope="col">Extensión</th>
+          <th scope="col">Ruta</th>
+          <th scope="col">Post</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let m of multimedias">
+          <td>{{ m.fileName }}</td>
+          <td>{{ m.mediaType }}</td>
+          <td>{{ m.extension }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
