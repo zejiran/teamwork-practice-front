@@ -41,6 +41,7 @@ describe('ComplementaryInformationListarComponent', () => {
             faker.lorem.sentence(),
             faker.datatype.number(),
             new Outing(
+              faker.datatype.number(),
               faker.lorem.sentence(),
               faker.datatype.datetime(),
               faker.lorem.sentence(),
@@ -52,6 +53,7 @@ describe('ComplementaryInformationListarComponent', () => {
           ),
           ),
         new Outing(
+          faker.datatype.number(),
           faker.lorem.sentence(),
           faker.datatype.datetime(),
           faker.lorem.sentence(),

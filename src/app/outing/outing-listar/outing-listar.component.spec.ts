@@ -34,6 +34,7 @@ describe('OutingListarComponent', () => {
     */
     component.outings = [
       new Outing(
+        faker.datatype.number(),
         faker.lorem.sentence(),
         faker.date.past(),
         faker.lorem.sentence(),
