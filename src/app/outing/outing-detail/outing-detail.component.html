@@ -1,3 +1,20 @@
-<p>
-  outing-detail works!
-</p>
+<div class="container-fluid">
+  <p class="h3 p-3">{{outingDetail.name}}</p>
+  <div class="row">
+    <div class="col">
+      <dl>
+        <dt>Activities</dt>
+        <dd *ngFor = "let a of outingDetail.activities">{{a.name}}</dd>
+        <dt>Complementary information</dt>
+        <dd *ngFor = "let b of outingDetail.complementaryInformation">{{b.name}}</dd>
+        <hr>
+        <dt>Guides</dt>
+        <dd *ngFor = "let c of outingDetail.guides">{{c.name}}</dd>
+        <hr>
+        <dt class="bold">Routes</dt>
+        <dd *ngFor = "let f of outingDetail.routes">{{f.name}}</dd>
+        <hr>
+      </dl>
+    </div>
+  </div>
+</div>

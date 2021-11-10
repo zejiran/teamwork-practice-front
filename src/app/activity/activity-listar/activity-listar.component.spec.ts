@@ -6,7 +6,7 @@ import { DebugElement } from '@angular/core';
 import { ActivityListarComponent } from './activity-listar.component';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
 import * as faker from 'faker';
-import {Activty} from '../activity';
+import {Activity} from '../activity';
 
 describe('ActivityListarComponent', () => {
   let component: ActivityListarComponent;
@@ -24,7 +24,7 @@ describe('ActivityListarComponent', () => {
     fixture = TestBed.createComponent(ActivityListarComponent);
     component = fixture.componentInstance;
     component.activities = [
-      new Activty(
+      new Activity(
       faker.lorem.sentence(),
       faker.datatype.number(),
       faker.datatype.number(),

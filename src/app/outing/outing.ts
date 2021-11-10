@@ -1,5 +1,4 @@
 import { Route } from "../route/route";
-
 // import { Itinerary } from "../itinerary/itinerary";
 export class Outing {
   id: number;
@@ -7,9 +6,7 @@ export class Outing {
   date: any;
   place: string;
   participationCost: number;
-  routes  : Array<Route>
-
-  // itinerary:Itinerary;
+  //itinerary:Itinerary;
 
 
   constructor(id: number,

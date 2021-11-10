@@ -1,4 +1,4 @@
-export class Activty{
+export class Activity{
   name: string;
   rating: number;
   age: number;

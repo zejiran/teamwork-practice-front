@@ -1,4 +1,6 @@
+import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { OutingDetail } from '../outingDetail';
 
 @Component({
   selector: 'app-outing-detail',
@@ -7,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OutingDetailComponent implements OnInit {
 
+  @Input() outingDetail: OutingDetail;
   constructor() { }
 
   ngOnInit() {
