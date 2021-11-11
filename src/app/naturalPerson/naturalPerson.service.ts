@@ -1,3 +1,4 @@
+import { NaturalPersonDetail } from './natural-person-detail/naturalPersonDetail';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -8,6 +9,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class NaturalPersonService {
+
   private apiUrl: string = environment.baseUrl + 'persons/natural';
 
   constructor(private http: HttpClient) {
@@ -17,4 +19,7 @@ export class NaturalPersonService {
     return this.http.get<NaturalPerson[]>(this.apiUrl);
   }
 
+  getNaturalPerson(id: number): Observable<NaturalPersonDetail> {
+    return this.http.get<NaturalPersonDetail>(this.apiUrl + '/' + id.toString());
+  }
 }

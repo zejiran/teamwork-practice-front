@@ -1,3 +1,4 @@
+import { NaturalPersonDetail } from './../natural-person-detail/naturalPersonDetail';
 import { Component, OnInit } from '@angular/core';
 import { NaturalPerson } from '../naturalPerson';
 import { NaturalPersonService } from '../naturalPerson.service';
@@ -10,6 +11,8 @@ import { NaturalPersonService } from '../naturalPerson.service';
 export class NaturalPersonListarComponent implements OnInit {
 
   naturalPersons: Array<NaturalPerson>;
+  selectedNaturalPerson: NaturalPersonDetail;
+  selected = false;
 
   constructor(private naturalPersonService: NaturalPersonService) {
   }
@@ -19,6 +22,14 @@ export class NaturalPersonListarComponent implements OnInit {
       .subscribe(naturalPersons => {
         this.naturalPersons = naturalPersons;
       });
+  }
+
+  onSelected(naturalPerson: NaturalPerson): void {
+    this.naturalPersonService.getNaturalPerson(naturalPerson.id)
+    .subscribe(naturalPersonDetail => {
+      this.selectedNaturalPerson = naturalPersonDetail;
+    });
+    this.selected = true;
   }
 
   ngOnInit(): void {

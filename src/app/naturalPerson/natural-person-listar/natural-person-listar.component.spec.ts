@@ -29,7 +29,7 @@ describe('NaturalPersonListarComponent', () => {
       faker.lorem.sentence()
     );
     component.naturalPersons = [
-      new NaturalPerson(person)
+      new NaturalPerson(100, 'test_user'),
     ];
     fixture.detectChanges();
     debug = fixture.debugElement;
@@ -41,7 +41,7 @@ describe('NaturalPersonListarComponent', () => {
 
   it('Should have an td element ', () => {
     expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
-      component.naturalPersons[0].person.name
+      component.naturalPersons[0].id
     );
 
   });
