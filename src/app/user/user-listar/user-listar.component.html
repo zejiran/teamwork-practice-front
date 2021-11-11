@@ -15,12 +15,14 @@
         <tr *ngFor="let u of users">
           <td>{{ u.user }}</td>
           <td>{{ u.id }}</td>
-          <th><button (click)="onSelected(u)">Ver Detalle</button></th>
+          <th><button class="btn btn-dark" (click)="onSelected(u)">Ver Detalle</button></th>
         </tr>
         </tbody>
       </table>
-      <div *ngIf="selected">
-        <app-user-detail [userDetail]="selectedUser"></app-user-detail>
+      <div class = "card-body m-3">
+        <div *ngIf="selected">
+          <app-user-detail [userDetail]="selectedUser"></app-user-detail>
+        </div>
       </div>
     </div>
   </div>

@@ -23,18 +23,16 @@ describe('Service: User', () => {
     httpMock.verify();
   });
 
-  it('getPost() should return 10 records', () => {
-    const mockPosts: User[] = [];
+  it('getUser() should return 10 records', () => {
+    const mockUsers: User[] = [];
 
     for (let i = 1; i < 11; i++) {
       const user = new User(
         faker.datatype.number(),
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
         faker.lorem.sentence()
       );
 
-      mockPosts.push(user);
+      mockUsers.push(user);
     }
 
     service.getUsers().subscribe((users) => {
@@ -43,7 +41,7 @@ describe('Service: User', () => {
 
     const req = httpMock.expectOne(apiUrl);
     expect(req.request.method).toBe('GET');
-    req.flush(mockPosts);
+    req.flush(mockUsers);
   });
 
 });
