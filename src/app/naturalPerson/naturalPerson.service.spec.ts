@@ -24,19 +24,17 @@ describe('Service: naturalPerson', () => {
     httpMock.verify();
   });
 
-  it('getPost() should return 10 records', () => {
-    const mockPosts: NaturalPerson[] = [];
+  it('getNaturalPerson() should return 10 records', () => {
+    const mockNaturalPersons: NaturalPerson[] = [];
 
     for (let i = 1; i < 11; i++) {
       const person = new Person(
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
+        faker.datatype.number(),
         faker.lorem.sentence()
       );
-      const naturalPerson = new NaturalPerson(person);
+      const naturalPerson = new NaturalPerson(100, 'test_user');
 
-      mockPosts.push(naturalPerson);
+      mockNaturalPersons.push(naturalPerson);
     }
 
     service.getNaturalPersons().subscribe((naturalPersons) => {
@@ -45,7 +43,7 @@ describe('Service: naturalPerson', () => {
 
     const req = httpMock.expectOne(apiUrl);
     expect(req.request.method).toBe('GET');
-    req.flush(mockPosts);
+    req.flush(mockNaturalPersons);
   });
 
 });

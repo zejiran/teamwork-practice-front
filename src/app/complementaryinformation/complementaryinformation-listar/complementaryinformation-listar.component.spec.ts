@@ -33,30 +33,15 @@ describe('ComplementaryInformationListarComponent', () => {
         faker.datatype.number(),
         faker.lorem.sentence(),
         faker.lorem.sentence(),
-        new Multimedia(
-          faker.lorem.sentence(),
-          faker.datatype.number(),
-          faker.lorem.sentence(),
-          new Route(
-            faker.lorem.sentence(),
-            faker.datatype.number(),
-            new Outing(
-              faker.lorem.sentence(),
-              faker.datatype.datetime(),
-              faker.lorem.sentence(),
-              faker.datatype.number()
-            )
-          ),
-          new Post(
-            faker.datatype.number()
-          ),
-          ),
+        new Multimedia(100, 'test_video'),
         new Outing(
+          faker.datatype.number(),
           faker.lorem.sentence(),
           faker.datatype.datetime(),
           faker.lorem.sentence(),
-          faker.datatype.number())
+          faker.datatype.number()
         ),
+      ),
     ];
     fixture.detectChanges();
     debug = fixture.debugElement;

@@ -1,4 +1,5 @@
 export class Guide{
+
     name:string;
     points:number;
     reviews:number;
@@ -8,5 +9,6 @@ export class Guide{
         this.points= points;
         this.reviews = reviews;
         this.age=age;
+
     }
 }

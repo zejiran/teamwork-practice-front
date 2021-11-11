@@ -23,8 +23,7 @@ describe('ClientListarComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ClientListarComponent);
     component = fixture.componentInstance;
-    let calendar = new Calendar(
-    );
+    const calendar = new Calendar(faker.datatype.number());
     component.clients = [
       new Client(
         faker.lorem.sentence(),

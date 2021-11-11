@@ -7,7 +7,9 @@ import { GuideDetailComponent } from './guide-detail/guide-detail.component';
   imports: [
     CommonModule
   ],
+
   declarations: [GuideListarComponent,GuideDetailComponent],
   exports:[GuideListarComponent]
+
 })
 export class GuideModule { }

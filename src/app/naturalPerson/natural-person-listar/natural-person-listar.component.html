@@ -7,21 +7,23 @@
       <table class="table resposive table-bordered text-center">
         <thead>
         <tr>
-          <th scope="col">Nombre</th>
           <th scope="col">ID</th>
-          <th scope="col">Tipo de ID</th>
-          <th scope="col">Dirección</th>
+          <th scope="col">Usuario</th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let p of naturalPersons">
-          <td>{{ p.person.name }}</td>
-          <td>{{ p.person.idNumber }}</td>
-          <td>{{ p.person.idType }}</td>
-          <td>{{ p.person.address }}</td>
+          <td>{{ p.id }}</td>
+          <td>{{ p.user }}</td>
+          <td><button class="btn btn-dark" (click)="onSelected(p)">Ver Detalle</button></td>
         </tr>
         </tbody>
       </table>
+      <div class = "card-body m-3">
+        <div *ngIf="selected">
+          <app-natural-person-detail [naturalPersonDetail]="selectedNaturalPerson"></app-natural-person-detail>
+        </div>
+      </div>
     </div>
   </div>
 </div>

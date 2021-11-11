@@ -25,13 +25,9 @@ describe('CalendarListarComponent', () => {
     fixture = TestBed.createComponent(CalendarListarComponent);
     component = fixture.componentInstance;
     component.calendars = [
-      new Calendar(),
+      new Calendar(faker.datatype.number()),
     ];
     fixture.detectChanges();
     debug = fixture.debugElement;
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
   });
 });

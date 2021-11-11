@@ -1,3 +1,4 @@
+import { UserDetail } from './../user-detail/userDetail';
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { UserService } from '../user.service';
@@ -8,8 +9,9 @@ import { UserService } from '../user.service';
   styleUrls: ['./user-listar.component.css']
 })
 export class UserListarComponent implements OnInit {
-
   users: Array<User>;
+  selectedUser: UserDetail;
+  selected = false;
 
   constructor(private userService: UserService) {
   }
@@ -19,6 +21,14 @@ export class UserListarComponent implements OnInit {
       .subscribe(users => {
         this.users = users;
       });
+  }
+
+  onSelected(user: User): void {
+    this.userService.getUser(user.id)
+    .subscribe(userDetail => {
+      this.selectedUser = userDetail;
+    });
+    this.selected = true;
   }
 
   ngOnInit(): void {

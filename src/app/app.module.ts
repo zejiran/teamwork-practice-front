@@ -28,6 +28,7 @@ import {GuideModule} from "./guide/guide.module";
 import { ComplementaryInformationModule } from "./complementaryinformation/complementaryinformation.module"
 import { ItineraryModule } from './itinerary/itinerary.module';
 
+
 @NgModule({
   declarations: [
     AppComponent

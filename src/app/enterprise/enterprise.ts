@@ -1,4 +1,5 @@
-import { Client } from "../client/client";
+import { Calendar } from '../calendar/calendar';
+import { Client } from '../client/client';
 
 export class Enterprise extends Client{
   representative: string;
@@ -8,9 +9,10 @@ export class Enterprise extends Client{
     user: string,
     idNumber: string,
     idType: string,
-    address: string
+    address: string,
+    calendar: Calendar
   ) {
-    super(user, idNumber, idType, address);
+    super(user, idNumber, idType, calendar);
     this.representative = representative;
   }
 

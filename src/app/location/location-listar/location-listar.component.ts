@@ -19,7 +19,7 @@ export class LocationListarComponent implements OnInit {
   getLocations(): void {
     this.locationService.getLocations().subscribe(locations => {
       this.locations = locations;
-    })
+    });
   }
 
   ngOnInit(): void {

@@ -1,8 +1,9 @@
 import { Multimedia } from '../multimedia/multimedia';
 import { Outing } from '../outing/outing';
-import { Route } from '../route/route'
+import { Route } from '../route/route';
 
 export class ComplementaryInformation {
+
   id:number;
   description:string;
   recommendation:string;
@@ -15,6 +16,7 @@ export class ComplementaryInformation {
     this.recommendation=recommendation;
     this.homeImage=homeImage;
     this.outing=outing;
+
   }
 
 }

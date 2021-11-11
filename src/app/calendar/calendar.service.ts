@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Calendar } from './calendar';
 import { environment } from '../../environments/environment';
+import { CalendarDetail } from './calendar-detail';
 
 
 @Injectable({
@@ -16,5 +17,9 @@ export class CalendarService {
 
   getCalendars(): Observable<Calendar[]> {
     return this.http.get<Calendar[]>(this.apiUrl);
+  }
+
+  getCalendar(calendarId): Observable<CalendarDetail> {
+    return this.http.get<CalendarDetail>(`${this.apiUrl}/${calendarId}`);
   }
 }

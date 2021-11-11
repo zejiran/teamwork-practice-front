@@ -7,21 +7,23 @@
       <table class="table resposive table-bordered text-center">
         <thead>
         <tr>
+          <th scope="col">ID</th>
           <th scope="col">Nombre del archivo</th>
-          <th scope="col">Tipo de archivo</th>
-          <th scope="col">Extensión</th>
-          <th scope="col">Ruta</th>
-          <th scope="col">Post</th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let m of multimedias">
+          <td>{{ m.id }}</td>
           <td>{{ m.fileName }}</td>
-          <td>{{ m.mediaType }}</td>
-          <td>{{ m.extension }}</td>
+          <td><button class="btn btn-dark" (click)="onSelected(m)">Ver Detalle</button></td>
         </tr>
         </tbody>
       </table>
+      <div class = "card-body m-3">
+        <div *ngIf="selected">
+          <app-multimedia-detail [multimediaDetail]="selectedMultimedia"></app-multimedia-detail>
+        </div>
+      </div>
     </div>
   </div>
 </div>
