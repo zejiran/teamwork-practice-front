@@ -1,5 +1,3 @@
-/* tslint:disable:no-unused-variable */
-
 import { getTestBed, TestBed } from '@angular/core/testing';
 import { complementaryinformationService } from './complementaryinformation.service';
 

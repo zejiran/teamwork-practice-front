@@ -13,7 +13,7 @@ export class CalendarDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.calendarDetail)
+    console.log(this.calendarDetail);
   }
 
 }

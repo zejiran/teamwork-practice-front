@@ -19,7 +19,7 @@ export class ComplementaryInformationListarComponent implements OnInit {
   getComplementaryInformations(): void {
     this.complementaryinformationService.getComplementaryInformations().subscribe(complementaryinformations => {
       this.complementaryinformations = complementaryinformations;
-    })
+    });
   }
 
   ngOnInit(): void {

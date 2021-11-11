@@ -23,10 +23,10 @@ export class OutingListarComponent implements OnInit {
       });
   }
 
-  onSelected(o:OutingDetail): void{
+  onSelected(o: OutingDetail): void{
 
     this.outingService.getOutingDetail(o.id)
-      .subscribe(outingDetail =>{
+      .subscribe(outingDetail => {
         this.selectedOuting = outingDetail;
       });
     this.selected = true;

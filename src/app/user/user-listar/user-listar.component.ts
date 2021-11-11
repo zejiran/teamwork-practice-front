@@ -28,7 +28,7 @@ export class UserListarComponent implements OnInit {
     .subscribe(userDetail => {
       this.selectedUser = userDetail;
     });
-    this.selected=true;
+    this.selected = true;
   }
 
   ngOnInit(): void {

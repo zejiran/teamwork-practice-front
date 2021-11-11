@@ -28,7 +28,7 @@ export class MultimediaListarComponent implements OnInit {
     .subscribe(multimediaDetail => {
       this.selectedMultimedia = multimediaDetail;
     });
-    this.selected=true;
+    this.selected = true;
   }
 
   ngOnInit(): void {

@@ -12,7 +12,7 @@ export class QuotationListarComponent implements OnInit {
 
   quotations: Array<Quotation>;
   quotationSelected: Quotation;
-  selected: boolean = false;
+  selected = false;
 
   constructor(private quotationService: QuotationService) {
   }
@@ -29,9 +29,9 @@ export class QuotationListarComponent implements OnInit {
   }
 
   onSelected(quotation: Quotation): void{
-      this.selected=true;
+      this.selected = true;
       this.quotationService.getQuotation(quotation.id)
-      .subscribe(QuotationDetail =>{
+      .subscribe(QuotationDetail => {
         this.quotationSelected = QuotationDetail;
      });
   }

@@ -29,7 +29,7 @@ export class PersonListarComponent implements OnInit {
     .subscribe(personDetail => {
       this.selectedPerson = personDetail;
     });
-    this.selected=true;
+    this.selected = true;
   }
 
   ngOnInit(): void {

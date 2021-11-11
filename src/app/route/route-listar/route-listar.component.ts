@@ -12,7 +12,7 @@ export class RouteListarComponent implements OnInit {
 
   routes: Array<Route>;
   selectedRoute: Route;
-  selected= false;
+  selected = false;
 
   constructor(private routeService: RouteService) {
 
@@ -22,7 +22,7 @@ export class RouteListarComponent implements OnInit {
   getRoutes(): void {
     this.routeService.getRoutes().subscribe(routes => {
       this.routes = routes;
-    })
+    });
   }
 
   ngOnInit(): void {
@@ -30,12 +30,12 @@ export class RouteListarComponent implements OnInit {
   }
 
   onSelected(route: Route): void{
-    if (this.selectedRoute==route && this.selected){
-      this.selected=false;
+    if (this.selectedRoute == route && this.selected){
+      this.selected = false;
     } else {
-      this.selected=true;
+      this.selected = true;
       this.routeService.getRoute(route.id)
-      .subscribe(RouteDetail =>{
+      .subscribe(RouteDetail => {
         this.selectedRoute = RouteDetail;
       });
     }

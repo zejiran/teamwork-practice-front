@@ -11,7 +11,7 @@ import { CalendarDetail } from '../calendar-detail';
 export class CalendarListarComponent implements OnInit {
 
   selectedCalendar: Calendar;
-  selected: boolean = false;
+  selected = false;
   calendars: Array<Calendar>;
 
   constructor(private calendarService: CalendarService) {
@@ -22,7 +22,7 @@ export class CalendarListarComponent implements OnInit {
   getCalendars(): void {
     this.calendarService.getCalendars().subscribe(calendars => {
       this.calendars = calendars;
-    })
+    });
   }
 
   ngOnInit(): void {
@@ -30,12 +30,12 @@ export class CalendarListarComponent implements OnInit {
   }
 
   selectHistory(calendar: Calendar): void {
-    if (this.selectedCalendar!=calendar || !(this.selected)){
+    if (this.selectedCalendar != calendar || !(this.selected)){
       this.calendarService.getCalendar(this.selectedCalendar.id)
-      .subscribe(CalendarDetail =>{
+      .subscribe(CalendarDetail => {
         this.selectedCalendar = CalendarDetail;
       });
-      this.selected=true;
+      this.selected = true;
     }
   }
 
