@@ -6,18 +6,24 @@
     <div class="card-body m-3">
       <table class="table resposive table-bordered text-center">
         <thead>
-        <tr>
-          <th scope="col">Difficulty</th>
-          <th scope="col">Estimated Duration</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let b of routes">
-          <td>{{ b.Difficulty }}</td>
-          <td>{{ b.estimatedDuration }}</td>
-        </tr>
+          <tr>
+            <th scope="col">Outing Id</th>
+            <th scope="col">Difficulty</th>
+            <th scope="col">Estimated Duration</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let b of routes">
+            <td>{{ b.outing.id }}</td>
+            <td>{{ b.difficulty }}</td>
+            <td>{{ b.estimatedDuration }}</td>
+            <th><button (click)="onSelected(b)">Ver Detalle</button></th>
+          </tr>
         </tbody>
       </table>
+      <div *ngIf="selected">
+        <app-route-detail [routeDetail]="selectedRoute"></app-route-detail>
+      </div>
     </div>
   </div>
 </div>

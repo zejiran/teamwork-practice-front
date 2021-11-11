@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Outing } from './outing';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
+import { OutingDetail } from './outingDetail';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +15,12 @@ export class OutingService {
   constructor(private http: HttpClient) {
   }
 
-  getOutings(): Observable<Outing[]> {
-    return this.http.get<Outing[]>(this.apiUrl);
+  getOutings(): Observable<Array<OutingDetail>> {
+    return this.http.get<Array<OutingDetail>>(this.apiUrl);
+  }
+
+  getOutingDetail(outingId): Observable<OutingDetail> {
+    return this.http.get<OutingDetail>(`${this.apiUrl}/${outingId}`);
   }
 
 }

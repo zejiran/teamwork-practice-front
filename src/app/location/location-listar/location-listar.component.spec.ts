@@ -30,11 +30,14 @@ describe('LocationListarComponent', () => {
       new Locationn(
         faker.datatype.number(),
         faker.datatype.number(),
+        faker.lorem.sentence(),
+        faker.datatype.number(),
         faker.datatype.number(),
         new Route(
-          faker.lorem.paragraph(),
+          faker.datatype.number(2),
           faker.datatype.number(),
           new Outing(
+            faker.datatype.number(),
             faker.lorem.sentence(),
             faker.datatype.datetime(),
             faker.lorem.sentence(),

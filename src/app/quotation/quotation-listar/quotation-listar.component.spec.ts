@@ -25,6 +25,7 @@ describe('QuotationListarComponent', () => {
     fixture = TestBed.createComponent(QuotationListarComponent);
     component = fixture.componentInstance;
     const outing = new Outing(
+      faker.datatype.number(),
       faker.lorem.sentence(),
       faker.date.past(),
       faker.lorem.sentence(),
@@ -32,6 +33,7 @@ describe('QuotationListarComponent', () => {
     );
     component.quotations = [
       new Quotation(
+        faker.datatype.number(),
         faker.datatype.number(),
         faker.datatype.number(),
         faker.datatype.number(2),

@@ -7,6 +7,7 @@ import { Enterprise } from '../enterprise';
 import { EnterpriseListarComponent } from './enterprise-listar.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import * as faker from 'faker';
+import { Calendar } from 'src/app/calendar/calendar';
 
 describe('EnterpriseListarComponent', () => {
   let component: EnterpriseListarComponent;
@@ -30,7 +31,8 @@ describe('EnterpriseListarComponent', () => {
         faker.lorem.sentence(),
         faker.lorem.sentence(),
         faker.lorem.sentence(),
-        faker.lorem.sentence()
+        faker.lorem.sentence(),
+        new Calendar(faker.datatype.number())
       ),
     ];
     fixture.detectChanges();

@@ -5,11 +5,12 @@ enum Difficulty {
 }
 
 export class Route {
-  difficulty:string;
+  id:number;
+  difficulty:Difficulty;
   estimatedDuration:number;
   outing:Outing;
 
-  constructor(difficulty: string, estimatedDuration:number,outing:Outing){
+  constructor(difficulty: Difficulty, estimatedDuration:number,outing:Outing){
 
     this.difficulty=difficulty;
     this.estimatedDuration=estimatedDuration;
