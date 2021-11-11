@@ -29,9 +29,7 @@ describe('Service: naturalPerson', () => {
 
     for (let i = 1; i < 11; i++) {
       const person = new Person(
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
+        faker.datatype.number(),
         faker.lorem.sentence()
       );
       const naturalPerson = new NaturalPerson(person);

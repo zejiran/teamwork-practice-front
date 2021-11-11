@@ -25,9 +25,7 @@ describe('NaturalPersonListarComponent', () => {
     fixture = TestBed.createComponent(NaturalPersonListarComponent);
     component = fixture.componentInstance;
     const person = new Person(
-      faker.lorem.sentence(),
-      faker.lorem.sentence(),
-      faker.lorem.sentence(),
+      faker.datatype.number(),
       faker.lorem.sentence()
     );
     component.naturalPersons = [
