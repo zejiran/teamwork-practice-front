@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Guide } from './guide';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
-import { GuideDetail } from './guideDetail';
+import { GuideDetail } from './guide-detail/guideDetail';
 @Injectable({
   providedIn: 'root'
 })
@@ -13,6 +13,10 @@ constructor(private http: HttpClient) { }
 
 getGuides(): Observable<GuideDetail[]> {
   return this.http.get<GuideDetail[]>(this.apiUrl);
+}
+
+getGuideDetail(guideid):Observable<GuideDetail>{
+  return this.http.get<GuideDetail>(`${this.apiUrl}/${guideid}`);
 }
 }
 
