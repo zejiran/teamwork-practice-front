@@ -10,6 +10,8 @@ import { UserService } from '../user.service';
 export class UserListarComponent implements OnInit {
 
   users: Array<User>;
+  selectedUser: User;
+  selected = false;
 
   constructor(private userService: UserService) {
   }
@@ -19,6 +21,15 @@ export class UserListarComponent implements OnInit {
       .subscribe(users => {
         this.users = users;
       });
+  }
+
+  onSelected(user: User): void{
+    if (this.selectedUser==user && this.selected){
+      this.selected=false;
+    } else {
+      this.selected=true;
+      this.selectedUser=user;
+    }
   }
 
   ngOnInit(): void {
