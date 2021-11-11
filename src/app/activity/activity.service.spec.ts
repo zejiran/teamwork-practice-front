@@ -5,7 +5,7 @@ import { ActivityService } from './activity.service';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import {environment} from '../../environments/environment';
 import * as faker from 'faker';
-import {Activty} from './activity';
+import {Activity} from './activity';
 
 describe('Service: Activity', () => {
   let injector: TestBed;
@@ -28,10 +28,10 @@ describe('Service: Activity', () => {
   });
 
   it('getPost() should return 10 records', () => {
-    const mockPosts: Activty[] = [];
+    const mockPosts: Activity[] = [];
 
     for (let i = 1; i < 11; i++) {
-      const activity = new Activty(
+      const activity = new Activity(
         faker.lorem.sentence(),
         faker.datatype.number(),
         faker.datatype.number(),

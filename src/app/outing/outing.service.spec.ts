@@ -34,6 +34,7 @@ describe('Service: Outing', () => {
 
     for (let i = 1; i < 11; i++) {
       const outing = new Outing(
+        faker.datatype.number(),
         faker.lorem.sentence(),
         faker.date.past(),
         faker.lorem.sentence(),
