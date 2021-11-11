@@ -19,9 +19,13 @@
           <td id="tc">{{ b.totalCost }}</td>
           <td id="s">{{ b.status }}</td>
           <td id="o">{{ b.outing.name }}</td>
+          <td><button (click)="onSelected(b)">Ver Detalle</button></td>
         </tr>
         </tbody>
       </table>
+      <div *ngIf="selected">
+        <app-quotation-detail [quotationDetail]="selectedQuotation"></app-quotation-detail>
+      </div>
     </div>
   </div>
 </div>
