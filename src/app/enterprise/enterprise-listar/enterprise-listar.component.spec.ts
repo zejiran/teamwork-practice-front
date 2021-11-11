@@ -8,6 +8,7 @@ import { EnterpriseListarComponent } from './enterprise-listar.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import * as faker from 'faker';
 import { Calendar } from 'src/app/calendar/calendar';
+import { Person } from 'src/app/person/person';
 
 describe('EnterpriseListarComponent', () => {
   let component: EnterpriseListarComponent;
@@ -27,12 +28,11 @@ describe('EnterpriseListarComponent', () => {
     component = fixture.componentInstance;
     component.enterprises = [
       new Enterprise(
+        faker.datatype.number(),
         faker.lorem.sentence(),
         faker.lorem.sentence(),
         faker.lorem.sentence(),
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
-        new Calendar(faker.datatype.number())
+        new Person(faker.datatype.number(), faker.datatype.string())
       ),
     ];
     fixture.detectChanges();

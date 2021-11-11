@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../post';
+import { PostDetail } from '../post-detail/postDetail';
 import { PostService } from '../post.service';
 
 
@@ -10,6 +11,8 @@ import { PostService } from '../post.service';
 })
 export class PostListarComponent implements OnInit {
   posts: Array<Post>;
+  selectedPost: PostDetail;
+  selected = false;
 
   constructor(private postService: PostService) {
   }
@@ -19,6 +22,14 @@ export class PostListarComponent implements OnInit {
       .subscribe(posts => {
         this.posts = posts;
       });
+  }
+
+  onSelected(post: Post): void {
+    this.postService.getPost(post.id)
+    .subscribe(postDetail => {
+      this.selectedPost = postDetail;
+    });
+    this.selected = true;
   }
 
   ngOnInit(): void {

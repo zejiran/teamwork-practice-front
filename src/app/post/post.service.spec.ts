@@ -34,7 +34,8 @@ describe('Service: Post', () => {
 
     for (let i = 1; i < 11; i++) {
       const post = new Post(
-        faker.random.number()
+        faker.datatype.number(),
+        faker.datatype.number()
       );
 
       mockPosts.push(post);

@@ -7,15 +7,19 @@
       <table class="table resposive table-bordered text-center">
         <thead>
         <tr>
-          <th scope="col">Representative</th>
+          <th scope="col">ID</th>
+          <th scope="col">Representante</th>
+          <th scope="col">Cliente</th>
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let b of enterprises">
-          <td>{{ b.user }}</td>
+        <tr *ngFor="let e of enterprises">
+          <td>{{ e.id }}</td>
+          <td>{{ e.representative.id}}</td>
+          <td>{{ e.user }}</td>
         </tr>
         </tbody>
       </table>
+      </div>
     </div>
   </div>
-</div>

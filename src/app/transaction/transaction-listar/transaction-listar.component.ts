@@ -21,6 +21,12 @@ export class TransactionListarComponent implements OnInit {
       });
   }
 
+  dateFixed(publishingDate: Date): Date {
+    console.log(publishingDate);
+    const dateNoTime: string[] = (publishingDate + '').split('T');
+    return new Date(dateNoTime[0]);
+  }
+
   ngOnInit(): void {
     this.getTransactions();
   }

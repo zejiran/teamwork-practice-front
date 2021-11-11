@@ -27,6 +27,7 @@ describe('PostListarComponent', () => {
     component = fixture.componentInstance;
     component.posts = [
       new Post(
+        faker.datatype.number(),
         faker.datatype.number()
       ),
     ];

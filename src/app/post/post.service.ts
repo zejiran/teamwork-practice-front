@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Post } from './post';
 import { environment } from '../../environments/environment';
+import { PostDetail } from './post-detail/postDetail';
 
 
 @Injectable({
@@ -16,5 +17,9 @@ export class PostService {
 
   getPosts(): Observable<Post[]> {
     return this.http.get<Post[]>(this.apiUrl);
+  }
+
+  getPost(id: number): Observable<PostDetail> {
+    return this.http.get<PostDetail>(this.apiUrl + '/' + id.toString());
   }
 }
