@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Person } from '../person';
+import { PersonDetail } from '../person-detail/personDetail';
 import { PersonService } from '../person.service';
 
 @Component({
@@ -10,6 +11,8 @@ import { PersonService } from '../person.service';
 export class PersonListarComponent implements OnInit {
 
   persons: Array<Person>;
+  selectedPerson: PersonDetail;
+  selected = false;
 
   constructor(private personService: PersonService) {
   }
@@ -19,6 +22,14 @@ export class PersonListarComponent implements OnInit {
       .subscribe(persons => {
         this.persons = persons;
       });
+  }
+
+  onSelected(person: Person): void {
+    this.personService.getPerson(person.id)
+    .subscribe(personDetail => {
+      this.selectedPerson = personDetail;
+    });
+    this.selected=true;
   }
 
   ngOnInit(): void {

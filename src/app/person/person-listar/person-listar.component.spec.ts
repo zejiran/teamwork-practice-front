@@ -25,9 +25,7 @@ describe('PersonListarComponent', () => {
     component = fixture.componentInstance;
     component.persons = [
       new Person(
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
+        faker.datatype.number(),
         faker.lorem.sentence()
       ),
     ];

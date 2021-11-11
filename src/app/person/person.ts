@@ -1,18 +1,12 @@
 export class Person {
+  id: number;
   name: string;
-  idNumber: string;
-  idType: string;
-  address: string;
 
   constructor(
+    id: number,
     name: string,
-    idNumber: string,
-    idType: string,
-    address: string
   ) {
+    this.id = id;
     this.name = name;
-    this.idNumber = idNumber;
-    this.idType = idType;
-    this.address = address;
   }
 }
