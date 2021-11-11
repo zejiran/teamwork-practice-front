@@ -28,16 +28,11 @@ export class QuotationListarComponent implements OnInit {
     this.getQuotations();
   }
 
-  onSelected(quotationSelected:Quotation): void{
-    if (this.quotationSelected==quotationSelected && this.selected){
-      this.selected=false;
-    } else {
+  onSelected(quotation: Quotation): void{
       this.selected=true;
-      this.quotationService.getQuotation(quotationSelected.id)
+      this.quotationService.getQuotation(quotation.id)
       .subscribe(QuotationDetail =>{
         this.quotationSelected = QuotationDetail;
-      });
-    }
+     });
   }
-
 }
