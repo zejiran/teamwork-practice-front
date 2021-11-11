@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Outing } from '../outing';
 import { OutingService } from '../outing.service';
+import { OutingDetail } from '../outingDetail';
 
 @Component({
   selector: 'app-outing-listar',
@@ -9,8 +10,9 @@ import { OutingService } from '../outing.service';
 })
 export class OutingListarComponent implements OnInit {
 
-  outings: Array<Outing>;
-
+  outings: Array<OutingDetail>;
+  selected = false;
+  selectedOuting: OutingDetail;
   constructor(private outingService: OutingService) {
   }
 
@@ -19,6 +21,15 @@ export class OutingListarComponent implements OnInit {
       .subscribe(outings => {
         this.outings = outings;
       });
+  }
+
+  onSelected(o:OutingDetail): void{
+
+    this.outingService.getOutingDetail(o.id)
+      .subscribe(outingDetail =>{
+        this.selectedOuting = outingDetail;
+      });
+    this.selected = true;
   }
 
   ngOnInit(): void {

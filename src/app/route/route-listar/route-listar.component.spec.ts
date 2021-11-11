@@ -30,6 +30,7 @@ describe('RouteListarComponent', () => {
         faker.lorem.sentence(),
         faker.datatype.number(),
         new Outing(
+          faker.datatype.number(),
           faker.lorem.sentence(),
           faker.datatype.datetime(),
           faker.lorem.sentence(),

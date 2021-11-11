@@ -10,6 +10,8 @@ import { QuotationService } from '../quotation.service';
 export class QuotationListarComponent implements OnInit {
 
   quotations: Array<Quotation>;
+  quotationSelected: Quotation;
+  selected: boolean = false;
 
   constructor(private quotationService: QuotationService) {
   }
@@ -24,6 +26,15 @@ export class QuotationListarComponent implements OnInit {
 
   ngOnInit(): void {
     this.getQuotations();
+  }
+
+  onSelected(quotationSelected:Quotation): void{
+    if (this.quotationSelected==quotationSelected && this.selected){
+      this.selected=false;
+    } else {
+      this.selected=true;
+      this.quotationSelected=quotationSelected;
+    }
   }
 
 }
