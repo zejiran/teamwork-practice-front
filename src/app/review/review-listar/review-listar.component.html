@@ -1,20 +1,28 @@
 <div class="container-fluid">
-  <table class="table table-striped">
-    <thead class="thead-dark">
-    <tr>
-      <th scope="col">text</th>
-      <th scope="col">score</th>
-      <th scope="col">likes</th>
-      <th scope="col">dislikes</th>
-    </tr>
-    </thead>
-    <tbody *ngFor="let b of reviews">
-    <tr>
-      <td id="t">{{b.comment.text}}</td>
-      <td id="s">{{b.score}}</td>
-      <td id="l">{{b.comment.likes}}</td>
-      <td id="dl">{{b.comment.dislikes}}</td>
-    </tr>
-    </tbody>
-  </table>
+  <div class="card m-5">
+    <div class="card-header p-3">
+      <p class="h2 text-center">Reviews</p>
+    </div>
+    <div class="card-body m-3">
+      <table class="table resposive table-bordered text-center">
+        <thead>
+        <tr>
+          <th scope="col">Text</th>
+          <th scope="col">Score</th>
+          <th scope="col">Likes</th>
+          <th scope="col">Dislikes</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let u of reviews">
+          <td>{{ u.comment.text }}</td>
+          <td>{{ u.score }}</td>
+          <td>{{ u.comment.likes }}</td>
+          <td>{{ u.comment.dislikes }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

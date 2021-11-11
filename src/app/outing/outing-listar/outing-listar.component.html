@@ -17,7 +17,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let b of outings">
+        <tr *ngFor="let b of outings" (click)="onSelected(b)">
           <td>{{ b.name }}</td>
           <td>{{ b.date }}</td>
           <td>{{ b.place }}</td>
@@ -28,6 +28,14 @@
         </tr>
         </tbody>
       </table>
+
     </div>
+    <div class = "card-body m-3">
+      <div *ngIf="selected">
+        <app-outing-detail [outingDetail]="selectedOuting"></app-outing-detail>
+      </div>
+    </div>
+
   </div>
+
 </div>

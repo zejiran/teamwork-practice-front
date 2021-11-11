@@ -43,7 +43,7 @@ describe('EnterpriseListarComponent', () => {
 
   it('Should have an td element ', () => {
     expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
-      component.enterprises[0].name
+      component.enterprises[0].user
     );
 
   });

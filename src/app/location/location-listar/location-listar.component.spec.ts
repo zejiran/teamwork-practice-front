@@ -36,6 +36,7 @@ describe('LocationListarComponent', () => {
           faker.datatype.number(2),
           faker.datatype.number(),
           new Outing(
+            faker.datatype.number(),
             faker.lorem.sentence(),
             faker.datatype.datetime(),
             faker.lorem.sentence(),
