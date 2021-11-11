@@ -5,7 +5,7 @@ import { Guide } from '../guide/guide';
 import { Route } from '../route/route';
 
 export class OutingDetail extends Outing{
-  activities: Array<Activity>
+  activities: Array<Activity>;
   complementaryInformation: ComplementaryInformation;
   guides: Array<Guide>;
   routes: Array<Route>;

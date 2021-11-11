@@ -7,6 +7,6 @@ import {GuideListarComponent} from './guide-listar/guide-listar.component';
     CommonModule
   ],
   declarations: [GuideListarComponent],
-  exports:[GuideListarComponent]
+  exports: [GuideListarComponent]
 })
 export class GuideModule { }

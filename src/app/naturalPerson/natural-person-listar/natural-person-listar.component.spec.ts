@@ -25,13 +25,11 @@ describe('NaturalPersonListarComponent', () => {
     fixture = TestBed.createComponent(NaturalPersonListarComponent);
     component = fixture.componentInstance;
     const person = new Person(
-      faker.lorem.sentence(),
-      faker.lorem.sentence(),
-      faker.lorem.sentence(),
+      faker.datatype.number(),
       faker.lorem.sentence()
     );
     component.naturalPersons = [
-      new NaturalPerson(person)
+      new NaturalPerson(100, 'test_user'),
     ];
     fixture.detectChanges();
     debug = fixture.debugElement;
@@ -43,7 +41,7 @@ describe('NaturalPersonListarComponent', () => {
 
   it('Should have an td element ', () => {
     expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
-      component.naturalPersons[0].person.name
+      component.naturalPersons[0].id
     );
 
   });

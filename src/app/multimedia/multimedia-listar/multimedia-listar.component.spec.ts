@@ -7,9 +7,6 @@ import { MultimediaListarComponent } from './multimedia-listar.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import * as faker from 'faker';
 import { Multimedia } from '../multimedia';
-import { Route } from 'src/app/route/route';
-import { Outing } from 'src/app/outing/outing';
-import { Post } from 'src/app/post/post';
 
 
 describe('MultimediaListarComponent', () => {
@@ -29,21 +26,8 @@ describe('MultimediaListarComponent', () => {
     component = fixture.componentInstance;
     component.multimedias = [
       new Multimedia(
-        faker.lorem.sentence(),
         faker.datatype.number(),
-        faker.lorem.sentence(),
-        new Route(
-          faker.datatype.number(2),
-          faker.datatype.number(),
-          new Outing(
-            faker.datatype.number(),
-            faker.lorem.sentence(),
-            faker.datatype.datetime(),
-            faker.lorem.sentence(),
-            faker.datatype.number()
-          )
-        ),
-        new Post(1)
+        faker.lorem.sentence()
       ),
     ];
     fixture.detectChanges();
@@ -58,6 +42,5 @@ describe('MultimediaListarComponent', () => {
     expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
       component.multimedias[0].fileName
     );
-
   });
 });

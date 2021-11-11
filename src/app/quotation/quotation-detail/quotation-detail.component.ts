@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { QuotationDetail } from '../quotation-detail'
+import { QuotationDetail } from '../quotation-detail';
 
 @Component({
   selector: 'app-quotation-detail',
@@ -8,12 +8,12 @@ import { QuotationDetail } from '../quotation-detail'
 })
 export class QuotationDetailComponent implements OnInit {
 
-  @Input() quotationDetail:QuotationDetail
+  @Input() quotationDetail: QuotationDetail;
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.quotationDetail.status)
+    console.log(this.quotationDetail.status);
   }
 
 }

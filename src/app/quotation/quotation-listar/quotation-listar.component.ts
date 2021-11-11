@@ -12,7 +12,7 @@ export class QuotationListarComponent implements OnInit {
 
   quotations: Array<Quotation>;
   quotationSelected: Quotation;
-  selected: boolean = false;
+  selected = false;
 
   constructor(private quotationService: QuotationService) {
   }
@@ -21,7 +21,6 @@ export class QuotationListarComponent implements OnInit {
     this.quotationService.getQuotations()
       .subscribe(quotations => {
         this.quotations = quotations;
-        console.log(quotations);
       });
   }
 
@@ -29,16 +28,11 @@ export class QuotationListarComponent implements OnInit {
     this.getQuotations();
   }
 
-  onSelected(quotationSelected:Quotation): void{
-    if (this.quotationSelected==quotationSelected && this.selected){
-      this.selected=false;
-    } else {
-      this.selected=true;
-      this.quotationService.getQuotation(quotationSelected.id)
-      .subscribe(QuotationDetail =>{
+  onSelected(quotation: Quotation): void{
+      this.selected = true;
+      this.quotationService.getQuotation(quotation.id)
+      .subscribe(QuotationDetail => {
         this.quotationSelected = QuotationDetail;
-      });
-    }
+     });
   }
-
 }

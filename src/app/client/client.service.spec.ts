@@ -7,7 +7,7 @@ import * as faker from 'faker';
 import { HttpClientTestingModule, HttpTestingController, } from '@angular/common/http/testing';
 import { Client } from './client';
 import { environment } from '../../environments/environment';
-//import { Calendar } from '../calendar/calendar';
+// import { Calendar } from '../calendar/calendar';
 
 describe('Service: Client', () => {
   let injector: TestBed;

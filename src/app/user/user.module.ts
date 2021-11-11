@@ -1,3 +1,4 @@
+import { UserDetailComponent } from './user-detail/user-detail.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserListarComponent } from './user-listar/user-listar.component';
@@ -6,8 +7,8 @@ import { UserListarComponent } from './user-listar/user-listar.component';
   imports: [
     CommonModule
   ],
-  declarations: [UserListarComponent],
-  exports: [UserListarComponent]
+  declarations: [UserListarComponent, UserDetailComponent],
+  exports: [UserListarComponent, UserDetailComponent]
 })
 export class UserModule {
 }

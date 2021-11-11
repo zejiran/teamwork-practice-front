@@ -13,12 +13,12 @@ export class Quotation {
   status: Status;
   outing: Outing;
 
-  constructor(id:number,
+  constructor(id: number,
               participants: number,
               totalCost: number,
               status: Status,
               outing: Outing) {
-    this.id=id;
+    this.id = id;
     this.participants = participants;
     this.totalCost = totalCost;
     this.status = status;

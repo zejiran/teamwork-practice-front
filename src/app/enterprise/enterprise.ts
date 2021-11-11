@@ -1,5 +1,5 @@
-import { Calendar } from "../calendar/calendar";
-import { Client } from "../client/client";
+import { Calendar } from '../calendar/calendar';
+import { Client } from '../client/client';
 
 export class Enterprise extends Client{
   representative: string;

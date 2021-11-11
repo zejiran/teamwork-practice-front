@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Person } from './person';
+import { PersonDetail } from './person-detail/personDetail';
 import { environment } from '../../environments/environment';
 
 @Injectable({
@@ -17,4 +18,7 @@ export class PersonService {
     return this.http.get<Person[]>(this.apiUrl);
   }
 
+  getPerson(id: number): Observable<PersonDetail> {
+    return this.http.get<PersonDetail>(this.apiUrl + '/' + id.toString());
+  }
 }

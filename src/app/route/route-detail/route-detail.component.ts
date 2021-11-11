@@ -13,7 +13,7 @@ export class RouteDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.routeDetail)
+    console.log(this.routeDetail);
   }
 
 }
