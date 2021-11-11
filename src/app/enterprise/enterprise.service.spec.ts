@@ -8,6 +8,7 @@ import { HttpClientTestingModule, HttpTestingController, } from '@angular/common
 import * as faker from 'faker';
 import { Enterprise } from './enterprise';
 import { environment } from '../../environments/environment';
+import { Calendar } from '../calendar/calendar';
 
 describe('Service: Enterprise', () => {
   let injector: TestBed;
@@ -38,7 +39,8 @@ describe('Service: Enterprise', () => {
         faker.lorem.sentence(),
         faker.lorem.sentence(),
         faker.lorem.sentence(),
-        faker.lorem.sentence()
+        faker.lorem.sentence(),
+        new Calendar(faker.datatype.number())
       );
 
       mockPosts.push(enterprise);

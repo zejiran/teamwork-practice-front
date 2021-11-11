@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CalendarService } from '../calendar.service';
 import { Calendar } from '../calendar';
+import { CalendarDetail } from '../calendar-detail';
 
 @Component({
   selector: 'app-calendar-listar',
@@ -30,7 +31,10 @@ export class CalendarListarComponent implements OnInit {
 
   selectHistory(calendar: Calendar): void {
     if (this.selectedCalendar!=calendar || !(this.selected)){
-      this.selectedCalendar=calendar;
+      this.calendarService.getCalendar(this.selectedCalendar.id)
+      .subscribe(CalendarDetail =>{
+        this.selectedCalendar = CalendarDetail;
+      });
       this.selected=true;
     }
   }

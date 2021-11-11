@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Quotation } from '../quotation';
+import { QuotationDetail } from '../quotation-detail';
 import { QuotationService } from '../quotation.service';
 
 @Component({
@@ -33,7 +34,10 @@ export class QuotationListarComponent implements OnInit {
       this.selected=false;
     } else {
       this.selected=true;
-      this.quotationSelected=quotationSelected;
+      this.quotationService.getQuotation(quotationSelected.id)
+      .subscribe(QuotationDetail =>{
+        this.quotationSelected = QuotationDetail;
+      });
     }
   }
 
