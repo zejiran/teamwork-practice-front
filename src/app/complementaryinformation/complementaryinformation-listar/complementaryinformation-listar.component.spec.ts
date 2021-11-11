@@ -38,7 +38,7 @@ describe('ComplementaryInformationListarComponent', () => {
           faker.datatype.number(),
           faker.lorem.sentence(),
           new Route(
-            faker.lorem.sentence(),
+            faker.datatype.number(2),
             faker.datatype.number(),
             new Outing(
               faker.lorem.sentence(),

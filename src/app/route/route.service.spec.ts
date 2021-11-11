@@ -35,7 +35,7 @@ describe('Service: Location', () => {
 
     for (let i = 1; i < 11; i++) {
       const route = new Route(
-        faker.lorem.sentence(),
+        faker.datatype.number(2),
         faker.datatype.number(),
         new Outing(
           faker.lorem.sentence(),

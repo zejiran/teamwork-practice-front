@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <p class="h3 p-3">Detalles de esta Ruta:</p>
+  <div class="row">
+    <div class="col">
+      <dl>
+        <dt>Medias</dt>
+        <dd *ngFor = "let a of routeDetail.medias">
+          {{a.filename}}
+        </dd>
+        <dt>Reviews</dt>
+        <dd *ngFor = "let a of routeDetail.reviews">
+          {{a.comment}}
+          {{a.score}}
+          {{a.route}}
+        </dd>
+        <dt>Reviews</dt>
+        <dd *ngFor = "let a of routeDetail.reviews">
+          {{a.comment}}
+          {{a.score}}
+        </dd>
+        <dt>Locations</dt>
+        <dd *ngFor = "let a of routeDetail.locations">
+          {{a.locationName}}
+          {{a.latitude}}
+          {{a.longitude}}
+        </dd>
+      </dl>
+    </div>
+  </div>
+</div>
