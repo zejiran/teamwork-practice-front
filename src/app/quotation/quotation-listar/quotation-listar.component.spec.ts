@@ -35,6 +35,7 @@ describe('QuotationListarComponent', () => {
       new Quotation(
         faker.datatype.number(),
         faker.datatype.number(),
+        faker.datatype.number(),
         faker.datatype.number(2),
         outing
       ),

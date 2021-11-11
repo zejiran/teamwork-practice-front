@@ -1,6 +1,7 @@
 export class Calendar {
-
-  constructor(){
+  id:number;
+  constructor(id:number){
+    this.id=id;
   }
 
 }

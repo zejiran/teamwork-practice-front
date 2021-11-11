@@ -5,6 +5,7 @@ enum Difficulty {
 }
 
 export class Route {
+  id:number;
   difficulty:Difficulty;
   estimatedDuration:number;
   outing:Outing;
