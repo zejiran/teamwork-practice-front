@@ -6,12 +6,16 @@
     <div class="card-body m-3">
       <table class="table resposive table-bordered text-center">
         <thead>
-        <tr>
+        <tr *ngFor="let b of calendars">
+          <button (click)="selectHistory(b)">Ver Historial</button>
         </tr>
         </thead>
         <tbody>
         </tbody>
       </table>
+      <div *ngIf="selected">
+        <app-route-detail [routeDetail]="selectedRoute"></app-route-detail>
+      </div>
     </div>
   </div>
 </div>

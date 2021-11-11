@@ -32,7 +32,7 @@ describe('Service: Review', () => {
     for (let i = 1; i < 11; i++) {
       const review = new Review(
         new Comment(faker.lorem.sentence(), faker.datatype.number(), faker.datatype.number()),
-        faker.datatype.number(),new Route(faker.lorem.sentence(),faker.datatype.number(),new Outing(faker.lorem.sentence(),faker.datatype.datetime(),faker.lorem.sentence(),faker.datatype.number()))
+        faker.datatype.number(),new Route(faker.datatype.number(2),faker.datatype.number(),new Outing(faker.lorem.sentence(),faker.datatype.datetime(),faker.lorem.sentence(),faker.datatype.number()))
       );
 
       mockPosts.push(review);
