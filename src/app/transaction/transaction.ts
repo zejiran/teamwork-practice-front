@@ -1,17 +1,20 @@
 export class Transaction {
+  id: number;
   payment: PaymentType;
   value: number;
-  date: Date;
+  creationDate: Date;
 
 
   constructor(
+    id: number,
     payment: PaymentType,
     value: number,
-    date: Date
+    creationDate: Date
   ) {
+    this.id = id;
     this.payment = payment;
     this.value = value;
-    this.date = date;
+    this.creationDate = creationDate;
   }
 
 }

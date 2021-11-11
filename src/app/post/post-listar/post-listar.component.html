@@ -7,15 +7,20 @@
       <table class="table resposive table-bordered text-center">
         <thead>
         <tr>
-          <th scope="col">Rating</th>
+          <th scope="col">ID</th>
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let b of posts">
-          <td>{{ b.ratings }}</td>
+        <tr *ngFor="let p of posts">
+          <td>{{ p.id }}</td>
+          <td><button class="btn btn-dark" (click)="onSelected(p)">Ver Detalle</button></td>
         </tr>
         </tbody>
       </table>
+      <div class = "card-body m-3">
+        <div *ngIf="selected">
+          <app-post-detail [postDetail]="selectedPost"></app-post-detail>
+        </div>
     </div>
   </div>
 </div>

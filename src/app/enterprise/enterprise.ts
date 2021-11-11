@@ -1,18 +1,18 @@
 import { Calendar } from '../calendar/calendar';
 import { Client } from '../client/client';
+import { Person } from '../person/person';
 
 export class Enterprise extends Client{
-  representative: string;
+  representative: Person;
 
   constructor(
-    representative: string,
+    idNumber: number,
     user: string,
-    idNumber: string,
     idType: string,
-    address: string,
-    calendar: Calendar
+    mail: string,
+    representative: Person,
   ) {
-    super(user, idNumber, idType, calendar);
+    super(idNumber, user, idType, mail);
     this.representative = representative;
   }
 

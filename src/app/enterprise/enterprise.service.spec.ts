@@ -9,6 +9,7 @@ import * as faker from 'faker';
 import { Enterprise } from './enterprise';
 import { environment } from '../../environments/environment';
 import { Calendar } from '../calendar/calendar';
+import { Person } from '../person/person';
 
 describe('Service: Enterprise', () => {
   let injector: TestBed;
@@ -35,13 +36,12 @@ describe('Service: Enterprise', () => {
 
     for (let i = 1; i < 11; i++) {
       const enterprise = new Enterprise(
+        faker.datatype.number(),
         faker.lorem.sentence(),
         faker.lorem.sentence(),
         faker.lorem.sentence(),
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
-        new Calendar(faker.datatype.number())
-      );
+        new Person(faker.datatype.number(), faker.datatype.string())
+        );
 
       mockPosts.push(enterprise);
     }

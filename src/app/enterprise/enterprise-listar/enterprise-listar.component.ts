@@ -11,6 +11,7 @@ export class EnterpriseListarComponent implements OnInit {
 
   enterprises: Array<Enterprise>;
 
+
   constructor(private enterpriseService: EnterpriseService) {
   }
 
@@ -20,7 +21,6 @@ export class EnterpriseListarComponent implements OnInit {
         this.enterprises = enterprises;
       });
   }
-
   ngOnInit(): void {
     this.getEnterprises();
   }

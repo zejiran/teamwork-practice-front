@@ -30,13 +30,12 @@ describe('TransactionListarComponent', () => {
     fixture = TestBed.createComponent(TransactionListarComponent);
     component = fixture.componentInstance;
     component.transactions = [
-      new Transaction(
-        PaymentType[
-          faker.random.arrayElement(Object.getOwnPropertyNames(PaymentType))
-          ],
-        faker.datatype.number(),
-        faker.date.past()
-      ),
+      faker.datatype.number(),
+      PaymentType[
+        faker.random.arrayElement(Object.getOwnPropertyNames(PaymentType))
+        ],
+      faker.datatype.number(),
+      faker.date.past()
     ];
     fixture.detectChanges();
     debug = fixture.debugElement;
