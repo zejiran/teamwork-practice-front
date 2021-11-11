@@ -3,10 +3,8 @@
   <div class="row">
     <div class="col">
       <dl>
-        <dt> Authors</dt>
-        <dd *ngFor = "let a of guideDetail.outings">{{a.name}}
-        <dt>Nombre</dt>
-        <td>{{ guideDetail.name }}</td>
+        <dt>Salidas</dt>
+          <dd *ngFor = "let a of guideDetail.outings">{{a.name}}</dd>
         <dt>Edad</dt>
         <td>{{ guideDetail.age }}</td>
         <dt>Cant. de reviews</dt>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import {Guide} from '../guide';
-import {GuideDetail} from '../guideDetail';
+import {GuideDetail} from '../guide-detail/guideDetail';
 import { GuideService } from '../guide.service';
 @Component({
   selector: 'app-guide-listar',
@@ -12,8 +12,9 @@ export class GuideListarComponent implements OnInit {
 
   constructor(private guideService: GuideService) { }
   guides: Array<GuideDetail>;
-  selectedGuide : Guide;
+  selectedGuide : GuideDetail;
   selected = false;
+
   getGuides(): void {
     this.guideService.getGuides()
       .subscribe(guides => {
@@ -24,7 +25,7 @@ export class GuideListarComponent implements OnInit {
   ngOnInit(): void {
     this.getGuides();
   }
-  onSelected(g:Guide):void{
+  onSelected(g:GuideDetail):void{
     this.selected = true;
     this.selectedGuide = g;
   }
