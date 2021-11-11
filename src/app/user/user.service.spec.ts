@@ -28,6 +28,7 @@ describe('Service: User', () => {
 
     for (let i = 1; i < 11; i++) {
       const user = new User(
+        faker.datatype.number(),
         faker.lorem.sentence(),
         faker.lorem.sentence(),
         faker.lorem.sentence()
