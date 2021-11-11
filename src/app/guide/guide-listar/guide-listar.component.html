@@ -7,7 +7,7 @@
       <table class="table resposive table-bordered text-center">
         <thead>
         <tr>
-          <th scope="col">Name</th>
+          <th scope="col" >Name</th>
           <th scope="col">Age</th>
           <th scope="col">Rating</th>
         </tr>
@@ -16,10 +16,14 @@
         <tr *ngFor="let u of guides">
           <td>{{ u.name }}</td>
           <td>{{ u.age }}</td>
-          <td>{{ u.rating }}</td>
+          <td>{{ u.reviews }}</td>
+          <td><button (click)="onSelected(u)">Ver Detalle</button></td>
         </tr>
         </tbody>
       </table>
+      <div *ngIf="selected">
+        <app-guide-detail [guideDetail]="selectedGuide"></app-guide-detail>
+      </div>
     </div>
   </div>
 </div>

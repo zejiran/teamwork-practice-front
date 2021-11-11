@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <p class="h3 p-3">{{guideDetail.name}}</p>
+  <div class="row">
+    <div class="col">
+      <dl>
+        <dt> Authors</dt>
+        <dd *ngFor = "let a of guideDetail.outings">{{a.name}}
+        <dt>Nombre</dt>
+        <td>{{ guideDetail.name }}</td>
+        <dt>Edad</dt>
+        <td>{{ guideDetail.age }}</td>
+        <dt>Cant. de reviews</dt>
+        <td>{{ guideDetail.reviews }}</td>
+        <dt>Cant. de puntos</dt>
+        <td>{{ guideDetail.points }}</td>
+      </dl>
+    </div>
+  </div>
+</div>

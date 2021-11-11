@@ -3,32 +3,32 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { GuideListarComponent } from './guide-listar.component';
-import {HttpClientTestingModule} from '@angular/common/http/testing';
+import { ItineraryListarComponent } from './itinerary-listar.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import * as faker from 'faker';
-import {Guide} from '../guide';
+import { Itinerary } from '../itinerary';
 
-describe('GuideListarComponent', () => {
-  let component: GuideListarComponent;
-  let fixture: ComponentFixture<GuideListarComponent>;
+
+describe('ItineraryListarComponent', () => {
+  let component: ItineraryListarComponent;
+  let fixture: ComponentFixture<ItineraryListarComponent>;
+
   let debug: DebugElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [GuideListarComponent],
+      declarations: [ItineraryListarComponent],
       imports: [HttpClientTestingModule],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GuideListarComponent);
+    fixture = TestBed.createComponent(ItineraryListarComponent);
     component = fixture.componentInstance;
-    component.guides = [
-      new Guide(
+    component.itineraries = [
+      new Itinerary(
         faker.lorem.sentence(),
-        faker.datatype.number(),
-        faker.datatype.number(),
-        faker.datatype.number()
+        faker.lorem.sentence()
       ),
     ];
     fixture.detectChanges();
@@ -41,7 +41,7 @@ describe('GuideListarComponent', () => {
 
   it('Should have an td element ', () => {
     expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
-      component.guides[0].name
+      component.itineraries[0].lodging
     );
 
   });
