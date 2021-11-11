@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { IterableDiffers, NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,8 +24,10 @@ import { CalendarModule } from './calendar/calendar.module';
 import {AdminModule} from './admin/admin.module';
 import {BlogModule} from './blog/blog.module';
 import {ActivityModule} from './activity/activity.module';
-import {GuideModule} from './guide/guide.module';
-import { ComplementaryInformationModule } from './complementaryinformation/complementaryinformation.module';
+import {GuideModule} from "./guide/guide.module";
+import { ComplementaryInformationModule } from "./complementaryinformation/complementaryinformation.module"
+import { ItineraryModule } from './itinerary/itinerary.module';
+
 
 @NgModule({
   declarations: [
@@ -57,7 +59,8 @@ import { ComplementaryInformationModule } from './complementaryinformation/compl
     BlogModule,
     ActivityModule,
     GuideModule,
-    ComplementaryInformationModule
+    ComplementaryInformationModule,
+    ItineraryModule
   ],
 
   providers: [],

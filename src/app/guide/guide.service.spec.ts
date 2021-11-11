@@ -35,6 +35,7 @@ describe('Service: Guide', () => {
         faker.lorem.sentence(),
         faker.datatype.number(),
         faker.datatype.number(),
+        faker.datatype.number()
       );
 
       mockPosts.push(guide);

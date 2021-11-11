@@ -16,5 +16,4 @@ export class Locationn {
     this.longitude = longitude;
     this.map = route;
   }
-
 }
