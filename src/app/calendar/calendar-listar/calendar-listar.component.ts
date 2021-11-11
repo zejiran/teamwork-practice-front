@@ -9,6 +9,8 @@ import { Calendar } from '../calendar';
 })
 export class CalendarListarComponent implements OnInit {
 
+  selectedCalendar: Calendar;
+  selected: boolean = false;
   calendars: Array<Calendar>;
 
   constructor(private calendarService: CalendarService) {
@@ -24,6 +26,13 @@ export class CalendarListarComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCalendars();
+  }
+
+  selectHistory(calendar: Calendar): void {
+    if (this.selectedCalendar!=calendar || !(this.selected)){
+      this.selectedCalendar=calendar;
+      this.selected=true;
+    }
   }
 
 }
