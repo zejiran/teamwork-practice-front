@@ -7,6 +7,7 @@
       <table class="table resposive table-bordered text-center">
         <thead>
         <tr>
+          <th scope="col">ID</th>
           <th scope="col">Participantes</th>
           <th scope="col">Costo total</th>
           <th scope="col">Estado de cotización</th>
@@ -15,10 +16,11 @@
         </thead>
         <tbody>
         <tr *ngFor="let b of quotations">
+          <td>{{ b.id }}</td>
           <td id="p">{{ b.participants }}</td>
           <td id="tc">{{ b.totalCost }}</td>
           <td id="s">{{ b.status }}</td>
-          <td id="o">{{ b.outing.name }}</td>
+          <td id="o">{{ b.outing }}</td>
           <td><button (click)="onSelected(b)">Ver Detalle</button></td>
         </tr>
         </tbody>

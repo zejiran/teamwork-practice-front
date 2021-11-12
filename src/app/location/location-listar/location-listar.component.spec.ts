@@ -29,6 +29,7 @@ describe('LocationListarComponent', () => {
     component.locations = [
       new Locationn(
         faker.datatype.number(),
+        faker.datatype.number(),
         faker.lorem.sentence(),
         faker.datatype.number(),
         faker.datatype.number(),

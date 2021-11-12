@@ -7,16 +7,18 @@
       <table class="table resposive table-bordered text-center">
         <thead>
         <tr>
-          <th scope="col">Payment</th>
-          <th scope="col">Value</th>
-          <th scope="col">Date</th>
+          <th scope="col">ID</th>
+          <th scope="col">Tipo de pago</th>
+          <th scope="col">Valor</th>
+          <th scope="col">Fecha</th>
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let b of transactions">
-          <td>{{ b.payment }}</td>
-          <td>{{ b.value }}</td>
-          <td>{{ b.date }}</td>
+        <tr *ngFor="let t of transactions">
+          <td>{{ t.id }}</td>
+          <td>{{ t.payment }}</td>
+          <td>{{ t.value }}</td>
+          <td>{{ t.creationDate }}</td>
         </tr>
         </tbody>
       </table>

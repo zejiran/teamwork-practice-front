@@ -1,10 +1,15 @@
 export class Activity{
-  name: string;
-  rating: number;
-  age: number;
-  constructor(name: string, rating: number, age: number){
+
+	name: string;
+
+	description: string;
+
+
+	minutes: number;
+
+  constructor(name: string, description: string, time: any, minutes: number){
     this.name = name;
-    this.rating = rating;
-    this.age = age;
+    this.description = description;
+    this.minutes = minutes;
   }
 }

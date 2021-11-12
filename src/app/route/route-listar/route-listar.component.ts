@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouteService } from '../route.service';
 import { Route } from '../route';
+import { RouteDetail } from '../route-detail';
 
 @Component({
   selector: 'app-route-listar',
@@ -11,7 +12,7 @@ export class RouteListarComponent implements OnInit {
 
   routes: Array<Route>;
   selectedRoute: Route;
-  selected= false;
+  selected = false;
 
   constructor(private routeService: RouteService) {
 
@@ -21,7 +22,7 @@ export class RouteListarComponent implements OnInit {
   getRoutes(): void {
     this.routeService.getRoutes().subscribe(routes => {
       this.routes = routes;
-    })
+    });
   }
 
   ngOnInit(): void {
@@ -29,11 +30,14 @@ export class RouteListarComponent implements OnInit {
   }
 
   onSelected(route: Route): void{
-    if (this.selectedRoute==route && this.selected){
-      this.selected=false;
+    if (this.selectedRoute == route && this.selected){
+      this.selected = false;
     } else {
-      this.selected=true;
-      this.selectedRoute=route;
+      this.selected = true;
+      this.routeService.getRoute(route.id)
+      .subscribe(RouteDetail => {
+        this.selectedRoute = RouteDetail;
+      });
     }
   }
 }

@@ -7,6 +7,7 @@ import { HttpClientTestingModule, HttpTestingController, } from '@angular/common
 
 import { Calendar } from './calendar';
 import { environment } from '../../environments/environment';
+import * as faker from 'faker';
 
 describe('Service: Calendar', () => {
   let injector: TestBed;
@@ -32,7 +33,7 @@ describe('Service: Calendar', () => {
     const mockPosts: Calendar[] = [];
 
     for (let i = 1; i < 11; i++) {
-      const calendar = new Calendar();
+      const calendar = new Calendar(faker.datatype.number());
 
       mockPosts.push(calendar);
     }

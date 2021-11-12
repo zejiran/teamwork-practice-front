@@ -1,4 +1,4 @@
-import { User } from './../user';
+import { UserDetail } from './userDetail';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -8,12 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class UserDetailComponent implements OnInit {
 
-  @Input() userDetail!: User;
+  @Input() userDetail: UserDetail;
 
   constructor() { }
 
-  ngOnInit() {
-    console.log(this.userDetail.id)
+  ngOnInit(): void {
+    this.userDetail = new UserDetail(0, '', '', '');
   }
-
 }
