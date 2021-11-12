@@ -33,8 +33,9 @@ describe('Service: Activity', () => {
     for (let i = 1; i < 11; i++) {
       const activity = new Activity(
         faker.lorem.sentence(),
-        faker.datatype.number(),
-        faker.datatype.number(),
+        faker.lorem.sentence(),
+        faker.date.past(),
+        faker.datatype.number()
       );
 
       mockPosts.push(activity);

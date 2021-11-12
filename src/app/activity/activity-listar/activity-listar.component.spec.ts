@@ -25,9 +25,12 @@ describe('ActivityListarComponent', () => {
     component = fixture.componentInstance;
     component.activities = [
       new Activity(
-      faker.lorem.sentence(),
-      faker.datatype.number(),
-      faker.datatype.number(),
+
+        faker.lorem.sentence(),
+        faker.lorem.sentence(),
+        faker.date.past(),
+        faker.datatype.number()
+
     )
     ];
     fixture.detectChanges();
