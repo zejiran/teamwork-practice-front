@@ -24,12 +24,8 @@ describe('NaturalPersonListarComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(NaturalPersonListarComponent);
     component = fixture.componentInstance;
-    const person = new Person(
-      faker.datatype.number(),
-      faker.lorem.sentence()
-    );
     component.naturalPersons = [
-      new NaturalPerson(100, 'test_user'),
+      new NaturalPerson(100),
     ];
     fixture.detectChanges();
     debug = fixture.debugElement;

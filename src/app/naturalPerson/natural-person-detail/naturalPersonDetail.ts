@@ -6,10 +6,9 @@ export class NaturalPersonDetail extends NaturalPerson {
 
   constructor(
     id: number,
-    user: string,
     person: Person
   ) {
-    super(id, user);
+    super(id);
     this.person = person;
   }
 }

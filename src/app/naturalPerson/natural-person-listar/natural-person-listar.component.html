@@ -8,13 +8,11 @@
         <thead>
         <tr>
           <th scope="col">ID</th>
-          <th scope="col">Usuario</th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let p of naturalPersons">
           <td>{{ p.id }}</td>
-          <td>{{ p.user }}</td>
           <td><button class="btn btn-dark" (click)="onSelected(p)">Ver Detalle</button></td>
         </tr>
         </tbody>

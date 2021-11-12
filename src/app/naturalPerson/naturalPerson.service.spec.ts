@@ -28,11 +28,7 @@ describe('Service: naturalPerson', () => {
     const mockNaturalPersons: NaturalPerson[] = [];
 
     for (let i = 1; i < 11; i++) {
-      const person = new Person(
-        faker.datatype.number(),
-        faker.lorem.sentence()
-      );
-      const naturalPerson = new NaturalPerson(100, 'test_user');
+      const naturalPerson = new NaturalPerson(100);
 
       mockNaturalPersons.push(naturalPerson);
     }

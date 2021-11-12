@@ -1,12 +1,9 @@
 export class NaturalPerson {
   id: number;
-  user: string;
 
   constructor(
-    id: number,
-    user: string
+    id: number
   ) {
     this.id = id;
-    this.user = user;
   }
 }

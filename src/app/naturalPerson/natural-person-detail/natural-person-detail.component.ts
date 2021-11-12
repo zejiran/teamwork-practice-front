@@ -12,7 +12,7 @@ export class NaturalPersonDetailComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }
