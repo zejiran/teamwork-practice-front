@@ -39,7 +39,7 @@ describe('PersonListarComponent', () => {
 
   it('Should have an td element ', () => {
     expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
-      component.persons[0].name
+      component.persons[0].id
     );
 
   });

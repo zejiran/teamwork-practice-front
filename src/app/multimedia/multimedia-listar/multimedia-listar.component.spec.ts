@@ -40,7 +40,7 @@ describe('MultimediaListarComponent', () => {
 
   it('Should have an td element ', () => {
     expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
-      component.multimedias[0].fileName
+      component.multimedias[0].id
     );
   });
 });

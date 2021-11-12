@@ -26,9 +26,6 @@ describe('ClientListarComponent', () => {
     const calendar = new Calendar(faker.datatype.number());
     component.clients = [
       new Client(
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
         calendar
       ),
     ];

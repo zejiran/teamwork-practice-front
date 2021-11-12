@@ -1,5 +1,6 @@
 import { NaturalPersonDetail } from './naturalPersonDetail';
 import { Component, Input, OnInit } from '@angular/core';
+import { Person } from 'src/app/person/person';
 
 @Component({
   selector: 'app-natural-person-detail',
@@ -13,6 +14,7 @@ export class NaturalPersonDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.naturalPersonDetail = new NaturalPersonDetail(0, new Person(0, ''));
   }
 
 }

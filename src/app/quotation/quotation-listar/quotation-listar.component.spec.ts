@@ -49,12 +49,8 @@ describe('QuotationListarComponent', () => {
   });
 
   it('Should have an td element ', () => {
-    expect(debug.query(By.css('#p')).nativeElement.innerText).toContain(
-      component.quotations[0].participants
-    );
-
-    expect(debug.query(By.css('#o')).nativeElement.innerText).toContain(
-      component.quotations[0].outing.name
+    expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
+      component.quotations[0].id
     );
   });
 });

@@ -13,8 +13,8 @@ export class GuideDetailComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-
+  ngOnInit(): void {
+    this.guideDetail = new GuideDetail('', 0, 0 , 0);
   }
 
 }

@@ -1,13 +1,13 @@
 
 export class Itinerary{
 
-	lodging:string;
+	lodging: string;
 
-	transportation:string;
+	transportation: string;
 
   constructor(
-	  lodging:string,
-	  transportation:string,
+	  lodging: string,
+	  transportation: string,
   ){
     this.lodging = lodging;
     this.transportation = transportation;

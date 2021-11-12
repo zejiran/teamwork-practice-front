@@ -41,7 +41,7 @@ describe('PostListarComponent', () => {
 
   it('Should have an td element ', () => {
     expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
-      component.posts[0].ratings
+      component.posts[0].id
     );
 
   });

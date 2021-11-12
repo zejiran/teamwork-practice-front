@@ -44,7 +44,7 @@ describe('Service: Post', () => {
           faker.random.arrayElement(Object.getOwnPropertyNames(PaymentType))
           ],
         faker.datatype.number(),
-        faker.date.past()
+        '01-05-1000'
       );
 
       mockPosts.push(transaction);

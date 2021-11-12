@@ -29,14 +29,11 @@ describe('Service: Client', () => {
     httpMock.verify();
   });
 
-  it('getPost() should return 10 records', () => {
+  it('getClient() should return 10 records', () => {
     const mockPosts: Client[] = [];
 
     for (let i = 1; i < 11; i++) {
       const client = new Client(
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
         null
       );
 

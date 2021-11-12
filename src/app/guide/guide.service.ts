@@ -15,7 +15,7 @@ getGuides(): Observable<GuideDetail[]> {
   return this.http.get<GuideDetail[]>(this.apiUrl);
 }
 
-getGuideDetail(guideid):Observable<GuideDetail>{
+getGuideDetail(guideid): Observable<GuideDetail>{
   return this.http.get<GuideDetail>(`${this.apiUrl}/${guideid}`);
 }
 }

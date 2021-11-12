@@ -10,8 +10,8 @@ import { Itinerary } from './itinerary';
   providedIn: 'root'
 })
 export class ItineraryService {
-  private apiUrl:string = environment.baseUrl + 'itineraries';
-  constructor(private http:HttpClient) {  }
+  private apiUrl: string = environment.baseUrl + 'itineraries';
+  constructor(private http: HttpClient) {  }
   getItineraries(): Observable<Itinerary[]>{
     return this.http.get<Itinerary[]>(this.apiUrl);
   }

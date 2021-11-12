@@ -7,6 +7,7 @@
       <table class="table resposive table-bordered text-center">
         <thead>
         <tr>
+          <th scope="col">ID</th>
           <th scope="col">Participantes</th>
           <th scope="col">Costo total</th>
           <th scope="col">Estado de cotización</th>
@@ -15,6 +16,7 @@
         </thead>
         <tbody>
         <tr *ngFor="let b of quotations">
+          <td>{{ b.id }}</td>
           <td id="p">{{ b.participants }}</td>
           <td id="tc">{{ b.totalCost }}</td>
           <td id="s">{{ b.status }}</td>

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Comment } from 'src/app/comment/comment';
 import { PostDetail } from './postDetail';
 
 @Component({
@@ -12,7 +13,7 @@ export class PostDetailComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-    console.log(this.postDetail.id);
+  ngOnInit(): void {
+    this.postDetail = new PostDetail(0, 0, '', new Comment('', 0, 0));
   }
 }

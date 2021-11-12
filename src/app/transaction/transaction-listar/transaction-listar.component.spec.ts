@@ -30,12 +30,14 @@ describe('TransactionListarComponent', () => {
     fixture = TestBed.createComponent(TransactionListarComponent);
     component = fixture.componentInstance;
     component.transactions = [
+      new Transaction(
       faker.datatype.number(),
       PaymentType[
         faker.random.arrayElement(Object.getOwnPropertyNames(PaymentType))
         ],
       faker.datatype.number(),
-      faker.date.past()
+      '01-05-1000'
+      )
     ];
     fixture.detectChanges();
     debug = fixture.debugElement;
@@ -47,8 +49,7 @@ describe('TransactionListarComponent', () => {
 
   it('Should have an td element ', () => {
     expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
-      component.transactions[0].payment
+      component.transactions[0].id
     );
-
   });
 });

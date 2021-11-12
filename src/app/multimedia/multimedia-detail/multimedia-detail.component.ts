@@ -13,6 +13,7 @@ export class MultimediaDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.multimediaDetail = new MultimediaDetail(0, '', 0, '');
   }
 
 }

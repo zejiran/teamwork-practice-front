@@ -8,10 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class UserDetailComponent implements OnInit {
 
-  @Input() userDetail!: UserDetail;
+  @Input() userDetail: UserDetail;
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.userDetail = new UserDetail(0, '', '', '');
   }
 }

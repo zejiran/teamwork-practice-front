@@ -17,7 +17,7 @@ export class complementaryinformationService {
   getComplementaryInformations(): Observable<ComplementaryInformation[]> {
     const respuesta = this.http.get<ComplementaryInformation[]>(this.apiUrl);
     console.log(respuesta);
-    console.log('hola',respuesta);
+    console.log('hola', respuesta);
     return respuesta;
   }
 }

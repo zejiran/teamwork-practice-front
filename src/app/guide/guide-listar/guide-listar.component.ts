@@ -12,7 +12,7 @@ export class GuideListarComponent implements OnInit {
 
   constructor(private guideService: GuideService) { }
   guides: Array<GuideDetail>;
-  selectedGuide : GuideDetail;
+  selectedGuide: GuideDetail;
   selected = false;
 
   getGuides(): void {
@@ -25,7 +25,7 @@ export class GuideListarComponent implements OnInit {
   ngOnInit(): void {
     this.getGuides();
   }
-  onSelected(g:GuideDetail):void{
+  onSelected(g: GuideDetail): void{
     this.selected = true;
     this.selectedGuide = g;
   }

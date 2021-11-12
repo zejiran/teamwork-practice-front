@@ -31,15 +31,11 @@ describe('Service: Enterprise', () => {
     httpMock.verify();
   });
 
-  it('getPost() should return 10 records', () => {
+  it('getEnterprise() should return 10 records', () => {
     const mockPosts: Enterprise[] = [];
 
     for (let i = 1; i < 11; i++) {
       const enterprise = new Enterprise(
-        faker.datatype.number(),
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
         new Person(faker.datatype.number(), faker.datatype.string())
         );
 

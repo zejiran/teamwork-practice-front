@@ -12,7 +12,8 @@ export class PersonDetailComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.personDetail = new PersonDetail(0, '', '', '', '');
   }
 
 }

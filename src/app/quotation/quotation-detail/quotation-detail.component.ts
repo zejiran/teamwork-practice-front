@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Outing } from 'src/app/outing/outing';
 import { QuotationDetail } from '../quotation-detail';
 
 @Component({
@@ -13,7 +14,7 @@ export class QuotationDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.quotationDetail.status);
+    this.quotationDetail = new QuotationDetail(0, 0, 0, 0, new Outing(0, '', null, '', 0));
   }
 
 }

@@ -11,14 +11,14 @@ import { ItineraryService} from '../itinerary.service';
 export class ItineraryListarComponent implements OnInit {
 
   itineraries: Array<Itinerary>;
-  constructor(private itineraryService:ItineraryService) { }
-  getItineraries():void{
+  constructor(private itineraryService: ItineraryService) { }
+  getItineraries(): void{
     this.itineraryService.getItineraries()
-    .subscribe(itineraries =>{
+    .subscribe(itineraries => {
       this.itineraries = itineraries;
-    })
+    });
   }
-  ngOnInit():void {
+  ngOnInit(): void {
     this.getItineraries;
   }
 

@@ -2,14 +2,14 @@ export class Transaction {
   id: number;
   payment: PaymentType;
   value: number;
-  creationDate: Date;
+  creationDate: string;
 
 
   constructor(
     id: number,
     payment: PaymentType,
     value: number,
-    creationDate: Date
+    creationDate: string
   ) {
     this.id = id;
     this.payment = payment;

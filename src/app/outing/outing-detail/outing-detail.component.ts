@@ -12,7 +12,8 @@ export class OutingDetailComponent implements OnInit {
   @Input() outingDetail: OutingDetail;
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.outingDetail = new OutingDetail(0, '', null, '', 0);
   }
 
 }
