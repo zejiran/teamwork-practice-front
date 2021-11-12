@@ -7,21 +7,23 @@
       <table class="table resposive table-bordered text-center">
         <thead>
         <tr>
-          <th scope="col">Nombre</th>
           <th scope="col">ID</th>
-          <th scope="col">Tipo de ID</th>
-          <th scope="col">Dirección</th>
+          <th scope="col">Nombre</th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let p of persons">
+          <td>{{ p.id }}</td>
           <td>{{ p.name }}</td>
-          <td>{{ p.idNumber }}</td>
-          <td>{{ p.idType }}</td>
-          <td>{{ p.address }}</td>
+          <td><button class="btn btn-dark" (click)="onSelected(p)">Ver Detalle</button></td>
         </tr>
         </tbody>
       </table>
+      <div class = "card-body m-3">
+        <div *ngIf="selected">
+          <app-person-detail [personDetail]="selectedPerson"></app-person-detail>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -34,16 +34,17 @@ describe('Service: Post', () => {
     'DEBITCARD'
   }
 
-  it('getPost() should return 10 records', () => {
+  it('getTransaction() should return 10 records', () => {
     const mockPosts: Transaction[] = [];
 
     for (let i = 1; i < 11; i++) {
       const transaction = new Transaction(
+        faker.datatype.number(),
         PaymentType[
           faker.random.arrayElement(Object.getOwnPropertyNames(PaymentType))
           ],
         faker.datatype.number(),
-        faker.date.past()
+        '01-05-1000'
       );
 
       mockPosts.push(transaction);

@@ -1,16 +1,13 @@
-import { Client } from "../client/client";
+import { Calendar } from '../calendar/calendar';
+import { Client } from '../client/client';
+import { Person } from '../person/person';
 
-export class Enterprise extends Client{
-  representative: string;
+export class Enterprise {
+  representative: Person;
 
   constructor(
-    representative: string,
-    user: string,
-    idNumber: string,
-    idType: string,
-    address: string
+    representative: Person,
   ) {
-    super(user, idNumber, idType, address);
     this.representative = representative;
   }
 

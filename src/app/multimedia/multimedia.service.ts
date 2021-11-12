@@ -1,3 +1,4 @@
+import { MultimediaDetail } from './multimedia-detail/multimediaDetail';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -15,5 +16,9 @@ export class MultimediaService {
 
   getMultimedias(): Observable<Multimedia[]> {
     return this.http.get<Multimedia[]>(this.apiUrl);
+  }
+
+  getMultimedia(id: number): Observable<MultimediaDetail> {
+    return this.http.get<MultimediaDetail>(this.apiUrl + '/' + id.toString());
   }
 }

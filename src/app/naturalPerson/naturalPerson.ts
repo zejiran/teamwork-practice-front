@@ -1,11 +1,9 @@
-import { Person } from '../person/person';
-
 export class NaturalPerson {
-  person: Person;
+  id: number;
 
   constructor(
-    person: Person
+    id: number
   ) {
-    this.person = person;
+    this.id = id;
   }
 }

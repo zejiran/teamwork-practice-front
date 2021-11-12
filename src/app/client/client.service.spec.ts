@@ -7,7 +7,7 @@ import * as faker from 'faker';
 import { HttpClientTestingModule, HttpTestingController, } from '@angular/common/http/testing';
 import { Client } from './client';
 import { environment } from '../../environments/environment';
-//import { Calendar } from '../calendar/calendar';
+// import { Calendar } from '../calendar/calendar';
 
 describe('Service: Client', () => {
   let injector: TestBed;
@@ -29,14 +29,11 @@ describe('Service: Client', () => {
     httpMock.verify();
   });
 
-  it('getPost() should return 10 records', () => {
+  it('getClient() should return 10 records', () => {
     const mockPosts: Client[] = [];
 
     for (let i = 1; i < 11; i++) {
       const client = new Client(
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
         null
       );
 

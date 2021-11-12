@@ -25,9 +25,7 @@ describe('PersonListarComponent', () => {
     component = fixture.componentInstance;
     component.persons = [
       new Person(
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
+        faker.datatype.number(),
         faker.lorem.sentence()
       ),
     ];
@@ -41,7 +39,7 @@ describe('PersonListarComponent', () => {
 
   it('Should have an td element ', () => {
     expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
-      component.persons[0].name
+      component.persons[0].id
     );
 
   });

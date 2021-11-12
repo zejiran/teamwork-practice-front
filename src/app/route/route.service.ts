@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Route } from './route';
 import { environment } from '../../environments/environment';
+import { RouteDetail } from './route-detail';
 
 
 @Injectable({
@@ -16,5 +17,9 @@ export class RouteService {
 
   getRoutes(): Observable<Route[]> {
     return this.http.get<Route[]>(this.apiUrl);
+  }
+
+  getRoute(routeId): Observable<RouteDetail> {
+    return this.http.get<RouteDetail>(`${this.apiUrl}/${routeId}`);
   }
 }

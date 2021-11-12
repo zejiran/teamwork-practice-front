@@ -25,6 +25,7 @@ describe('QuotationListarComponent', () => {
     fixture = TestBed.createComponent(QuotationListarComponent);
     component = fixture.componentInstance;
     const outing = new Outing(
+      faker.datatype.number(),
       faker.lorem.sentence(),
       faker.date.past(),
       faker.lorem.sentence(),
@@ -32,6 +33,7 @@ describe('QuotationListarComponent', () => {
     );
     component.quotations = [
       new Quotation(
+        faker.datatype.number(),
         faker.datatype.number(),
         faker.datatype.number(),
         faker.datatype.number(2),
@@ -47,12 +49,8 @@ describe('QuotationListarComponent', () => {
   });
 
   it('Should have an td element ', () => {
-    expect(debug.query(By.css('#p')).nativeElement.innerText).toContain(
-      component.quotations[0].participants
-    );
-
-    expect(debug.query(By.css('#o')).nativeElement.innerText).toContain(
-      component.quotations[0].outing.name
+    expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
+      component.quotations[0].id
     );
   });
 });

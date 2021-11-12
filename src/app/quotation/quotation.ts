@@ -7,16 +7,18 @@ enum Status {
 }
 
 export class Quotation {
-
+  id: number;
   participants: number;
   totalCost: number;
   status: Status;
   outing: Outing;
 
-  constructor(participants: number,
+  constructor(id: number,
+              participants: number,
               totalCost: number,
               status: Status,
               outing: Outing) {
+    this.id = id;
     this.participants = participants;
     this.totalCost = totalCost;
     this.status = status;

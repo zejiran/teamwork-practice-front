@@ -6,7 +6,7 @@ import { DebugElement } from '@angular/core';
 import { OutingListarComponent } from './outing-listar.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import * as faker from 'faker';
-import { Outing } from '../outing';
+import { OutingDetail } from '../outingDetail';
 // import { Itinerary } from "../itinerary/itinerary";
 
 
@@ -33,7 +33,8 @@ describe('OutingListarComponent', () => {
     );
     */
     component.outings = [
-      new Outing(
+      new OutingDetail(
+        faker.datatype.number(),
         faker.lorem.sentence(),
         faker.date.past(),
         faker.lorem.sentence(),

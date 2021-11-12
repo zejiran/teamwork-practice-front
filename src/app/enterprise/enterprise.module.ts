@@ -6,9 +6,8 @@ import { EnterpriseListarComponent } from './enterprise-listar/enterprise-listar
   imports: [
     CommonModule
   ],
-  exports: [EnterpriseListarComponent],
   declarations: [EnterpriseListarComponent],
-
+  exports: [EnterpriseListarComponent],
 })
-export class EnterpriseModule {
-}
+export class EnterpriseModule { }
+

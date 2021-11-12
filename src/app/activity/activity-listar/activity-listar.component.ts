@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ActivityService } from '../activity.service';
-import {Activty} from '../activity';
+
+import {Activity} from '../activity';
+
 
 @Component({
   selector: 'app-activity-listar',
@@ -10,7 +12,7 @@ import {Activty} from '../activity';
 })
 export class ActivityListarComponent implements OnInit {
 
-  activities: Array<Activty>;
+  activities: Array<Activity>;
   constructor(private activityService: ActivityService) { }
 
   getActivities(): void {

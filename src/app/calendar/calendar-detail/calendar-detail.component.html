@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <p class="h3 p-3">Historial:</p>
+  <div class="row">
+    <div class="col">
+      <dl>
+        <dt>Medias</dt>
+        <dd *ngFor = "let a of calendarDetail.history">
+          {{a.name}}
+          {{a.date}}
+          {{a.place}}
+          {{a.participationCost}}
+        </dd>
+      </dl>
+    </div>
+  </div>
+</div>

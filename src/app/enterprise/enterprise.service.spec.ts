@@ -8,6 +8,8 @@ import { HttpClientTestingModule, HttpTestingController, } from '@angular/common
 import * as faker from 'faker';
 import { Enterprise } from './enterprise';
 import { environment } from '../../environments/environment';
+import { Calendar } from '../calendar/calendar';
+import { Person } from '../person/person';
 
 describe('Service: Enterprise', () => {
   let injector: TestBed;
@@ -29,17 +31,13 @@ describe('Service: Enterprise', () => {
     httpMock.verify();
   });
 
-  it('getPost() should return 10 records', () => {
+  it('getEnterprise() should return 10 records', () => {
     const mockPosts: Enterprise[] = [];
 
     for (let i = 1; i < 11; i++) {
       const enterprise = new Enterprise(
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
-        faker.lorem.sentence()
-      );
+        new Person(faker.datatype.number(), faker.datatype.string())
+        );
 
       mockPosts.push(enterprise);
     }

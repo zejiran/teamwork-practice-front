@@ -8,18 +8,22 @@
         <thead>
         <tr>
           <th scope="col">Usuario</th>
-          <th scope="col">Contraseña</th>
-          <th scope="col">Email</th>
+          <th scope="col">ID</th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let u of users">
           <td>{{ u.user }}</td>
-          <td>{{ u.password }}</td>
-          <td>{{ u.mail }}</td>
+          <td>{{ u.id }}</td>
+          <td><button class="btn btn-dark" (click)="onSelected(u)">Ver Detalle</button></td>
         </tr>
         </tbody>
       </table>
+      <div class = "card-body m-3">
+        <div *ngIf="selected">
+          <app-user-detail [userDetail]="selectedUser"></app-user-detail>
+        </div>
+      </div>
     </div>
   </div>
 </div>

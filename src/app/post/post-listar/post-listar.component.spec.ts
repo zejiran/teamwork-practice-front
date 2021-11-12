@@ -27,6 +27,7 @@ describe('PostListarComponent', () => {
     component = fixture.componentInstance;
     component.posts = [
       new Post(
+        faker.datatype.number(),
         faker.datatype.number()
       ),
     ];
@@ -40,7 +41,7 @@ describe('PostListarComponent', () => {
 
   it('Should have an td element ', () => {
     expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
-      component.posts[0].ratings
+      component.posts[0].id
     );
 
   });
