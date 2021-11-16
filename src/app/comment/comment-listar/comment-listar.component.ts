@@ -11,7 +11,7 @@ import {CommentDetail} from '../commentDetail';
 export class CommentListarComponent implements OnInit {
   @Input() comments: Array<Comment>;
   selected = false;
-  selectedComment: CommentDetail = new CommentDetail(null, null, null, new Date(), [], ' ');
+  selectedComment: CommentDetail = new CommentDetail(' ', '', null, new Date(), []);
 
   constructor(private commentService: CommentService) {
   }

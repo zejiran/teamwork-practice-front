@@ -27,7 +27,7 @@ describe('ReviewListarComponent', () => {
     fixture = TestBed.createComponent(ReviewListarComponent);
     component = fixture.componentInstance;
     component.reviews = [
-      new Review(
+      new Review(faker.datatype.number(),
         new Comment(
           faker.datatype.number(),
           faker.lorem.sentence(),

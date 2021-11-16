@@ -1,5 +1,5 @@
 export class Comment {
-  id: string;
+  id: number;
   text: string;
   likes: number;
   dislikes: number;
@@ -10,6 +10,7 @@ export class Comment {
     likes?: number,
     dislikes?: number,
   ) {
+    this.id = id;
     this.text = text;
     this.likes = likes;
     this.dislikes = dislikes;

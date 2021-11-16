@@ -7,9 +7,9 @@ export class CommentDetail extends Comment{
   date: Date;
   replies: Array<Comment>;
 
-  constructor(id: number, text: string, likes: number, dislikes: number, username: string, userType: string,
+  constructor(username: string, userType: string,
               userId: string, date: Date, replies: Array<Comment>) {
-    super(id, text, likes, dislikes);
+    super();
     this.username = username;
     this.userType = userType;
     this.userId = userId;

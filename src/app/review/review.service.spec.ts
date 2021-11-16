@@ -30,7 +30,7 @@ describe('Service: Review', () => {
     const mockPosts: Review[] = [];
 
     for (let i = 1; i < 11; i++) {
-      const review = new Review(
+      const review = new Review(faker.datatype.number() ,
         new Comment(faker.datatype.number(), faker.lorem.sentence(), faker.datatype.number(), faker.datatype.number()),
         faker.datatype.number(),
         new Route(faker.datatype.number(2),

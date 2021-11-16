@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { BlogListarComponent } from './blog-listar.component';
 import {DebugElement} from '@angular/core';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
+import * as faker from 'faker';
 import {Blog} from '../blog';
 import {By} from '@angular/platform-browser';
 
@@ -22,7 +23,7 @@ describe('BlogListarComponent', () => {
     fixture = TestBed.createComponent(BlogListarComponent);
     component = fixture.componentInstance;
     component.blogs = [
-      new Blog(),
+      new Blog(faker.datatype.number()),
     ];
     fixture.detectChanges();
     debug = fixture.debugElement;

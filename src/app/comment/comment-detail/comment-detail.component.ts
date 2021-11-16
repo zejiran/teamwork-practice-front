@@ -12,10 +12,7 @@ export class CommentDetailComponent implements OnInit {
   constructor() {
   }
   ngOnInit(): void {
-    this.commentDetail = new CommentDetail(null, null, null, new Date(), [], ' ');
-    this.commentDetail.username = this.commentDetail.getUsername();
+    this.commentDetail = new CommentDetail(null, null, null, new Date(), []);
   }
-  getUsername(): string {
-    return this.commentDetail.getUsername();
-  }
+
 }
