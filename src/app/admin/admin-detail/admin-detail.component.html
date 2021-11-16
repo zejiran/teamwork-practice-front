@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <p class="h3 p-3">Admin details:</p>
+  <div class="row">
+    <div class="col">
+      <dl>
+        <dt>password:</dt> <dd>{{adminDetail.password}}</dd>
+        <dt>Outings</dt>
+        <dd *ngFor = "let a of adminDetail.outings">
+          {{a.id}}
+          {{a.name}}
+          {{a.place}}
+          {{a.date}}
+        </dd>
+      </dl>
+    </div>
+  </div>
+</div>

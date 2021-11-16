@@ -30,13 +30,13 @@ export class RouteListarComponent implements OnInit {
   }
 
   onSelected(route: Route): void{
-    if (this.selectedRoute == route && this.selected){
+    if (this.selectedRoute === route && this.selected){
       this.selected = false;
     } else {
       this.selected = true;
       this.routeService.getRoute(route.id)
-      .subscribe(RouteDetail => {
-        this.selectedRoute = RouteDetail;
+      .subscribe(routeDetail => {
+        this.selectedRoute = routeDetail;
       });
     }
   }

@@ -31,7 +31,11 @@ describe('AdminService', () => {
     const mockPosts: Admin[] = [];
 
     for (let i = 1; i < 11; i++) {
-      const admin = new Admin();
+      const admin = new Admin(
+        faker.datatype.number(),
+        faker.lorem.sentence(),
+        faker.lorem.sentence(),
+      );
 
       mockPosts.push(admin);
     }

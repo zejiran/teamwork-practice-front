@@ -1,4 +1,6 @@
 export class Blog {
-  constructor() {
+  id: number;
+  constructor(id?: number) {
+    this.id = id;
   }
 }

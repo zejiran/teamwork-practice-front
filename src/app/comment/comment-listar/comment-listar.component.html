@@ -14,12 +14,17 @@
         </thead>
         <tbody>
         <tr *ngFor="let u of comments">
+          <td>{{ u.id }}</td>
           <td>{{ u.text }}</td>
           <td>{{ u.likes }}</td>
           <td>{{ u.dislikes }}</td>
+          <th><button (click)="onSelected(u)">Ver Detalle</button></th>
         </tr>
         </tbody>
       </table>
+      <div *ngIf="selected">
+        <app-comment-detail [commentDetail]="selectedComment"></app-comment-detail>
+      </div>
     </div>
   </div>
 </div>
