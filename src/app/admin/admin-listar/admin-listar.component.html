@@ -4,22 +4,26 @@
       <p class="h2 text-center">Administradores</p>
     </div>
     <div class="card-body m-3">
-      <table class="table resposive table-bordered text-center">
+      <table class="table responsive table-bordered text-center">
         <thead>
         <tr>
+          <th scope="col">Id</th>
           <th scope="col">Usuario</th>
-          <th scope="col">Contraseña</th>
-          <th scope="col">Email</th>
+          <th scope="col">Mail</th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let u of admins">
-          <!-- <td>{{ u.user }}</td>
-          <td>{{ u.password }}</td>
-          <td>{{ u.mail }}</td> -->
+          <td>{{ u.id }}</td>
+          <td>{{ u.user }}</td>
+          <td>{{u.mail}}</td>
+          <th><button (click)="onSelected(u)">Ver Detalle</button></th>
         </tr>
         </tbody>
       </table>
+      <div *ngIf="selected">
+        <app-admin-detail [adminDetail]="selectedAdmin"></app-admin-detail>
+      </div>
     </div>
   </div>
 </div>

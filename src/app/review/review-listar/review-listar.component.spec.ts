@@ -29,6 +29,7 @@ describe('ReviewListarComponent', () => {
     component.reviews = [
       new Review(
         new Comment(
+          faker.datatype.number(),
           faker.lorem.sentence(),
           faker.datatype.number(),
           faker.datatype.number(),

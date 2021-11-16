@@ -4,6 +4,7 @@ import { BlogListarComponent } from './blog-listar.component';
 import {DebugElement} from '@angular/core';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
 import {Blog} from '../blog';
+import {By} from '@angular/platform-browser';
 
 describe('BlogListarComponent', () => {
   let component: BlogListarComponent;
@@ -31,4 +32,9 @@ describe('BlogListarComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it('Should have an td element ', () => {
+    expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
+      component.blogs[0].id
+    );
+  });
 });

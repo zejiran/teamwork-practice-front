@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <p class="h3 p-3">Admin details:</p>
+  <div class="row">
+    <div class="col">
+      <dl>
+        <dt></dt>
+        <dt>username:</dt>
+        <dd>{{commentDetail.username}}</dd>
+        <dt>Tipo de usuario</dt>
+        <dd>{{commentDetail.userType}}</dd>
+        <dt>Fecha </dt>
+        <dd>{{commentDetail.date}}</dd>
+        <dt></dt>
+        <app-comment-listar [comments] = "commentDetail.replies"></app-comment-listar>
+      </dl>
+    </div>
+  </div>
+</div>

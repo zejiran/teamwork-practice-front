@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Admin} from '../admin';
 import {AdminService} from '../admin.service';
+import {AdminDetail} from '../adminDetail';
 
 @Component({
   selector: 'app-admin-listar',
@@ -9,6 +10,8 @@ import {AdminService} from '../admin.service';
 })
 export class AdminListarComponent implements OnInit {
   admins: Array<Admin>;
+  selected = false;
+  selectedAdmin: AdminDetail = new AdminDetail();
   constructor(private adminService: AdminService) { }
 
   getAdmins(): void {
@@ -20,6 +23,17 @@ export class AdminListarComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAdmins();
+  }
+  onSelected(admin: Admin): void{
+    if (this.selectedAdmin.id === admin.id && this.selected){
+      this.selected = false;
+    } else {
+      this.selected = true;
+      this.adminService.getAdmin(admin.id)
+        .subscribe(adminDetail => {
+          this.selectedAdmin = adminDetail;
+        });
+    }
   }
 
 }

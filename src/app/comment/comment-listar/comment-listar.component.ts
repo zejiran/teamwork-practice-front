@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { Comment } from '../comment';
 import { CommentService } from '../comment.service';
+import {CommentDetail} from '../commentDetail';
 
 @Component({
   selector: 'app-comment-listar',
@@ -8,7 +9,9 @@ import { CommentService } from '../comment.service';
   styleUrls: ['./comment-listar.component.scss']
 })
 export class CommentListarComponent implements OnInit {
-  comments: Array<Comment>;
+  @Input() comments: Array<Comment>;
+  selected = false;
+  selectedComment: CommentDetail = new CommentDetail(null, null, null, new Date(), [], ' ');
 
   constructor(private commentService: CommentService) {
   }
@@ -21,6 +24,17 @@ export class CommentListarComponent implements OnInit {
 
   ngOnInit(): void {
     this.getComments();
+  }
+  onSelected(comment: Comment): void{
+    if (this.selectedComment.id === comment.id && this.selected){
+      this.selected = false;
+    } else {
+      this.selected = true;
+      this.commentService.getComment(comment.id)
+        .subscribe(commentDetail => {
+          this.selectedComment = commentDetail;
+        });
+    }
   }
 
 }

@@ -27,7 +27,7 @@ describe('Service: Comment', () => {
     const mockPosts: Comment[] = [];
 
     for (let i = 1; i < 11; i++) {
-      const comment = new Comment(
+      const comment = new Comment(faker.datatype.number(),
         faker.lorem.sentence(),
         faker.datatype.number(),
         faker.datatype.number());

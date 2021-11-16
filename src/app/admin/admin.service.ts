@@ -3,6 +3,7 @@ import {environment} from '../../environments/environment';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Admin} from './admin';
+import {AdminDetail} from './adminDetail';
 
 @Injectable({
   providedIn: 'root'
@@ -12,5 +13,8 @@ export class AdminService {
   constructor(private http: HttpClient) { }
   getAdmins(): Observable<Admin[]> {
     return this.http.get<Admin[]>(this.apiUrl);
+  }
+  getAdmin(adminId): Observable<AdminDetail> {
+    return this.http.get<AdminDetail>(`${this.apiUrl}/${adminId}`);
   }
 }
