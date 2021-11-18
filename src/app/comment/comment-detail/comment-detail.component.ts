@@ -12,7 +12,7 @@ export class CommentDetailComponent implements OnInit {
   constructor() {
   }
   ngOnInit(): void {
-    this.commentDetail = new CommentDetail(null, null, null, new Date(), []);
+    this.commentDetail = new CommentDetail('', '', new Date(), []);
   }
 
 }
