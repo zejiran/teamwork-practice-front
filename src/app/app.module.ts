@@ -63,6 +63,7 @@ import { FilesContainerDetailComponent } from './FilesContainer/files-container-
     BlogModule,
     ActivityModule,
     GuideModule,
+    AppRoutingModule,
     ComplementaryInformationModule,
     ItineraryModule
   ],

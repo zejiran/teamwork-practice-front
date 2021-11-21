@@ -21,9 +21,20 @@
     <a class="nav-item nav-link active" routerLink="/">Inicio</a>
     <a id="outings-navbar-item" class="nav-item nav-link" routerLink="/outings/list">Salidas</a>
     <a id="blogs-navbar-item" class="nav-item nav-link" routerLink="/blogs/list">Blog</a>
-    <a id="navbar-item" class="nav-item nav-link" routerLink="/">Ver más</a>
+    <a id="blogs-navbar-item" class="nav-item nav-link" routerLink="/persons/natural/list">Personas Naturales</a>
+    <a id="blogs-navbar-item" class="nav-item nav-link" routerLink="/persons/list">Personas</a>
+    <a id="blogs-navbar-item" class="nav-item nav-link" routerLink="/users/list">Usuarios</a>
+    <a id="blogs-navbar-item" class="nav-item nav-link" routerLink="/multimedias/list">Archivos multimedia</a>
+    <li class="nav-item dropdown">
+        <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">Ver más</a>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" href="#">Próximamente</a></li>
+            <!-- <li><a class="dropdown-item" href="#">Configuración</a></li>
+            <li><a class="dropdown-item" href="#">Multimedia</a></li> -->
+        </ul>
+    </li>
   </div>
-
 </nav>
 
 <!-- Main Router Outlet -->
@@ -53,6 +64,7 @@
   <app-multimedia-listar></app-multimedia-listar>
   <app-person-listar></app-person-listar>
   <app-natural-person-listar></app-natural-person-listar>
+  <app-user-listar></app-user-listar>
   <app-comment-listar></app-comment-listar>
   <app-review-listar></app-review-listar>
   <app-enterprise-listar></app-enterprise-listar>
