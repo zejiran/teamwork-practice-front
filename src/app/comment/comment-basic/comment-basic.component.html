@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div class="card-body m-3">
+      <dt></dt>
+          <dt>{{comment.username}}  {{comment.date}} </dt>
+          <dd>{{comment.text}}</dd>
+          <dd><button (click)="onSelected()">Ver respuestas</button></dd>
+          <dt></dt>
+        <div *ngIf="selected">
+          <app-comment-listar [comments]="replies" [all] = "false"></app-comment-listar>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
