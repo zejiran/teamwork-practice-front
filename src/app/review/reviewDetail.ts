@@ -7,4 +7,8 @@ export class ReviewDetail extends Review{
     super();
     this.container = container;
   }
+
+  toString(): string {
+    return String(this.comment.id);
+  }
 }

@@ -12,6 +12,7 @@ export class ReviewListarComponent implements OnInit {
   reviews: Array<Review>;
   selected = false;
   selectedReview: ReviewDetail = new ReviewDetail();
+  selectedComment: number;
 
   constructor(private reviewService: ReviewService) {
   }
@@ -28,14 +29,16 @@ export class ReviewListarComponent implements OnInit {
   }
 
   onSelected(review: Review): void{
-    if (this.selectedReview.id === review.id && this.selected){
+    if (this.selected){
+      this.selectedReview.comment.id = 0;
       this.selected = false;
-    } else {
-      this.selected = true;
+    } else{
       this.reviewService.getReview(review.id)
         .subscribe(reviewDetail => {
           this.selectedReview = reviewDetail;
         });
+      this.selectedComment = review.comment.id;
+      this.selected = true;
     }
   }
 

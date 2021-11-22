@@ -11,7 +11,7 @@ import {AdminDetail} from '../adminDetail';
 export class AdminListarComponent implements OnInit {
   admins: Array<Admin>;
   selected = false;
-  selectedAdmin: AdminDetail = new AdminDetail();
+  selectedAdmin: AdminDetail = new AdminDetail('', []);
   constructor(private adminService: AdminService) { }
 
   getAdmins(): void {

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BlogListarComponent } from './blog-listar/blog-listar.component';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 import {PostModule} from '../post/post.module';
+import {BlogRoutingModule} from './blog.route.module';
 
 
 
@@ -10,7 +11,8 @@ import {PostModule} from '../post/post.module';
   declarations: [BlogListarComponent, BlogDetailComponent],
   imports: [
     CommonModule,
-    PostModule
+    PostModule,
+    BlogRoutingModule
   ],
   exports: [BlogListarComponent]
 })

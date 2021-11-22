@@ -10,9 +10,8 @@ import {CommentDetail} from '../commentDetail';
 })
 export class CommentListarComponent implements OnInit {
   @Input() comments: Array<Comment>;
-  @Input() all = true;
   selected = false;
-  selectedComment: CommentDetail = new CommentDetail(' ', '',  []);
+  selectedComment: CommentDetail = new CommentDetail(' ', '', []);
 
   constructor(private commentService: CommentService) {
   }
@@ -24,8 +23,18 @@ export class CommentListarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.all){
-      this.getComments();
+    this.getComments();
+  }
+  onSelected(comment: Comment): void{
+    if (this.selectedComment.id === comment.id && this.selected){
+      this.selected = false;
+    } else {
+      this.selected = true;
+      this.commentService.getComment(comment.id)
+        .subscribe(commentDetail => {
+          this.selectedComment = commentDetail;
+        });
     }
   }
+
 }

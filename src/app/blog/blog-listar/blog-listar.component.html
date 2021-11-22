@@ -8,12 +8,14 @@
         <thead>
         <tr>
           <th scope="col">id</th>
+          <th scope="col"># posts</th>
+
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let u of blogs">
-          <td>{{u.id}}</td>
-          <th><button (click)="onSelected(u)">Ver Detalle</button></th>
+          <td> <a routerLink="/blogs/{{u.id}}">{{u.id}}</a></td>
+          <td>{{u.posts.length}} </td>
         </tr>
         </tbody>
       </table>

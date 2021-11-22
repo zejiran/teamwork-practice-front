@@ -1,9 +1,33 @@
 <div class="container-fluid">
   <div class="card m-5">
+    <div class="card-header p-3">
+      <p class="h2 text-center">Comments</p>
+    </div>
     <div class="card-body m-3">
-        <div *ngFor="let u of comments">
-          <app-comment-basic [comment]="u"> </app-comment-basic>
-        </div>
+      <table class="table resposive table-bordered text-center">
+        <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Text</th>
+          <th scope="col">Likes</th>
+          <th scope="col">Dislikes</th>
+          <th scope="col">Username</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let u of comments">
+          <td>{{ u.id }}</td>
+          <td>{{ u.text }}</td>
+          <td>{{ u.likes }}</td>
+          <td>{{ u.dislikes }}</td>
+          <td>{{ u.username }}</td>
+          <th><button (click)="onSelected(u)">Ver Detalle</button></th>
+        </tr>
+        </tbody>
+      </table>
+      <div *ngIf="selected">
+        <app-comment-detail [commentDetail]="selectedComment"></app-comment-detail>
+      </div>
     </div>
   </div>
 </div>

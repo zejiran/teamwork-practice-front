@@ -8,7 +8,7 @@
           <dd><button (click)="onSelected()">Ver respuestas</button></dd>
           <dt></dt>
         <div *ngIf="selected">
-          <app-comment-listar [comments]="replies" [all] = "false"></app-comment-listar>
+          <app-comment-replies [idComment]="comment.id"></app-comment-replies>
         </div>
       </div>
     </div>

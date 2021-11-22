@@ -9,7 +9,7 @@ import {BlogDetail} from '../blogDetail';
   styleUrls: ['./blog-listar.component.css']
 })
 export class BlogListarComponent implements OnInit {
-  blogs: Array<Blog>;
+  blogs: Array<BlogDetail>;
   selected = false;
   selectedBlog: BlogDetail = new BlogDetail();
   constructor(private blogService: BlogService) { }

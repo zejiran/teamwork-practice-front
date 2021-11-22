@@ -11,8 +11,8 @@ import {BlogDetail} from './blogDetail';
 export class BlogService {
   private apiUrl: string = environment.baseUrl + 'blogs';
   constructor(private http: HttpClient) { }
-  getBlogs(): Observable<Blog[]> {
-    return this.http.get<Blog[]>(this.apiUrl);
+  getBlogs(): Observable<BlogDetail[]> {
+    return this.http.get<BlogDetail[]>(this.apiUrl);
   }
   getBlog(BlogId): Observable<BlogDetail> {
     return this.http.get<BlogDetail>(`${this.apiUrl}/${BlogId}`);

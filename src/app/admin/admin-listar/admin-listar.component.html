@@ -14,7 +14,7 @@
         </thead>
         <tbody>
         <tr *ngFor="let u of admins">
-          <td>{{ u.id }}</td>
+          <a routerLink="/admins/{{u.id}}">{{ u.id }}</a>
           <td>{{ u.user }}</td>
           <td>{{u.mail}}</td>
           <th><button (click)="onSelected(u)">Ver Detalle</button></th>
