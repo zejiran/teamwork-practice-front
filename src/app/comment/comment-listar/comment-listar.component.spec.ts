@@ -38,9 +38,5 @@ describe('CommentListarComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('Should have an td element ', () => {
-    expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
-      component.comments[0].id
-    );
-  });
+
 });
