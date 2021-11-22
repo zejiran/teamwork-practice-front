@@ -14,6 +14,6 @@ export class PostDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.postDetail = new PostDetail(0, 0, '', new Comment('', 0, 0));
+    this.postDetail = new PostDetail(0, 0, '', new Comment(0, '', 0, 0));
   }
 }

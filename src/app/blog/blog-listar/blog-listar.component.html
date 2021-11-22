@@ -7,16 +7,19 @@
       <table class="table resposive table-bordered text-center">
         <thead>
         <tr>
-          <th scope="col">?</th>
-
+          <th scope="col">id</th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let u of blogs">
-
+          <td>{{u.id}}</td>
+          <th><button (click)="onSelected(u)">Ver Detalle</button></th>
         </tr>
         </tbody>
       </table>
+      <div *ngIf="selected">
+        <app-blog-detail [blogDetail]="selectedBlog"></app-blog-detail>
+      </div>
     </div>
   </div>
 </div>

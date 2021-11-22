@@ -1,0 +1,48 @@
+#cuerpo{
+  background-color: #FFC58D;
+}
+h2 {
+  color: white;
+}
+
+nav{
+  background-color: #8FC640;
+  border: 2px solid white;
+}
+
+.form-inline {
+  padding-left: 20px;
+}
+
+h5{
+  color:white;
+}
+
+#textWhite{
+  color:white;
+}
+
+#navbarDropdown{
+  color: white;
+}
+
+#principal{
+  background-color: #EBEFF2;
+
+}
+#secundaria {
+  background-color:#76919C;
+}
+
+#footer {
+  background-color:#F2D7B6;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+}

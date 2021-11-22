@@ -3,6 +3,7 @@ import {environment} from '../../environments/environment';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Blog} from './blog';
+import {BlogDetail} from './blogDetail';
 
 @Injectable({
   providedIn: 'root'
@@ -13,4 +14,8 @@ export class BlogService {
   getBlogs(): Observable<Blog[]> {
     return this.http.get<Blog[]>(this.apiUrl);
   }
+  getBlog(BlogId): Observable<BlogDetail> {
+    return this.http.get<BlogDetail>(`${this.apiUrl}/${BlogId}`);
+  }
+
 }

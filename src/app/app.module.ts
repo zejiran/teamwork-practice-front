@@ -27,11 +27,17 @@ import {ActivityModule} from './activity/activity.module';
 import {GuideModule} from './guide/guide.module';
 import { ComplementaryInformationModule } from './complementaryinformation/complementaryinformation.module';
 import { ItineraryModule } from './itinerary/itinerary.module';
+import { FilesContainerListarComponent } from './FilesContainer/files-container-listar/files-container-listar.component';
+import { FilesContainerDetailComponent } from './FilesContainer/files-container-detail/files-container-detail.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FilesContainerListarComponent,
+    FilesContainerDetailComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +65,7 @@ import { ItineraryModule } from './itinerary/itinerary.module';
     BlogModule,
     ActivityModule,
     GuideModule,
+    AppRoutingModule,
     ComplementaryInformationModule,
     ItineraryModule
   ],

@@ -24,7 +24,7 @@ describe('CommentListarComponent', () => {
     fixture = TestBed.createComponent(CommentListarComponent);
     component = fixture.componentInstance;
     component.comments = [
-      new Comment(
+      new Comment(faker.datatype.number(),
         faker.lorem.sentence(),
         faker.datatype.number(),
         faker.datatype.number(),
@@ -40,7 +40,7 @@ describe('CommentListarComponent', () => {
 
   it('Should have an td element ', () => {
     expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
-      component.comments[0].text
+      component.comments[0].id
     );
   });
 });
