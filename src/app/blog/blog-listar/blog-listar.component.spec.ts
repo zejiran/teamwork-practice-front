@@ -6,6 +6,7 @@ import {HttpClientTestingModule} from '@angular/common/http/testing';
 import * as faker from 'faker';
 import {Blog} from '../blog';
 import {By} from '@angular/platform-browser';
+import {BlogDetail} from "../blogDetail";
 
 describe('BlogListarComponent', () => {
   let component: BlogListarComponent;
@@ -23,7 +24,7 @@ describe('BlogListarComponent', () => {
     fixture = TestBed.createComponent(BlogListarComponent);
     component = fixture.componentInstance;
     component.blogs = [
-      new Blog(faker.datatype.number()),
+      new BlogDetail([]),
     ];
     fixture.detectChanges();
     debug = fixture.debugElement;

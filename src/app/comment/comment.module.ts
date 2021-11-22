@@ -4,10 +4,12 @@ import { CommentListarComponent } from './comment-listar/comment-listar.componen
 import { CommentDetailComponent } from './comment-detail/comment-detail.component';
 import { CommentBasicComponent } from './comment-basic/comment-basic.component';
 import { CommentRepliesComponent } from './comment-replies/comment-replies.component';
+import {CommentRoutingModule} from './comment.route.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    CommentRoutingModule
   ],
     exports: [
         CommentListarComponent,
