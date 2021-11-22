@@ -34,9 +34,4 @@ describe('BlogListarComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('Should have an td element ', () => {
-    expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
-      component.blogs[0].id
-    );
-  });
 });
