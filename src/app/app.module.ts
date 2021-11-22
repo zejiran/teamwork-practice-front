@@ -29,13 +29,15 @@ import { ComplementaryInformationModule } from './complementaryinformation/compl
 import { ItineraryModule } from './itinerary/itinerary.module';
 import { FilesContainerListarComponent } from './FilesContainer/files-container-listar/files-container-listar.component';
 import { FilesContainerDetailComponent } from './FilesContainer/files-container-detail/files-container-detail.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FilesContainerListarComponent,
-    FilesContainerDetailComponent
+    FilesContainerDetailComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +65,7 @@ import { FilesContainerDetailComponent } from './FilesContainer/files-container-
     BlogModule,
     ActivityModule,
     GuideModule,
+    AppRoutingModule,
     ComplementaryInformationModule,
     ItineraryModule
   ],

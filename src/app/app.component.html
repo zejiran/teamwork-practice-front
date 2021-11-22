@@ -1,18 +1,65 @@
-<div class="container-fluid m-auto text-center p-5" id="first-section">
-  <h1 class="mb-3">Trekking</h1>
-  <p class="blockquote fst-italic mb-5">"Aquí no solo recorremos caminos, los hacemos."</p>
-  <img
-    alt="Trekking Banner"
-    class="pb-5"
-    src="https://loveincorporated.blob.core.windows.net/contentimages/gallery/6c478a3b-3a18-42c7-9ba7-a116dbbf78bc-jaw-dropping-pictures-of-the-worlds-most-dangerous-roads.jpg"
-  >
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#8FC640;">
+  <a class="navbar-brand" href="#">
+    <div class="form-inline">
+      <div class="col">
+        <div class="row-sm-4">
+          <img id="logo" src="../assets/trekking-logo.png" class="center-block" width="100" height="100" />
+          <h2 class="mainTitle f1">Trekking</h2>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Menu a recursos principales -->
+  <div class="navbar-nav mr-auto mt-0">
+    <a class="nav-item nav-link active" routerLink="/">Inicio</a>
+    <a id="outings-navbar-item" class="nav-item nav-link" routerLink="/outings/list">Salidas</a>
+    <a id="quotations-navbar-item" class="nav-item nav-link" routerLink="/quotations/list">Cotizaciones</a>
+    <a id="insurances-navbar-item" class="nav-item nav-link" routerLink="/insurances/list">Seguros</a>
+    <a id="blogs-navbar-item" class="nav-item nav-link" routerLink="/blogs/list">Blog</a>
+    <a id="posts-navbar-item" class="nav-item nav-link" routerLink="/posts/list">Publicaciones</a>
+    <a id="blogs-navbar-item" class="nav-item nav-link" routerLink="/persons/natural/list">Personas Naturales</a>
+    <a id="blogs-navbar-item" class="nav-item nav-link" routerLink="/persons/list">Personas</a>
+    <a id="blogs-navbar-item" class="nav-item nav-link" routerLink="/users/list">Usuarios</a>
+    <a id="enterprises-navbar-item" class="nav-item nav-link" routerLink="/enterprises/list">Empresas</a>
+    <a id="transactions-navbar-item" class="nav-item nav-link" routerLink="/transactions/list">Transacciones</a>
+    <a id="blogs-navbar-item" class="nav-item nav-link" routerLink="/multimedias/list">Archivos multimedia</a>
+
+    <li class="nav-item dropdown">
+        <a class="nav-link  dropdown-toggle" href="" data-bs-toggle="dropdown">Ver más</a>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" href="">Próximamente</a></li>
+            <!-- <li><a class="dropdown-item" href="#">Configuración</a></li>
+            <li><a class="dropdown-item" href="#">Multimedia</a></li> -->
+        </ul>
+    </li>
+  </div>
+</nav>
+
+<!-- Main Router Outlet -->
+<div class="container-fluid" id="principal">
+  <div class="row">
+    <div class="col">
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="p-2" id="listas">
+
+<!-- <div class="p-2">
   <app-outing-listar></app-outing-listar>
   <app-insurance-listar></app-insurance-listar>
   <app-multimedia-listar></app-multimedia-listar>
   <app-person-listar></app-person-listar>
   <app-natural-person-listar></app-natural-person-listar>
+  <app-user-listar></app-user-listar>
   <app-comment-listar></app-comment-listar>
   <app-review-listar></app-review-listar>
   <app-enterprise-listar></app-enterprise-listar>
@@ -26,10 +73,4 @@
   <app-guide-listar></app-guide-listar>
   <app-itinerary-listar></app-itinerary-listar>
   <app-complementaryinformation-listar></app-complementaryinformation-listar>
-</div>
-<!-- Main Router Outlet -->
-<div class="content-wrapper">
-  <div class="content">
-    <router-outlet></router-outlet>
-  </div>
-</div>
+</div> -->
