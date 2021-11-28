@@ -13,7 +13,7 @@ export class CommentRepliesComponent implements OnInit {
   constructor(private commentService: CommentService) { }
 
   ngOnInit(): void {
-    if (this.replies.length === 0){
+    if (this.idComment !== null){
     this.commentService.getComment(this.idComment)
       .subscribe(commentDetail => {
         this.replies = commentDetail.replies;
