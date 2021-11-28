@@ -30,6 +30,8 @@ import { ItineraryModule } from './itinerary/itinerary.module';
 import { FilesContainerListarComponent } from './FilesContainer/files-container-listar/files-container-listar.component';
 import { FilesContainerDetailComponent } from './FilesContainer/files-container-detail/files-container-detail.component';
 import { HomeComponent } from './home/home.component';
+import {ToastrModule} from 'ngx-toastr';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -41,6 +43,7 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     OutingModule,
@@ -67,9 +70,13 @@ import { HomeComponent } from './home/home.component';
     GuideModule,
     AppRoutingModule,
     ComplementaryInformationModule,
-    ItineraryModule
+    ItineraryModule,
+    ToastrModule.forRoot({
+      timeOut: 10000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+    })
   ],
-
   providers: [],
   bootstrap: [AppComponent]
 })
