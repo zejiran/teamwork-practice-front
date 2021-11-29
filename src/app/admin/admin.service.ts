@@ -17,4 +17,9 @@ export class AdminService {
   getAdmin(adminId): Observable<AdminDetail> {
     return this.http.get<AdminDetail>(`${this.apiUrl}/${adminId}`);
   }
+
+  createAdmin(admin: AdminDetail): Observable<AdminDetail> {
+    return this.http.post<AdminDetail>(this.apiUrl, admin);
+  }
+
 }

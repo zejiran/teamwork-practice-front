@@ -1,0 +1,118 @@
+<div class="container-fluid">
+  <div class="col-4 p-3">
+    <div class="h4" i18n>Customer Creation</div>
+    <form
+      [formGroup]="form"
+      (ngSubmit)="!form.invalid && createAdmin(form.value)"
+    >
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="user"> User </label>
+        <input
+          id="user"
+          class="form-control"
+          formControlName="user"
+          placeholder="Your user"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            form.get('user').hasError('required') &&
+            form.get('user').touched
+          "
+        >
+          Name required
+        </div>
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            form.get('user').hasError('minlength') &&
+            form.get('user').touched
+          "
+        >
+          user too short. It should be at least 3 characters
+        </div>
+      </div>
+
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="mail"> Email* </label>
+        <input
+          id="mail"
+          type="email"
+          class="form-control"
+          formControlName="mail"
+          placeholder="Your Email"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            form.get('mail').hasError('required') &&
+            form.get('mail').touched
+          "
+        >
+          Email required
+        </div>
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            form.get('mail').touched &&
+            form.get('mail').hasError('email')
+          "
+        >
+          Incorrect email format. It must include @
+        </div>
+      </div>
+
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="password"> </label>
+        <input
+          id="password"
+          type="text"
+          class="form-control"
+          formControlName="password"
+          placeholder="Your password"
+        />
+
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            form.get('password').hasError('required') &&
+            form.get('password').touched
+          "
+        >
+          Password required
+        </div>
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            form.get('password').hasError('minlength') &&
+            form.get('password').touched
+          "
+        >
+          Password have to had at least 7 characters
+        </div>
+      </div>
+
+
+      <div class="row m-3 small">
+        <p>* Required fields</p>
+      </div>
+
+      <div class="row m-3">
+        <button
+          type="submit"
+          class="btn btn-success"
+          [disabled]="!form.valid"
+        >
+          Create
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger ml-3"
+          (click)="cancelCreation()"
+        >
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
