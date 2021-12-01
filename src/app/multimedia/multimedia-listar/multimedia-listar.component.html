@@ -3,23 +3,28 @@
     <div class="card-header p-3">
       <p class="h2 text-center">Multimedias</p>
     </div>
-    <div class="card-body m-3">
-      <table class="table resposive table-bordered text-center">
-        <thead>
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Nombre del archivo</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let m of multimedias">
-          <td>{{ m.id }}</td>
-          <td>{{ m.fileName }}</td>
-          <td><button class="btn btn-dark" (click)="onSelected(m)">Ver Detalle</button></td>
-        </tr>
-        </tbody>
-      </table>
-      <div class = "card-body m-3">
+    <div class="m-3">
+      <div class="m-5">
+        <app-multimedia-create></app-multimedia-create>
+
+        <table class="table resposive table-bordered text-center mt-5">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nombre del archivo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let m of multimedias">
+              <td>{{ m.id }}</td>
+              <td>{{ m.fileName }}</td>
+              <td><button class="btn btn-dark" (click)="onSelected(m)">Ver Detalle</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card-body m-3">
         <div *ngIf="selected">
           <app-multimedia-detail [multimediaDetail]="selectedMultimedia"></app-multimedia-detail>
         </div>
@@ -27,4 +32,3 @@
     </div>
   </div>
 </div>
-
