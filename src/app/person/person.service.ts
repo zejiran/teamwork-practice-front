@@ -21,4 +21,8 @@ export class PersonService {
   getPerson(id: number): Observable<PersonDetail> {
     return this.http.get<PersonDetail>(this.apiUrl + '/' + id.toString());
   }
+
+  createPerson(person: Person): Observable<PersonDetail> {
+    return this.http.post<PersonDetail>(this.apiUrl, person);
+  }
 }
