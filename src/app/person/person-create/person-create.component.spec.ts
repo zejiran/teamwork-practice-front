@@ -1,19 +1,28 @@
-/* tslint:disable:no-unused-variable */
+import { ReactiveFormsModule } from '@angular/forms';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import { IndividualConfig, ToastrService } from 'ngx-toastr';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { PersonCreateComponent } from './person-create.component';
 
 describe('PersonCreateComponent', () => {
   let component: PersonCreateComponent;
   let fixture: ComponentFixture<PersonCreateComponent>;
+  const toastrService = {
+    success: (message?: string, title?: string, override?: Partial<IndividualConfig>) => { },
+    error: (message?: string, title?: string, override?: Partial<IndividualConfig>) => { }
+  };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PersonCreateComponent ]
+      imports: [
+        ReactiveFormsModule,
+        HttpClientTestingModule
+      ],
+      providers: [{ provide: ToastrService, useValue: toastrService }],
+      declarations: [PersonCreateComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
