@@ -1,3 +1,111 @@
-<p>
-  outing-create works!
-</p>
+<div class="container-fluid">
+  <div class="col">
+    <form
+      [formGroup]="outingForm"
+      (ngSubmit)="!outingForm.invalid && createOuting(outingForm.value)"
+    >
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="name"> Salida* </label>
+        <input
+          novalidate
+          id="name"
+          class="form-control"
+          formControlName="name"
+          placeholder="Nombre de la salida"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            outingForm.get('name').hasError('required') &&
+            outingForm.get('name').touched
+          "
+        >
+          Debes ponerle nombre a tu salida
+        </div>
+      </div>
+
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="date"> Fecha* </label>
+        <input
+          id="date"
+          type="date"
+          class="form-control"
+          formControlName="date"
+          placeholder="Fecha de la salida"
+        />
+
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            outingForm.get('date').hasError('required') &&
+            outingForm.get('date').touched
+          "
+        >
+          Debes ponerle una fecha a tu salida
+        </div>
+      </div>
+
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="place"> Lugar* </label>
+        <input
+          id="place"
+          type="text"
+          class="form-control"
+          formControlName="place"
+          placeholder="Lugar de la salida"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            outingForm.get('place').hasError('required') &&
+            outingForm.get('place').touched
+          "
+        >
+          Debes ponerle un lugar a tu salida
+        </div>
+      </div>
+
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="participationCost"> Costo* </label>
+        <input
+          id="participationCost"
+          type="number"
+          class="form-control"
+          formControlName="participationCost"
+          placeholder="Costo de participación"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            outingForm.get('participationCost').hasError('required') &&
+            outingForm.get('participationCost').touched
+          "
+        >
+          Debes ponerle un costo a tu salida
+        </div>
+      </div>
+
+      <div class="row m-3 small">
+        <p>* Required fields</p>
+      </div>
+
+      <div class="row m-3">
+        <button
+          type="submit"
+          class="btn btn-success"
+          [disabled]="!outingForm.valid"
+        >
+          Crear
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger ml-3"
+          (click)="cancelCreation()"
+        >
+          Cancelar
+        </button>
+      </div>
+    </form>
+    <p>{{ outingForm.value.name | titlecase}}</p>
+  </div>
+ </div>

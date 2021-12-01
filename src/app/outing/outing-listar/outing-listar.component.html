@@ -1,41 +1,52 @@
 <div class="container-fluid">
-  <div class="card m-5">
-    <div class="card-header p-3">
-      <p class="h2 text-center">Outings</p>
-    </div>
-    <div class="card-body m-3">
-      <table class="table resposive table-bordered text-center">
-        <thead>
-        <tr>
-          <th scope="col">Nombre</th>
-          <th scope="col">Fecha</th>
-          <th scope="col">Lugar</th>
-          <th scope="col">Costo de participación</th>
-          <!--
-          <th scope="col">Itinerario</th>
-          -->
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let b of outings" (click)="onSelected(b)">
-          <td>{{ b.name }}</td>
-          <td>{{ b.date }}</td>
-          <td>{{ b.place }}</td>
-          <td>{{ b.participationCost }}</td>
-          <!--
-          <td>{{ b.itinerary }}</td>
-          -->
-        </tr>
-        </tbody>
-      </table>
+  <div class = "row">
 
-    </div>
-    <div class = "card-body m-3">
-      <div *ngIf="selected">
-        <app-outing-detail [outingDetail]="selectedOuting"></app-outing-detail>
+    <div class = "col">
+      <div class="card m-5">
+        <div class="card-header p-3">
+          <p class="h2 text-center">Salidas</p>
+        </div>
+        <div class="card-body m-3">
+          <table class="table resposive table-bordered text-center">
+            <thead>
+            <tr>
+              <th scope="col">Nombre</th>
+              <th scope="col">Fecha</th>
+              <th scope="col">Lugar</th>
+              <th scope="col">Costo de participación</th>
+              <!--
+              <th scope="col">Itinerario</th>
+              -->
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let b of outings" (click)="onSelected(b)">
+              <td>{{ b.name }}</td>
+              <td>{{ b.date }}</td>
+              <td>{{ b.place }}</td>
+              <td>{{ b.participationCost }}</td>
+              <!--
+              <td>{{ b.itinerary }}</td>
+              -->
+            </tr>
+            </tbody>
+          </table>
+
+        </div>
+        </div>
+      </div>
+    <div class = "col">
+      <div class="card m-5">
+        <div class = "card-body m-3">
+          <div *ngIf="selected">
+            <app-outing-detail [outingDetail]="selectedOuting"></app-outing-detail>
+          </div>
+          <div *ngIf="!selected">
+            <p>Da clic a una salida para conocer más información</p>
+          </div>
+        </div>
       </div>
     </div>
-
   </div>
 
 </div>
