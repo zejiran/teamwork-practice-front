@@ -22,4 +22,8 @@ export class NaturalPersonService {
   getNaturalPerson(id: number): Observable<NaturalPersonDetail> {
     return this.http.get<NaturalPersonDetail>(this.apiUrl + '/' + id.toString());
   }
+
+  createNaturalPerson(): Observable<NaturalPersonDetail> {
+    return this.http.post<NaturalPersonDetail>(this.apiUrl, {});
+  }
 }
