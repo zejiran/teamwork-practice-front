@@ -4,6 +4,7 @@
       <p class="h2 text-center">Transactions</p>
     </div>
     <div class="card-body m-3">
+      <app-transaction-create></app-transaction-create>>
       <table class="table resposive table-bordered text-center">
         <thead>
         <tr>
@@ -19,9 +20,15 @@
           <td>{{ t.payment }}</td>
           <td>{{ t.value }}</td>
           <td>{{ t.creationDate }}</td>
+          <td><button class="btn btn-dark" (click)="onSelected(t)">Ver Detalle</button></td>
         </tr>
         </tbody>
       </table>
+      <div class="card-body m-3">
+        <div *ngIf="selected">
+          <app-transaction-detail [transactionDetail]="selectedTransaction"></app-transaction-detail>
+        </div>
+      </div>
     </div>
   </div>
 </div>

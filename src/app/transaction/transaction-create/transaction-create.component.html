@@ -1,0 +1,65 @@
+<div class="container-fluid create">
+  <div class="py-5">
+    <div class="h4 pb-1">Crear nuevo Transaction</div>
+    <form [formGroup]="transactionForm" (ngSubmit)="!transactionForm.invalid && createTransaction(transactionForm.value)">
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="title">Tipo de pago*</label>
+        <input novalidate id="payment" class="form-control" formControlName="payment" placeholder="The payment" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            transactionForm.get('payment').hasError('required') &&
+            transactionForm.get('payment').touched
+          ">
+          Transaction payment required
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            transactionForm.get('payment').hasError('minlength') &&
+            transactionForm.get('payment').touched
+          ">
+          Transaction payment too short. It should be at least 4 characters
+        </div>
+        <label for="value">Valor*</label>
+        <input novalidate id="value" class="form-control" formControlName="value" placeholder="The value" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+        transactionForm.get('value').hasError('required') &&
+        transactionForm.get('value').touched
+        " >
+        Transaction value required
+        </div>
+        <label for="creationDate">Fecha*</label>
+        <input novalidate id="creationDate" class="form-control" formControlName="creationDate" placeholder="The date" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+        transactionForm.get('creationDate').hasError('required') &&
+        transactionForm.get('creationDate').touched
+        " >
+        Transaction creationDate required
+        </div>
+        <label for="username">Usuario*</label>
+        <input novalidate id="username" class="form-control" formControlName="username" placeholder="The username" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+        transactionForm.get('username').hasError('required') &&
+        transactionForm.get('username').touched
+        " >
+        Transaction username required
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+        transactionForm.get('username').hasError('minlength') &&
+        transactionForm.get('username').touched
+        ">
+        Transaction username too short. It should be at least 4 characters
+        </div>
+      </div>
+      <div class="row m-3 small">
+        <p>* Campos requeridos</p>
+      </div>
+
+      <div class="row m-3">
+        <button type="submit" class="btn btn-success" [disabled]="!transactionForm.valid">
+          Crear
+        </button>
+        <button type="button" class="btn btn-danger mt-3 ml-3" (click)="cancelCreation()">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

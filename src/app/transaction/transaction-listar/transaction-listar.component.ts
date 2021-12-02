@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Transaction } from '../transaction';
 import { TransactionService } from '../transaction.service';
+import { TransactionDetail } from '../transaction-detail/transactionDetail';
 
 
 @Component({
@@ -10,7 +11,8 @@ import { TransactionService } from '../transaction.service';
 })
 export class TransactionListarComponent implements OnInit {
   transactions: Array<Transaction>;
-
+  selectedTransaction: TransactionDetail;
+  selected = false;
   constructor(private transactionService: TransactionService) {
   }
 
@@ -19,6 +21,14 @@ export class TransactionListarComponent implements OnInit {
       .subscribe(transactions => {
         this.transactions = transactions;
       });
+  }
+
+  onSelected(transaction: Transaction): void {
+    this.transactionService.getTransaction(transaction.id)
+    .subscribe(transactionDetail => {
+      this.selectedTransaction = transactionDetail;
+    });
+    this.selected = true;
   }
 
   ngOnInit(): void {
