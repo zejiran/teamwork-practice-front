@@ -28,7 +28,8 @@ describe('EnterpriseListarComponent', () => {
     component = fixture.componentInstance;
     component.enterprises = [
       new Enterprise(
-        new Person(faker.datatype.number(), faker.datatype.string())
+        new Person(faker.datatype.number(), faker.datatype.string()),
+        faker.lorem.sentence()
       ),
     ];
     fixture.detectChanges();
