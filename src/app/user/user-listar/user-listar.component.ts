@@ -11,6 +11,7 @@ import { UserService } from '../user.service';
 export class UserListarComponent implements OnInit {
   users: Array<User>;
   selectedUser: UserDetail;
+  selectedUID: number;
   selected = false;
 
   constructor(private userService: UserService) {
@@ -29,6 +30,7 @@ export class UserListarComponent implements OnInit {
       this.selectedUser = userDetail;
     });
     this.selected = true;
+    this.selectedUID = user.id;
   }
 
   ngOnInit(): void {
