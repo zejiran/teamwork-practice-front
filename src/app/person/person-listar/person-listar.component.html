@@ -3,23 +3,28 @@
     <div class="card-header p-3">
       <p class="h2 text-center">Persons</p>
     </div>
-    <div class="card-body m-3">
-      <table class="table resposive table-bordered text-center">
-        <thead>
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Nombre</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let p of persons">
-          <td>{{ p.id }}</td>
-          <td>{{ p.name }}</td>
-          <td><button class="btn btn-dark" (click)="onSelected(p)">Ver Detalle</button></td>
-        </tr>
-        </tbody>
-      </table>
-      <div class = "card-body m-3">
+    <div class="m-3">
+      <div class="m-5">
+        <app-person-create></app-person-create>
+
+        <table class="table resposive table-bordered text-center mt-5">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nombre</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let p of persons">
+              <td>{{ p.id }}</td>
+              <td>{{ p.name }}</td>
+              <td><button class="btn btn-dark" (click)="onSelected(p)">Ver Detalle</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card-body m-3">
         <div *ngIf="selected">
           <app-person-detail [personDetail]="selectedPerson"></app-person-detail>
         </div>
@@ -27,4 +32,3 @@
     </div>
   </div>
 </div>
-

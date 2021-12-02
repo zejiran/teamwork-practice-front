@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EnterpriseListarComponent } from './enterprise-listar/enterprise-listar.component';
-import { EnterpriseRoutingModule } from './enterprise-routing.module'
+import { EnterpriseRoutingModule } from './enterprise-routing.module';
 
 @NgModule({
   imports: [

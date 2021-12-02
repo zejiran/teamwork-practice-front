@@ -21,4 +21,8 @@ export class MultimediaService {
   getMultimedia(id: number): Observable<MultimediaDetail> {
     return this.http.get<MultimediaDetail>(this.apiUrl + '/' + id.toString());
   }
+
+  createMultimedia(multimedia: Multimedia): Observable<MultimediaDetail> {
+    return this.http.post<MultimediaDetail>(this.apiUrl, multimedia);
+  }
 }
