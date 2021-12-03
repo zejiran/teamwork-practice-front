@@ -1,0 +1,164 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div class="card my-5">
+        <div class="card-body">
+          <form
+            [formGroup]="outingForm"
+            (ngSubmit)="!outingForm.invalid && createOuting(outingForm.value)"
+          >
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="name"> Salida* </label>
+              <input
+                novalidate
+                id="name"
+                class="form-control"
+                formControlName="name"
+                placeholder="Nombre de la salida"
+              />
+              <div
+                class="alert alert-danger alert-dismissible fade show"
+                *ngIf="
+                  outingForm.get('name').hasError('required') &&
+                  outingForm.get('name').touched
+                "
+              >
+                Debes ponerle nombre a tu salida
+              </div>
+            </div>
+
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="date"> Fecha* </label>
+              <input
+                id="date"
+                type="date"
+                class="form-control"
+                formControlName="date"
+                placeholder="Fecha de la salida"
+              />
+
+              <div
+                class="alert alert-danger alert-dismissible fade show"
+                *ngIf="
+                  outingForm.get('date').hasError('required') &&
+                  outingForm.get('date').touched
+                "
+              >
+                Debes ponerle una fecha a tu salida
+              </div>
+            </div>
+
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="place"> Lugar* </label>
+              <input
+                id="place"
+                type="text"
+                class="form-control"
+                formControlName="place"
+                placeholder="Lugar de la salida"
+              />
+              <div
+                class="alert alert-danger alert-dismissible fade show"
+                *ngIf="
+                  outingForm.get('place').hasError('required') &&
+                  outingForm.get('place').touched
+                "
+              >
+                Debes ponerle un lugar a tu salida
+              </div>
+            </div>
+
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="participationCost"> Costo* </label>
+              <input
+                id="participationCost"
+                type="number"
+                class="form-control"
+                formControlName="participationCost"
+                placeholder="Costo de participación"
+              />
+              <div
+                class="alert alert-danger alert-dismissible fade show"
+                *ngIf="
+                  outingForm.get('participationCost').hasError('required') &&
+                  outingForm.get('participationCost').touched
+                "
+              >
+                Debes ponerle un costo a tu salida
+              </div>
+            </div>
+
+            <div class="row m-3 small">
+              <p>* Required fields</p>
+            </div>
+
+            <div class="row m-3">
+              <button
+                type="submit"
+                class="btn btn-success"
+                [disabled]="!outingForm.valid"
+              >
+                Crear
+              </button>
+              <button
+                type="button"
+                class="btn btn-danger ml-3"
+                (click)="cancelCreation()"
+              >
+                Cancelar
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary ml-3"
+                (click)="volver()"
+              >
+                Volver
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class = "col">
+      <div class="card my-5">
+        <img src="https://www.efadeporte.com/blog/wp-content/uploads/2020/08/senderismo.jpg" class="card-img-top" />
+        <div class="card-body">
+          <p class="h3 p-3">{{ outingForm.value.name | titlecase }}</p>
+          <div class="row">
+            <div class="col">
+              <dl>
+                <dt>Fecha</dt>
+                <dd>{{ outingForm.value.date | date }}</dd>
+                <hr />
+                <dt>Lugar</dt>
+                <dd>{{ outingForm.value.place | titlecase }}</dd>
+                <hr />
+                <dt>Costo de participación</dt>
+                <dd>{{ outingForm.value.participationCost | number }}</dd>
+                <hr />
+                <!--
+                <dt>Activities</dt>
+                <dd *ngFor="let a of outingDetail.activities">{{ a.name }}</dd>
+                <hr />
+                <dt>Complementary information</dt>
+                <dd *ngFor="let b of outingDetail.complementaryInformation">
+                  {{ b.description }}
+                </dd>
+                <hr />
+                <dt>Guides</dt>
+                <dd *ngFor="let c of outingDetail.guides">{{ c.name }}</dd>
+                <hr />
+                <dt class="bold">Routes</dt>
+                <dd *ngFor="let f of outingDetail.routes">
+                  {{ f.estimatedDuration }}
+                </dd>
+                <hr />
+                -->
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
