@@ -16,7 +16,7 @@
           <tbody>
             <tr *ngFor="let p of naturalPersons">
               <td>{{ p.id }}</td>
-              <td><button class="btn btn-dark" (click)="onSelected(p)">Ver Detalle</button></td>
+              <td><a [routerLink]="['/persons', p.id]"><button class="btn btn-dark" (click)="onSelected(p)">Ver Detalle</button></a></td>
             </tr>
           </tbody>
         </table>
