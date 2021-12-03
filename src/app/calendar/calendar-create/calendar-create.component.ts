@@ -2,7 +2,7 @@ import { CalendarService } from './../calendar.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
-import { Calendar } from '../Calendar';
+import { Calendar } from '../calendar';
 
 
 @Component({
