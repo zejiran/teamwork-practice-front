@@ -9,7 +9,7 @@ import { RouteDetailComponent } from './route-detail/route-detail.component';
     CommonModule
   ],
   declarations: [RouteListarComponent, RouteDetailComponent],
-  exports: [RouteListarComponent]
+  exports: [RouteListarComponent, RouteDetailComponent]
 })
 export class RouteModule {
 
