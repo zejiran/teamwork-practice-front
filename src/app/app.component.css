@@ -35,11 +35,15 @@ h5{
 }
 
 #footer {
-  background-color:#F2D7B6;
+  background-color:#f1f1f1;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
+  font-size: 12px;
+  text-align: center;
+  color: rgb(32, 32, 32);
+  height: 3rem;
 }
 
 @media all and (min-width: 992px) {
