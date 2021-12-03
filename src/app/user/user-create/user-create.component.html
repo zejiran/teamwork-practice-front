@@ -1,36 +1,53 @@
 <div class="container-fluid create">
   <div class="py-5">
     <div class="h4 pb-1">Crear nuevo usuario</div>
-    <form
-      [formGroup]="userForm"
-      (ngSubmit)="!userForm.invalid && createUser(userForm.value)"
-    >
+    <form [formGroup]="userForm" (ngSubmit)="!userForm.invalid && createUser(userForm.value)">
       <div class="form-group mx-sm-3 mb-2">
         <label for="user">Nombre de usuario*</label>
-        <input
-          novalidate
-          id="user"
-          class="form-control"
-          formControlName="user"
-          placeholder="Username"
-        />
-        <div
-          class="alert alert-danger alert-dismissible fade show"
-          *ngIf="
+        <input novalidate id="user" class="form-control" formControlName="user" placeholder="Username" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
             userForm.get('user').hasError('required') &&
             userForm.get('user').touched
-          "
-        >
+          ">
           User name required
         </div>
-        <div
-          class="alert alert-danger alert-dismissible fade show"
-          *ngIf="
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
             userForm.get('user').hasError('minlength') &&
             userForm.get('user').touched
-          "
-        >
+          ">
           User name too short. It should be at least 2 characters
+        </div>
+
+        <label class="mt-1" for="mail">Email*</label>
+        <input novalidate id="mail" type="email" class="form-control" formControlName="mail"
+          placeholder="Example@trekking.com" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+          userForm.get('mail').hasError('required') &&
+          userForm.get('mail').touched
+        ">
+          Email required
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+          userForm.get('mail').hasError('minlength') &&
+          userForm.get('mail').touched
+        ">
+          Email too short. It should be at least 4 characters
+        </div>
+
+        <label class="mt-1" for="password">Contraseña*</label>
+        <input novalidate id="password" type="password" class="form-control" formControlName="password"
+          placeholder="Password" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+          userForm.get('password').hasError('required') &&
+          userForm.get('password').touched
+        ">
+          Password required
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+          userForm.get('password').hasError('minlength') &&
+          userForm.get('password').touched
+        ">
+          Password too short. It should be at least 8 characters
         </div>
       </div>
 
@@ -39,21 +56,13 @@
       </div>
 
       <div class="row m-3">
-        <button
-          type="submit"
-          class="btn btn-success"
-          [disabled]="!userForm.valid"
-        >
+        <button type="submit" class="btn btn-success" [disabled]="!userForm.valid">
           Crear
         </button>
-        <button
-          type="button"
-          class="btn btn-danger mt-3 ml-3"
-          (click)="cancelCreation()"
-        >
+        <button type="button" class="btn btn-danger mt-3 ml-3" (click)="cancelCreation()">
           Cancelar
         </button>
       </div>
     </form>
   </div>
- </div>
+</div>
