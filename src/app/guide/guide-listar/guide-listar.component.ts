@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import {GuideDetail} from '../guide-detail/guideDetail';
+import {GuideDetail} from '../guideDetail';
 
 import { GuideService } from '../guide.service';
 @Component({

@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Guide } from './guide';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
-import { GuideDetail } from './guide-detail/guideDetail';
+import { GuideDetail } from './guideDetail';
 @Injectable({
   providedIn: 'root'
 })
