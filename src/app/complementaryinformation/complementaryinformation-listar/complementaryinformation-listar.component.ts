@@ -11,6 +11,10 @@ export class ComplementaryInformationListarComponent implements OnInit {
 
   complementaryinformations: Array<ComplementaryInformation>;
 
+  selected = false;
+
+  selectedCI : ComplementaryInformation;
+
   constructor(private complementaryinformationService: complementaryinformationService) {
 
   }
@@ -20,6 +24,12 @@ export class ComplementaryInformationListarComponent implements OnInit {
     this.complementaryinformationService.getComplementaryInformations().subscribe(complementaryinformations => {
       this.complementaryinformations = complementaryinformations;
     });
+  }
+
+  onSelected(b:ComplementaryInformation):void{
+    console.log(b);
+    this.selectedCI = b;
+    this.selected = true;
   }
 
   ngOnInit(): void {

@@ -20,4 +20,11 @@ export class complementaryinformationService {
     console.log('hola', respuesta);
     return respuesta;
   }
+
+  getComplementaryInformationDetail(ciId): Observable<ComplementaryInformation>{
+    return this.http.get<ComplementaryInformation>(`${this.apiUrl}/${ciId}`);
+  }
+  createComplementaryInformation(ci: ComplementaryInformation):Observable<ComplementaryInformation>{
+    return this.http.post<ComplementaryInformation>(this.apiUrl, ci);
+  }
 }

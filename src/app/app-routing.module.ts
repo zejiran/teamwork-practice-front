@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { OutingListarComponent } from './outing/outing-listar/outing-listar.component';
 import { OutingCreateComponent } from './outing/outing-create/outing-create.component';
 import { ActivityListarComponent } from './activity/activity-listar/activity-listar.component';
+import { ComplementaryInformationListarComponent } from './complementaryinformation/complementaryinformation-listar/complementaryinformation-listar.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -23,6 +24,13 @@ const routes: Routes = [
       {
         path: 'list',
         component: ActivityListarComponent
+      }
+    ]},
+    { path: 'complementaryinformations',
+    children: [
+      {
+        path: 'list',
+        component: ComplementaryInformationListarComponent
       }
     ]}
 ];
