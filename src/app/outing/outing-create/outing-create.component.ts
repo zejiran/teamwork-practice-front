@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { ToastrService } from "ngx-toastr";
 import { Outing } from '../outing';
 import { OutingService } from '../outing.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-outing-create',
@@ -14,8 +14,9 @@ export class OutingCreateComponent implements OnInit {
   outingForm: FormGroup;
   constructor(private formBuilder: FormBuilder,
               private toastr: ToastrService,
-              private router: Router,
-              private outingService: OutingService) { }
+              private outingService: OutingService,
+              private route: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit() {
     this.outingForm = this.formBuilder.group({
@@ -36,7 +37,7 @@ export class OutingCreateComponent implements OnInit {
     this.outingService.createOuting(newOuting)
       .subscribe(outing => {
         this.toastr.success('The outing was created successfully');
-        window.location.reload();
+        this.outingForm.reset();
       }, err => {
         this.toastr.error(err, 'Error');
       });
@@ -44,6 +45,10 @@ export class OutingCreateComponent implements OnInit {
   }
   cancelCreation() {
     console.log("Cancelando ...");
+    this.outingForm.reset();
+  }
+  volver() {
+    this.router.navigate(['../list'], {relativeTo: this.route});
     this.outingForm.reset();
   }
 
