@@ -9,9 +9,9 @@ import { PersonService } from '../person.service';
   styleUrls: ['./person-listar.component.css']
 })
 export class PersonListarComponent implements OnInit {
-
   persons: Array<Person>;
   selectedPerson: PersonDetail;
+  selectedPID: number;
   selected = false;
 
   constructor(private personService: PersonService) {
@@ -30,6 +30,7 @@ export class PersonListarComponent implements OnInit {
       this.selectedPerson = personDetail;
     });
     this.selected = true;
+    this.selectedPID = person.id;
   }
 
   ngOnInit(): void {

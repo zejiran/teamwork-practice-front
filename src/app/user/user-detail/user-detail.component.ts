@@ -15,10 +15,14 @@ export class UserDetailComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private userService: UserService) { }
 
   ngOnInit(): void {
-    const id: number = +this.activatedRoute.snapshot.paramMap.get('id') || 0;
-    this.userService.getUser(id)
-    .subscribe(userDetail => {
-      this.userDetail = userDetail;
+    let id = 0;
+    this.activatedRoute.params.subscribe(params => {
+      id = +params.id || 0;
+      this.userService.getUser(id)
+      .subscribe(userDetail => {
+        this.userDetail = userDetail;
+      });
     });
   }
+
 }
