@@ -17,6 +17,51 @@
           ">
           Person name too short. It should be at least 4 characters
         </div>
+
+        <label for="idNumber">Número de documento*</label>
+        <input novalidate id="idNumber" class="form-control" formControlName="idNumber" placeholder="00000000000" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            personForm.get('idNumber').hasError('required') &&
+            personForm.get('idNumber').touched
+          ">
+          ID number required
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            personForm.get('idNumber').hasError('minlength') &&
+            personForm.get('idNumber').touched
+          ">
+         ID number too short. It should be at least 6 characters
+        </div>
+
+        <label for="idType">Tipo de documento*</label>
+        <input novalidate id="idType" class="form-control" formControlName="idType" placeholder="CC" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            personForm.get('idType').hasError('required') &&
+            personForm.get('idType').touched
+          ">
+          ID type required
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            personForm.get('idType').hasError('minlength') &&
+            personForm.get('idType').touched
+          ">
+          ID type too short. It should be at least 2 characters
+        </div>
+
+        <label for="address">Dirección*</label>
+        <input novalidate id="address" class="form-control" formControlName="address" placeholder="KRR 30 #7-31" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            personForm.get('address').hasError('required') &&
+            personForm.get('address').touched
+          ">
+          Address required
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            personForm.get('address').hasError('minlength') &&
+            personForm.get('address').touched
+          ">
+          Address too short. It should be at least 5 characters
+        </div>
       </div>
 
       <div class="row m-3 small">
