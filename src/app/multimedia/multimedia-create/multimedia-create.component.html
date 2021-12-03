@@ -1,0 +1,37 @@
+<div class="container-fluid create">
+  <div class="py-5">
+    <div class="h4 pb-1">Subir un nuevo archivo</div>
+    <form [formGroup]="multimediaForm" (ngSubmit)="!multimediaForm.invalid && createMultimedia(multimediaForm.value)">
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="fileName">Nombre del archivo*</label>
+        <input novalidate id="fileName" class="form-control" formControlName="fileName"
+          placeholder="Nombre del archivo" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            multimediaForm.get('fileName').hasError('required') &&
+            multimediaForm.get('fileName').touched
+          ">
+          Multimedia fileName required
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            multimediaForm.get('fileName').hasError('minlength') &&
+            multimediaForm.get('fileName').touched
+          ">
+          Multimedia name too short. It should be at least 3 characters
+        </div>
+      </div>
+
+      <div class="row m-3 small">
+        <p>* Campos requeridos</p>
+      </div>
+
+      <div class="row m-3">
+        <button type="submit" class="btn btn-success" [disabled]="!multimediaForm.valid">
+          Crear
+        </button>
+        <button type="button" class="btn btn-danger mt-3 ml-3" (click)="cancelCreation()">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,30 +1,29 @@
 <div class="container-fluid">
-  <div class="card m-5">
+  <div class="card my-5">
     <div class="card-header p-3">
       <p class="h2 text-center">Usuarios</p>
     </div>
-    <div class="card-body m-3">
-      <table class="table resposive table-bordered text-center">
-        <thead>
-        <tr>
-          <th scope="col">Usuario</th>
-          <th scope="col">ID</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let u of users">
-          <td>{{ u.user }}</td>
-          <td>{{ u.id }}</td>
-          <td><button class="btn btn-dark" (click)="onSelected(u)">Ver Detalle</button></td>
-        </tr>
-        </tbody>
-      </table>
-      <div class = "card-body m-3">
-        <div *ngIf="selected">
-          <app-user-detail [userDetail]="selectedUser"></app-user-detail>
+    <div class="m-3">
+      <div class="my-2">
+        <app-user-create></app-user-create>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 mt-4 mx-1 mx-md-5">
+          <div class="col my-2" *ngFor="let u of users">
+            <div class="card" style="max-width: 20rem;">
+              <img src="https://joeschmoe.io/api/v1/{{ u.user }}" class="card-img-top" alt="User image">
+              <div class="card-body text-center mt-1">
+                <h5 class="card-title">{{ u.user }}</h5>
+                <p class="card-text">UID: {{ u.id }}</p>
+                <button class="btn btn-dark" (click)="onSelected(u)">Ver Detalle</button>
+              </div>
+              <div class="card-body m-1">
+                <div *ngIf="selected && selectedUID == u.id">
+                  <app-user-detail [userDetail]="selectedUser"></app-user-detail>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-

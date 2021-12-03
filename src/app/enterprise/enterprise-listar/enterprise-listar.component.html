@@ -4,19 +4,18 @@
       <p class="h2 text-center">Enterprises</p>
     </div>
     <div class="card-body m-3">
+      <app-enterprise-create></app-enterprise-create>
       <table class="table resposive table-bordered text-center">
         <thead>
         <tr>
           <th scope="col">ID</th>
-          <th scope="col">Representante</th>
-          <th scope="col">Cliente</th>
+          <th scope="col">Usuario</th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let e of enterprises">
-          <!-- <td>{{ e.id }}</td>
-          <td>{{ e.representative.id}}</td>
-          <td>{{ e.user }}</td> -->
+          <td>{{ e.id }}</td>
+          <td>{{ e.user }}</td>
         </tr>
         </tbody>
       </table>

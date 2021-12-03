@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Transaction } from './transaction';
 import { environment } from '../../environments/environment';
-import {TransactionDetail} from './transactionDetail';
+import { TransactionDetail } from './transaction-detail/transactionDetail';
 
 
 @Injectable({
@@ -20,5 +20,9 @@ export class TransactionService {
   }
   getTransaction(transactionId): Observable<TransactionDetail> {
     return this.http.get<TransactionDetail>(`${this.apiUrl}/${transactionId}`);
+  }
+
+  createTransaction(transaction: TransactionDetail): Observable<TransactionDetail> {
+    return this.http.post<TransactionDetail>(this.apiUrl, transaction);
   }
 }

@@ -1,0 +1,59 @@
+<div class="container-fluid create">
+  <div class="py-5">
+    <div class="h4 pb-1">Crear nuevo usuario</div>
+    <form
+      [formGroup]="userForm"
+      (ngSubmit)="!userForm.invalid && createUser(userForm.value)"
+    >
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="user">Nombre de usuario*</label>
+        <input
+          novalidate
+          id="user"
+          class="form-control"
+          formControlName="user"
+          placeholder="Username"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            userForm.get('user').hasError('required') &&
+            userForm.get('user').touched
+          "
+        >
+          User name required
+        </div>
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            userForm.get('user').hasError('minlength') &&
+            userForm.get('user').touched
+          "
+        >
+          User name too short. It should be at least 2 characters
+        </div>
+      </div>
+
+      <div class="row m-3 small">
+        <p>* Campos requeridos</p>
+      </div>
+
+      <div class="row m-3">
+        <button
+          type="submit"
+          class="btn btn-success"
+          [disabled]="!userForm.valid"
+        >
+          Crear
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger mt-3 ml-3"
+          (click)="cancelCreation()"
+        >
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+ </div>
