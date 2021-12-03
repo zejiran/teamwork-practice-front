@@ -1,21 +1,69 @@
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#8FC640;">
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:#8FC640;">
   <a class="navbar-brand" href="#">
     <div class="form-inline">
       <div class="col">
         <div class="row-sm-4">
-          <img id="logo" src="../assets/trekking-logo.png" class="center-block" width="100" height="100" alt="logo" />
-          <h2 class="mainTitle f1">Trekking</h2>
+          <img id="logo" src="../assets/trekking-logo.png" class="center-block" width="90" height="50" alt="logo" />
+          <h4 class="mainTitle f1">Trekking</h4>
         </div>
       </div>
     </div>
   </a>
-
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <!-- Menu a recursos principales -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a id="outings-navbar-item" class="nav-link" routerLink="/outings/list">Salidas</a>
+      </li>
+      <li class="nav-item">
+        <a id="quotations-navbar-item" class="nav-link" routerLink="/quotations/list">Cotizaciones</a>
+      </li>
+      <li class="nav-item">
+        <a id="insurances-navbar-item" class="nav-link" routerLink="/insurances/list">Seguros</a>
+      </li>
+      <li class="nav-item">
+        <a id="admins-navbar-item" class="nav-link" routerLink="/admins/list">Admins</a>
+      </li>
+      <li class="nav-item">
+        <a id="reviews-navbar-item" class="nav-link" routerLink="/reviews/list">Reviews</a>
+      </li>
+      <li class="nav-item">
+        <a id="comments-navbar-item" class="nav-link" routerLink="/comments/list">Comments</a>
+      </li>
+      <li class="nav-item">
+        <a id="blogs-navbar-item" class="nav-link" routerLink="/blogs/list">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a id="posts-navbar-item" class="nav-link" routerLink="/posts/list">Publicaciones</a>
+      </li>
+      <li class="nav-item">
+        <a id="natural-navbar-item" class="nav-link" routerLink="/persons/natural/list">Personas Naturales</a>
+      </li>
+      <li class="nav-item">
+        <a id="persons-navbar-item" class="nav-link" routerLink="/persons/list">Personas</a>
+      </li>
+      <li class="nav-item">
+        <a id="users-navbar-item" class="nav-link" routerLink="/users/list">Usuarios</a>
+      </li>
+      <li class="nav-item">
+        <a id="enterprises-navbar-item" class="nav-link" routerLink="/enterprises/list">Empresas</a>
+      </li>
+      <li class="nav-item">
+        <a id="transactions-navbar-item" class="nav-link" routerLink="/transactions/list">Transacciones</a>
+      </li>
+      <li class="nav-item">
+        <a id="multimedia-navbar-item" class="nav-link" routerLink="/multimedias/list">Archivos multimedia</a>
+      </li>
+    </ul>
+  </div>
+  <!-- Menu a recursos principales
   <div class="navbar-nav mr-auto mt-0">
     <a class="nav-item nav-link active" routerLink="/">Inicio</a>
     <a id="outings-navbar-item" class="nav-item nav-link" routerLink="/outings/list">Salidas</a>
@@ -48,7 +96,7 @@
         </li>
       </ul>
     </li>
-  </div>
+  </div>-->
 </nav>
 
 <!-- Main Router Outlet -->
