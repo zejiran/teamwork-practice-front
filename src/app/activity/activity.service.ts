@@ -15,4 +15,12 @@ export class ActivityService {
   getActivities(): Observable<Activity[]> {
     return this.http.get<Activity[]>(this.apiUrl);
   }
+  getActivityDetail(activityId): Observable<Activity>{
+    return this.http.get<Activity>(`${this.apiUrl}/${activityId}`);
+  }
+  createActivity(activity: Activity):Observable<Activity>{
+    return this.http.post<Activity>(this.apiUrl, activity);
+  }
 }
+
+
