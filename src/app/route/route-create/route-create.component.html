@@ -1,0 +1,15 @@
+<div class="container-fluid create">
+  <div class="py-5">
+    <div class="h4 pb-1">Crear nueva ruta</div>
+    <form [formGroup]="routeForm"
+      (ngSubmit)="!routeForm.invalid && createNaturalPerson(routeFormvalue)">
+      <div class="form-group mx-sm-3 mb-2"></div>
+
+      <div class="row m-3">
+        <button type="submit" class="btn btn-success" [disabled]="!routeForm.valid">
+          Crear
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
