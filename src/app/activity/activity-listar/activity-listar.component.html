@@ -1,4 +1,7 @@
 <div class="container-fluid">
+  <div *ngIf="selected">
+    <app-activity-detail [activityDetail]="selectedActivity"></app-activity-detail>
+  </div>
   <div class="card m-5">
     <div class="card-header p-3">
       <p class="h2 text-center">Activities</p>
@@ -7,9 +10,10 @@
       <table class="table resposive table-bordered text-center">
         <thead>
         <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Edad</th>
-          <th scope="col">Rating</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Descripción</th>
+          <th scope="col">Duración en minutos</th>
+          <th scope="col">Boton Detalle</th>
         </tr>
         </thead>
         <tbody>
@@ -17,6 +21,7 @@
           <td>{{ u.name }}</td>
           <td>{{ u.description }}</td>
           <td>{{ u.minutes}}</td>
+          <td><button (click)="onSelected(u)">Click me</button></td>
         </tr>
         </tbody>
       </table>
