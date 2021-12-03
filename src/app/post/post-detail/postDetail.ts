@@ -2,7 +2,6 @@ import { Post } from './../post';
 import { Comment } from 'src/app/comment/comment';
 
 export class PostDetail extends Post {
-  ratings: number;
   title: string;
   comment: Comment;
 

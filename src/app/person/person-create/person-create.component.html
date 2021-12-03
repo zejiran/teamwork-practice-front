@@ -1,0 +1,36 @@
+<div class="container-fluid create">
+  <div class="py-5">
+    <div class="h4 pb-1">Crear nueva persona</div>
+    <form [formGroup]="personForm" (ngSubmit)="!personForm.invalid && createPerson(personForm.value)">
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="name">Nombre de la persona*</label>
+        <input novalidate id="name" class="form-control" formControlName="name" placeholder="Your name" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            personForm.get('name').hasError('required') &&
+            personForm.get('name').touched
+          ">
+          Person name required
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            personForm.get('name').hasError('minlength') &&
+            personForm.get('name').touched
+          ">
+          Person name too short. It should be at least 4 characters
+        </div>
+      </div>
+
+      <div class="row m-3 small">
+        <p>* Campos requeridos</p>
+      </div>
+
+      <div class="row m-3">
+        <button type="submit" class="btn btn-success" [disabled]="!personForm.valid">
+          Crear
+        </button>
+        <button type="button" class="btn btn-danger mt-3 ml-3" (click)="cancelCreation()">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

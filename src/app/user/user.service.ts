@@ -21,4 +21,8 @@ export class UserService {
   getUser(id: number): Observable<UserDetail> {
     return this.http.get<UserDetail>(this.apiUrl + '/' + id.toString());
   }
+
+  createUser(user: User): Observable<UserDetail> {
+    return this.http.post<UserDetail>(this.apiUrl, user);
+  }
 }

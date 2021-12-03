@@ -1,4 +1,3 @@
-/* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
@@ -37,8 +36,8 @@ describe('UserListarComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('Should have an td element ', () => {
-    expect(debug.query(By.css('td')).nativeElement.innerText).toContain(
+  it('Should have a user name', () => {
+    expect(debug.query(By.css('h5')).nativeElement.innerText).toContain(
       component.users[0].user
     );
 

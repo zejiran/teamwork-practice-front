@@ -1,0 +1,35 @@
+<div class="container-fluid create">
+  <div class="py-5">
+    <div class="h4 pb-1">Crear nuevo Enterprise</div>
+    <form [formGroup]="enterpriseForm" (ngSubmit)="!enterpriseForm.invalid && createEnterprise(enterpriseForm.value)">
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="title">User*</label>
+        <input novalidate id="user" class="form-control" formControlName="user" placeholder="The user" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            enterpriseForm.get('user').hasError('required') &&
+            enterpriseForm.get('user').touched
+          ">
+          Enterprise user required
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            enterpriseForm.get('user').hasError('minlength') &&
+            enterpriseForm.get('user').touched
+          ">
+          Enterprise user too short. It should be at least 4 characters
+        </div>
+      </div>
+      <div class="row m-3 small">
+        <p>* Campos requeridos</p>
+      </div>
+
+      <div class="row m-3">
+        <button type="submit" class="btn btn-success" [disabled]="!enterpriseForm.valid">
+          Crear
+        </button>
+        <button type="button" class="btn btn-danger mt-3 ml-3" (click)="cancelCreation()">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

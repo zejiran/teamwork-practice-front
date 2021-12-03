@@ -44,7 +44,8 @@ describe('Service: Post', () => {
           faker.random.arrayElement(Object.getOwnPropertyNames(PaymentType))
           ],
         faker.datatype.number(),
-        '01-05-1000'
+        '01-05-1000',
+        faker.lorem.lines()
       );
 
       mockPosts.push(transaction);
