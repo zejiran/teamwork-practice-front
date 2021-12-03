@@ -3,7 +3,7 @@ import {environment} from '../../environments/environment';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Admin} from './admin';
-import {reviewDetail} from './reviewDetail';
+import {AdminDetail} from './adminDetail';
 
 @Injectable({
   providedIn: 'root'
@@ -14,12 +14,12 @@ export class AdminService {
   getAdmins(): Observable<Admin[]> {
     return this.http.get<Admin[]>(this.apiUrl);
   }
-  getAdmin(adminId): Observable<reviewDetail> {
-    return this.http.get<reviewDetail>(`${this.apiUrl}/${adminId}`);
+  getAdmin(adminId): Observable<AdminDetail> {
+    return this.http.get<AdminDetail>(`${this.apiUrl}/${adminId}`);
   }
 
-  createAdmin(admin: reviewDetail): Observable<reviewDetail> {
-    return this.http.post<reviewDetail>(this.apiUrl, admin);
+  createAdmin(admin: AdminDetail): Observable<AdminDetail> {
+    return this.http.post<AdminDetail>(this.apiUrl, admin);
   }
 
 }

@@ -2,7 +2,7 @@ import {Admin} from './admin';
 import {Outing} from '../outing/outing';
 import {Review} from '../review/review';
 
-export class ReviewDetail extends Review{
+export class AdminDetail extends Review{
 
   password: string;
   outings: Array<Outing>;

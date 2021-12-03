@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {reviewDetail} from '../reviewDetail';
+import {reviewDetail} from '../adminDetail';
 
 @Component({
   selector: 'app-admin-detail',

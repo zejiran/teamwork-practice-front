@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Admin} from '../admin';
 import {AdminService} from '../admin.service';
-import {reviewDetail} from '../reviewDetail';
+import {reviewDetail} from '../adminDetail';
 
 @Component({
   selector: 'app-admin-listar',

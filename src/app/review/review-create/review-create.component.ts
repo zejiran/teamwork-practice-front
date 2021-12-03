@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ToastrService} from 'ngx-toastr';
 import {Router} from '@angular/router';
-import {reviewDetail} from '../../admin/reviewDetail';
+import {reviewDetail} from '../../admin/adminDetail';
 import {ReviewService} from '../review.service';
 import {RouteDetail} from '../../route/route-detail';
 import {ReviewDetail} from '../reviewDetail';

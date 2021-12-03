@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import { reviewDetail } from '../reviewDetail';
+import { reviewDetail } from '../adminDetail';
 import {AdminService} from '../admin.service';
 import {Router} from '@angular/router';
 import {ToastrService} from 'ngx-toastr';
