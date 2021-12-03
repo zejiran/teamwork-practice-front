@@ -1,6 +1,12 @@
 #cuerpo{
   background-color: #FFC58D;
 }
+
+#main-content{
+  background-color: #EBEFF2;
+  min-height: 70rem;
+}
+
 h2 {
   color: white;
 }
@@ -56,7 +62,16 @@ h5{
   height: 3rem;
 }
 
-@media all and (min-width: 992px) {
+@media (min-width: 992px) {
 	.navbar .nav-item .dropdown-menu{ display: none; }
 	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+  .small-navbar {
+    display: none !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .large-navbar {
+    display: none !important;
+  }
 }
