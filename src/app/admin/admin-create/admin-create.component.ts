@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import { AdminDetail } from '../adminDetail';
+import { reviewDetail } from '../reviewDetail';
 import {AdminService} from '../admin.service';
 import {Router} from '@angular/router';
 import {ToastrService} from 'ngx-toastr';
@@ -34,7 +34,7 @@ export class AdminCreateComponent implements OnInit {
     });
   }
 
-  createAdmin(admin: AdminDetail): void{
+  createAdmin(admin: reviewDetail): void{
     this.adminService.createAdmin(admin)
       .subscribe(() => {
         this.toastrService.success('The admin was created successfully');

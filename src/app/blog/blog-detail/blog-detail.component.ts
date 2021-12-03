@@ -15,6 +15,5 @@ export class BlogDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-      this.blogDetail = new BlogDetail(0);
   }
 }
