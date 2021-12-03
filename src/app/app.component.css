@@ -1,6 +1,12 @@
 #cuerpo{
   background-color: #FFC58D;
 }
+
+#main-content{
+  background-color: #EBEFF2;
+  min-height: 70rem;
+}
+
 h2 {
   color: white;
 }
@@ -34,15 +40,38 @@ h5{
   background-color:#76919C;
 }
 
+.dropdown-item:focus{
+  background-color: #8FC640;
+  color: yellowgreen;
+}
+
+.dropdown-item:hover{
+  background-color: #8FC640;
+  color: white;
+}
+
 #footer {
-  background-color:#F2D7B6;
+  background-color:#f1f1f1;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
+  font-size: 12px;
+  text-align: center;
+  color: rgb(32, 32, 32);
+  height: 3rem;
 }
 
-@media all and (min-width: 992px) {
+@media (min-width: 992px) {
 	.navbar .nav-item .dropdown-menu{ display: none; }
 	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+  .small-navbar {
+    display: none !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .large-navbar {
+    display: none !important;
+  }
 }

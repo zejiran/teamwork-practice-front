@@ -17,4 +17,8 @@ export class EnterpriseService {
   getEnterprises(): Observable<Enterprise[]> {
     return this.http.get<Enterprise[]>(this.apiUrl);
   }
+
+  createEnterprise(enterprise: Enterprise): Observable<Enterprise> {
+    return this.http.post<Enterprise>(this.apiUrl, enterprise);
+  }
 }

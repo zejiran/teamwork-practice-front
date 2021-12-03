@@ -1,0 +1,43 @@
+<div class="container-fluid create">
+  <div class="py-5">
+    <div class="h4 pb-1">Crear nuevo Post</div>
+    <form [formGroup]="postForm" (ngSubmit)="!postForm.invalid && createPost(postForm.value)">
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="title">Titulo*</label>
+        <input novalidate id="title" class="form-control" formControlName="title" placeholder="The title" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            postForm.get('title').hasError('required') &&
+            postForm.get('title').touched
+          ">
+          Post title required
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            postForm.get('title').hasError('minlength') &&
+            postForm.get('title').touched
+          ">
+          Post name too short. It should be at least 4 characters
+        </div>
+        <label for="ratings">Rating*</label>
+        <input novalidate id="ratings" class="form-control" formControlName="ratings" placeholder="The rating" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+        postForm.get('ratings').hasError('required') &&
+        postForm.get('ratings').touched
+        " >
+        Post rating required
+        </div>
+      </div>
+      <div class="row m-3 small">
+        <p>* Campos requeridos</p>
+      </div>
+
+      <div class="row m-3">
+        <button type="submit" class="btn btn-success" [disabled]="!postForm.valid">
+          Crear
+        </button>
+        <button type="button" class="btn btn-danger mt-3 ml-3" (click)="cancelCreation()">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

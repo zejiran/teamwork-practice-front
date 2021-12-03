@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { IterableDiffers, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,17 +21,17 @@ import { UserModule } from './user/user.module';
 import { LocationModule } from './location/location.module';
 import { RouteModule } from './route/route.module';
 import { CalendarModule } from './calendar/calendar.module';
-import {AdminModule} from './admin/admin.module';
-import {BlogModule} from './blog/blog.module';
-import {ActivityModule} from './activity/activity.module';
-import {GuideModule} from './guide/guide.module';
+import { AdminModule } from './admin/admin.module';
+import { BlogModule } from './blog/blog.module';
+import { ActivityModule } from './activity/activity.module';
+import { GuideModule } from './guide/guide.module';
 import { ComplementaryInformationModule } from './complementaryinformation/complementaryinformation.module';
 import { ItineraryModule } from './itinerary/itinerary.module';
 import { FilesContainerListarComponent } from './FilesContainer/files-container-listar/files-container-listar.component';
 import { FilesContainerDetailComponent } from './FilesContainer/files-container-detail/files-container-detail.component';
 import { HomeComponent } from './home/home.component';
-import {ToastrModule} from 'ngx-toastr';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({

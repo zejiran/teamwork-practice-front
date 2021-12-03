@@ -5,6 +5,7 @@
     </div>
     <div class="card-body m-3">
       <table class="table resposive table-bordered text-center">
+        <caption>reviews</caption>
         <thead>
         <tr>
           <th scope="col">Text</th>
@@ -19,7 +20,7 @@
           <td>{{ u.score }}</td>
           <td>{{ u.comment.likes }}</td>
           <td>{{ u.comment.dislikes }}</td>
-          <th><button (click)="onSelected(u)">Ver Detalle</button></th>
+          <td><button (click)="onSelected(u)">Ver Detalle</button></td>
         </tr>
         </tbody>
       </table>

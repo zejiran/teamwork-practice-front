@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Outing } from '../outing';
+import { ActivatedRoute, Router } from '@angular/router';
 import { OutingService } from '../outing.service';
 import { OutingDetail } from '../outingDetail';
 
@@ -13,7 +14,9 @@ export class OutingListarComponent implements OnInit {
   outings: Array<OutingDetail>;
   selected = false;
   selectedOuting: OutingDetail;
-  constructor(private outingService: OutingService) {
+  constructor(private outingService: OutingService,
+              private route: ActivatedRoute,
+              private router: Router) {
   }
 
   getOutings(): void {
@@ -34,6 +37,10 @@ export class OutingListarComponent implements OnInit {
 
   ngOnInit(): void {
     this.getOutings();
+  }
+
+  crearOuting(): void {
+    this.router.navigate(['../create'], {relativeTo: this.route});
   }
 
 
