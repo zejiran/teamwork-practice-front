@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { RouteListarComponent } from './route-listar/route-listar.component';
 import { RouteDetailComponent } from './route-detail/route-detail.component';
 import {ReviewModule} from '../review/review.module';
+import {RouteRoutingModule} from './route-routing.module';
 
 
 @NgModule({
     imports: [
         CommonModule,
-        ReviewModule
+        ReviewModule,
+        RouteRoutingModule
     ],
   declarations: [RouteListarComponent, RouteDetailComponent],
   exports: [RouteListarComponent, RouteDetailComponent]
