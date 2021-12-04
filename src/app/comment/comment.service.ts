@@ -4,7 +4,6 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Comment } from './comment';
 import {CommentDetail} from './commentDetail';
-import {BlogDetail} from '../blog/blogDetail';
 
 @Injectable({
   providedIn: 'root'
@@ -22,5 +21,8 @@ export class CommentService {
   }
   createReply(fatherId: number, comment: CommentDetail): Observable<CommentDetail> {
     return this.http.post<CommentDetail>(`${this.apiUrl}/${fatherId}/replies`, comment);
+  }
+  createComment(comment: CommentDetail): Observable<CommentDetail> {
+    return this.http.post<CommentDetail>(`${this.apiUrl}`, comment);
   }
 }

@@ -2,10 +2,11 @@ import {Component, Input, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ToastrService} from 'ngx-toastr';
 import {Router} from '@angular/router';
-import {reviewDetail} from '../../admin/adminDetail';
 import {ReviewService} from '../review.service';
 import {RouteDetail} from '../../route/route-detail';
 import {ReviewDetail} from '../reviewDetail';
+import {CommentDetail} from '../../comment/commentDetail';
+import {CommentService} from '../../comment/comment.service';
 
 @Component({
   selector: 'app-review-create',
@@ -22,7 +23,8 @@ export class ReviewCreateComponent implements OnInit {
     private formBuilder: FormBuilder,
     private toastrService: ToastrService,
     private router: Router,
-    private reviewService: ReviewService) { }
+    private reviewService: ReviewService,
+    private commentService: CommentService) { }
 
   cancelCreation(): void {
     this.toastrService.warning('The review wasn\'t created', 'Review creation');
@@ -37,8 +39,15 @@ export class ReviewCreateComponent implements OnInit {
     });
   }
 
-  createAdmin(review: ReviewDetail): void{
-    this.reviewService.createReview(2, review)
+  createReview(review: ReviewDetail): void{
+    const c = new CommentDetail();
+    c.date = new Date();
+    c.likes = 0;
+    c.dislikes = 0;
+    c.text = this.form.value.text;
+    this.commentService.createComment(c).subscribe();
+    review.comment = c;
+    this.reviewService.createReview( review)
       .subscribe(() => {
         this.toastrService.success('The review was created successfully');
         this.form.reset();

@@ -1,9 +1,9 @@
 <div class="container-fluid">
   <div class="col-4 p-3">
-    <div class="h4" i18n>Customer Creation</div>
+    <div class="h4" i18n>Review Creation</div>
     <form
       [formGroup]="form"
-      (ngSubmit)="!form.invalid && createAdmin(form.value)"
+      (ngSubmit)="!form.invalid && createReview(form.value)"
     >
       <div class="form-group mx-sm-3 mb-2">
         <label for="text"> text </label>
@@ -11,7 +11,7 @@
           id="text"
           class="form-control"
           formControlName="text"
-          placeholder="Your user"
+          placeholder="Your opinion"
         />
         <div
           class="alert alert-danger alert-dismissible fade show"
@@ -33,13 +33,13 @@
         </div>
       </div>
       <div class="form-group mx-sm-3 mb-2">
-        <label for="score"> text </label>
+        <label for="score"> score </label>
         <input
           id="score"
           class="form-control"
           type = "number"
           formControlName="score"
-          placeholder="Your user"
+          placeholder="the score 1-5"
         />
       </div>
 

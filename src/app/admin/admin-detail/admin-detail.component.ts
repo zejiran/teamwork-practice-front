@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {reviewDetail} from '../adminDetail';
+import {AdminDetail} from '../adminDetail';
 
 @Component({
   selector: 'app-admin-detail',
@@ -8,14 +8,14 @@ import {reviewDetail} from '../adminDetail';
 })
 export class AdminDetailComponent implements OnInit {
 
-  @Input() adminDetail = new reviewDetail();
+  @Input() adminDetail = new AdminDetail();
 
   constructor(
   ) {
   }
 
   ngOnInit(): void {
-    this.adminDetail = new reviewDetail('', []);
+    this.adminDetail = new AdminDetail('', []);
 
   }
 }

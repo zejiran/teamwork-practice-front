@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Admin} from '../admin';
 import {AdminService} from '../admin.service';
-import {reviewDetail} from '../adminDetail';
+import {AdminDetail} from '../adminDetail';
 
 @Component({
   selector: 'app-admin-listar',
@@ -11,7 +11,7 @@ import {reviewDetail} from '../adminDetail';
 export class AdminListarComponent implements OnInit {
   admins: Array<Admin>;
   selected = false;
-  selectedAdmin: reviewDetail = new reviewDetail('', []);
+  selectedAdmin: AdminDetail = new AdminDetail('', []);
   constructor(private adminService: AdminService) { }
 
   getAdmins(): void {
