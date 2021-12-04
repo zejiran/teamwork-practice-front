@@ -1,220 +1,187 @@
 <testExecutions version="1">
-  <file path="src/app/route/route.service.spec.ts">
-    <testCase name="Service: Location getPost() should return 10 records" duration="20"/>
-  </file>
-  <file path="src/app/post/post-listar/post-listar.component.spec.ts">
-    <testCase name="PostListarComponent Should have an td element " duration="69"/>
-    <testCase name="PostListarComponent should create" duration="11"/>
-  </file>
-  <file path="src/app/route/route.service.spec.ts">
-    <testCase name="Service: Location getPost() should return 10 records" duration="4"/>
-  </file>
-  <file path="src/app/FilesContainer/files-container-detail/files-container-detail.component.spec.ts">
-    <testCase name="FilesContainerDetailComponent should create" duration="6"/>
-  </file>
-  <file path="src/app/location/location-listar/location-listar.component.spec.ts">
-    <testCase name="LocationListarComponent should create" duration="14"/>
-    <testCase name="LocationListarComponent Should have an td element " duration="10"/>
-  </file>
-  <file path="src/app/transaction/transaction.service.spec.ts">
-    <testCase name="Service: Post getPost() should return 10 records" duration="3"/>
-  </file>
-  <file path="src/app/enterprise/enterprise.service.spec.ts">
-    <testCase name="Service: Enterprise getEnterprise() should return 10 records" duration="8"/>
-  </file>
-  <file path="src/app/FilesContainer/files-container-listar/files-container-listar.component.spec.ts">
-    <testCase name="FilesContainerListarComponent should create" duration="11"/>
-  </file>
-  <file path="src/app/multimedia/multimedia-detail/multimedia-detail.component.spec.ts">
-    <testCase name="MultimediaDetailComponent should create" duration="14"/>
-  </file>
-  <file path="src/app/transaction/transaction.service.spec.ts">
-    <testCase name="Service: Post getTransaction() should return 10 records" duration="4"/>
-  </file>
-  <file path="src/app/comment/comment.service.spec.ts">
-    <testCase name="Service: Comment getPost() should return 10 records" duration="3"/>
-  </file>
-  <file path="src/app/client/client.service.spec.ts">
-    <testCase name="Service: Client getClient() should return 10 records" duration="3"/>
-  </file>
-  <file path="src/app/admin/admin-listar/admin-listar.component.spec.ts">
-    <testCase name="AdminListarComponent should create" duration="13"/>
-    <testCase name="AdminListarComponent Should have an td element " duration="8"/>
-  </file>
-  <file path="src/app/user/user-listar/user-listar.component.spec.ts">
-    <testCase name="UserListarComponent should create" duration="16"/>
-    <testCase name="UserListarComponent Should have a user name" duration="8"/>
-  </file>
-  <file path="src/app/multimedia/multimedia-listar/multimedia-listar.component.spec.ts">
-    <testCase name="MultimediaListarComponent should create" duration="13"/>
-    <testCase name="MultimediaListarComponent Should have an td element " duration="10"/>
-  </file>
-  <file path="src/app/guide/guide.service.spec.ts">
-    <testCase name="Service: Guide getPost() should return 10 records" duration="3"/>
-  </file>
-  <file path="src/app/user/user.service.spec.ts">
-    <testCase name="Service: User getUser() should return 10 records" duration="3"/>
-  </file>
-  <file path="src/app/quotation/quotation-listar/quotation-listar.component.spec.ts">
-    <testCase name="QuotationListarComponent Should have an td element " duration="16"/>
-    <testCase name="QuotationListarComponent should create" duration="6"/>
-  </file>
-  <file path="src/app/calendar/calendar-create/calendar-create.component.spec.ts">
-    <testCase name="CalendarCreateComponent should create" duration="9"/>
-  </file>
-  <file path="src/app/client/client-listar/client-listar.component.spec.ts">
-    <testCase name="ClientListarComponent should create" duration="13"/>
-  </file>
-  <file path="src/app/user/user-create/user-create.component.spec.ts">
-    <testCase name="UserCreateComponent should create" duration="27"/>
-  </file>
-  <file path="src/app/transaction/transaction-detail/transaction-detail.component.spec.ts">
-    <testCase name="TransactionDetailComponent should create" duration="8"/>
-  </file>
-  <file path="src/app/blog/blog.service.spec.ts">
-    <testCase name="BlogService getPost() should return 10 records" duration="2"/>
-  </file>
-  <file path="src/app/calendar/calendar.service.spec.ts">
-    <testCase name="Service: Calendar getPost() should return 10 records" duration="3"/>
-  </file>
-  <file path="src/app/multimedia/multimedia-create/multimedia-create.component.spec.ts">
-    <testCase name="MultimediaCreateComponent should create" duration="14"/>
-  </file>
-  <file path="src/app/naturalPerson/natural-person-create/natural-person-create.component.spec.ts">
-    <testCase name="NaturalPersonCreateComponent should create" duration="9"/>
-  </file>
-  <file path="src/app/transaction/transaction-listar/transaction-listar.component.spec.ts">
-    <testCase name="TransactionListarComponent Should have an td element " duration="16"/>
-    <testCase name="TransactionListarComponent should create" duration="5"/>
-  </file>
-  <file path="src/app/outing/outing-listar/outing-listar.component.spec.ts">
-    <testCase name="OutingListarComponent should create" duration="15"/>
-    <testCase name="OutingListarComponent Should have an td element " duration="10"/>
-  </file>
-  <file path="src/app/user/user-detail/user-detail.component.spec.ts">
-    <testCase name="UserDetailComponent should create" duration="8"/>
-  </file>
-  <file path="src/app/insurance/insurance-listar/insurance-listar.component.spec.ts">
-    <testCase name="InsuranceListarComponent Should have an td element " duration="11"/>
-    <testCase name="InsuranceListarComponent should create" duration="6"/>
-  </file>
-  <file path="src/app/enterprise/enterprise-create/enterprise-create.component.spec.ts">
-    <testCase name="EnterpriseCreateComponent should create" duration="16"/>
-  </file>
-  <file path="src/app/review/review-detail/review-detail.component.spec.ts">
-    <testCase name="ReviewDetailComponent should create" duration="9"/>
-  </file>
-  <file path="src/app/outing/outing.service.spec.ts">
-    <testCase name="Service: Outing getPost() should return 10 records" duration="4"/>
-  </file>
-  <file path="src/app/home/home.component.spec.ts">
-    <testCase name="HomeComponent should create" duration="7"/>
-  </file>
-  <file path="src/app/quotation/quotation.service.spec.ts">
-    <testCase name="Service: Quotation getPost() should return 10 records" duration="4"/>
-  </file>
-  <file path="src/app/naturalPerson/natural-person-detail/natural-person-detail.component.spec.ts">
-    <testCase name="NaturalPersonDetailComponent should create" duration="8"/>
-  </file>
-  <file path="src/app/transaction/transaction-create/transaction-create.component.spec.ts">
-    <testCase name="TransactionCreateComponent should create" duration="22"/>
-  </file>
-  <file path="src/app/enterprise/enterprise-listar/enterprise-listar.component.spec.ts">
-    <testCase name="EnterpriseListarComponent should create" duration="9"/>
-  </file>
-  <file path="src/app/blog/blog-listar/blog-listar.component.spec.ts">
-    <testCase name="BlogListarComponent should create" duration="8"/>
-  </file>
-  <file path="src/app/person/person-create/person-create.component.spec.ts">
-    <testCase name="PersonCreateComponent should create" duration="17"/>
-  </file>
-  <file path="src/app/activity/activity-listar/activity-listar.component.spec.ts">
-    <testCase name="ActivityListarComponent should create" duration="11"/>
-    <testCase name="ActivityListarComponent Should have an td element " duration="9"/>
-  </file>
-  <file path="src/app/review/review.service.spec.ts">
-    <testCase name="Service: Review getPost() should return 10 records" duration="5"/>
-  </file>
-  <file path="src/app/comment/comment-listar/comment-listar.component.spec.ts">
-    <testCase name="CommentListarComponent should create" duration="12"/>
-  </file>
-  <file path="src/app/multimedia/multimedia.service.spec.ts">
-    <testCase name="Service: Multimedia getPost() should return 10 records" duration="3"/>
-  </file>
-  <file path="src/app/insurance/insurance.service.spec.ts">
-    <testCase name="Service: Insurance getPost() should return 10 records" duration="2"/>
-  </file>
-  <file path="src/app/activity/activity.service.spec.ts">
-    <testCase name="Service: Activity getPost() should return 10 records" duration="2"/>
-  </file>
-  <file path="src/app/review/review-listar/review-listar.component.spec.ts">
-    <testCase name="ReviewListarComponent should create" duration="11"/>
-    <testCase name="ReviewListarComponent Should have an td element " duration="8"/>
-  </file>
-  <file path="src/app/person/person-detail/person-detail.component.spec.ts">
-    <testCase name="PersonDetailComponent should create" duration="7"/>
-  </file>
-  <file path="src/app/admin/admin-detail/admin-detail.component.spec.ts">
-    <testCase name="AdminDetailComponent should create" duration="7"/>
-  </file>
-  <file path="src/app/outing/outing-create/outing-create.component.spec.ts">
-    <testCase name="OutingCreateComponent should create" duration="22"/>
-  </file>
-  <file path="src/app/guide/guide-listar/guide-listar.component.spec.ts">
-    <testCase name="GuideListarComponent should create" duration="9"/>
-    <testCase name="GuideListarComponent Should have an td element " duration="9"/>
-  </file>
-  <file path="src/app/itinerary/itinerary.service.spec.ts">
-    <testCase name="Service: Itinerary getItineraries() should return 10 records" duration="3"/>
-  </file>
-  <file path="src/app/person/person-listar/person-listar.component.spec.ts">
-    <testCase name="PersonListarComponent Should have an td element " duration="9"/>
-    <testCase name="PersonListarComponent should create" duration="6"/>
-  </file>
   <file path="src/app/admin/admin.service.spec.ts">
-    <testCase name="AdminService getPost() should return 10 records" duration="2"/>
-  </file>
-  <file path="src/app/itinerary/itinerary-listar/itinerary-listar.component.spec.ts">
-    <testCase name="ItineraryListarComponent Should have an td element " duration="10"/>
-    <testCase name="ItineraryListarComponent should create" duration="5"/>
+    <testCase name="AdminService getPost() should return 10 records" duration="13"/>
   </file>
   <file path="src/app/person/person.service.spec.ts">
-    <testCase name="Service: Person getPost() should return 10 records" duration="2"/>
+    <testCase name="Service: Person getPost() should return 10 records" duration="3"/>
   </file>
-  <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should have as title 'front'" duration="20"/>
-    <testCase name="AppComponent should create the app" duration="11"/>
+  <file path="src/app/comment/comment.service.spec.ts">
+    <testCase name="Service: Comment getPost() should return 10 records" duration="2"/>
   </file>
-  <file path="src/app/route/route-create/route-create.component.spec.ts">
-    <testCase name="RouteCreateComponent should create" duration="8"/>
+  <file path="src/app/blog/blog-listar/blog-listar.component.spec.ts">
+    <testCase name="BlogListarComponent should create" duration="40"/>
   </file>
-  <file path="src/app/complementaryinformation/complementaryinformation-listar/complementaryinformation-listar.component.spec.ts">
-    <testCase name="ComplementaryInformationListarComponent should create" duration="9"/>
-    <testCase name="ComplementaryInformationListarComponent Should have an td element " duration="9"/>
+  <file path="src/app/enterprise/enterprise-listar/enterprise-listar.component.spec.ts">
+    <testCase name="EnterpriseListarComponent should create" duration="10"/>
   </file>
-  <file path="src/app/naturalPerson/natural-person-listar/natural-person-listar.component.spec.ts">
-    <testCase name="NaturalPersonListarComponent should create" duration="11"/>
-    <testCase name="NaturalPersonListarComponent Should have an td element " duration="7"/>
+  <file path="src/app/insurance/insurance.service.spec.ts">
+    <testCase name="Service: Insurance getPost() should return 10 records" duration="4"/>
   </file>
-  <file path="src/app/post/post-create/post-create.component.spec.ts">
-    <testCase name="PostCreateComponent should create" duration="12"/>
+  <file path="src/app/transaction/transaction-listar/transaction-listar.component.spec.ts">
+    <testCase name="TransactionListarComponent should create" duration="8"/>
+    <testCase name="TransactionListarComponent Should have an td element " duration="6"/>
   </file>
   <file path="src/app/blog/blog-detail/blog-detail.component.spec.ts">
-    <testCase name="BlogDetailComponent should create" duration="14"/>
+    <testCase name="BlogDetailComponent should create" duration="9"/>
   </file>
   <file path="src/app/complementaryinformation/complementaryinformation.service.spec.ts">
-    <testCase name="Service: Complementary Information getPost() should return 10 records" duration="4"/>
+    <testCase name="Service: Complementary Information getPost() should return 10 records" duration="6"/>
   </file>
-  <file path="src/app/naturalPerson/naturalPerson.service.spec.ts">
-    <testCase name="Service: naturalPerson getNaturalPerson() should return 10 records" duration="2"/>
+  <file path="src/app/transaction/transaction.service.spec.ts">
+    <testCase name="Service: Post getTransaction() should return 10 records" duration="2"/>
   </file>
-  <file path="src/app/post/post-detail/post-detail.component.spec.ts">
-    <testCase name="PostDetailComponent should create" duration="11"/>
+  <file path="src/app/activity/activity.service.spec.ts">
+    <testCase name="Service: Activity getPost() should return 10 records" duration="1"/>
   </file>
-  <file path="src/app/location/location-create/location-create.component.spec.ts">
-    <testCase name="LocationCreateComponent should create" duration="6"/>
+  <file path="src/app/post/post-listar/post-listar.component.spec.ts">
+    <testCase name="PostListarComponent should create" duration="10"/>
+    <testCase name="PostListarComponent Should have an td element " duration="6"/>
+  </file>
+  <file path="src/app/itinerary/itinerary-listar/itinerary-listar.component.spec.ts">
+    <testCase name="ItineraryListarComponent should create" duration="10"/>
+    <testCase name="ItineraryListarComponent Should have an td element " duration="10"/>
+  </file>
+  <file path="src/app/activity/activity-listar/activity-listar.component.spec.ts">
+    <testCase name="ActivityListarComponent should create" duration="8"/>
+    <testCase name="ActivityListarComponent Should have an td element " duration="6"/>
+  </file>
+  <file path="src/app/outing/outing.service.spec.ts">
+    <testCase name="Service: Outing getPost() should return 10 records" duration="2"/>
+  </file>
+  <file path="src/app/multimedia/multimedia.service.spec.ts">
+    <testCase name="Service: Multimedia getPost() should return 10 records" duration="1"/>
+  </file>
+  <file path="src/app/route/route.service.spec.ts">
+    <testCase name="Service: Location getPost() should return 10 records" duration="1"/>
+  </file>
+  <file path="src/app/quotation/quotation.service.spec.ts">
+    <testCase name="Service: Quotation getPost() should return 10 records" duration="3"/>
+  </file>
+  <file path="src/app/review/review-detail/review-detail.component.spec.ts">
+    <testCase name="ReviewDetailComponent should create" duration="5"/>
+  </file>
+  <file path="src/app/FilesContainer/files-container-listar/files-container-listar.component.spec.ts">
+    <testCase name="FilesContainerListarComponent should create" duration="4"/>
+  </file>
+  <file path="src/app/admin/admin-listar/admin-listar.component.spec.ts">
+    <testCase name="AdminListarComponent should create" duration="7"/>
+    <testCase name="AdminListarComponent Should have an td element " duration="6"/>
+  </file>
+  <file path="src/app/FilesContainer/files-container-detail/files-container-detail.component.spec.ts">
+    <testCase name="FilesContainerDetailComponent should create" duration="5"/>
+  </file>
+  <file path="src/app/complementaryinformation/complementaryinformation-listar/complementaryinformation-listar.component.spec.ts">
+    <testCase name="ComplementaryInformationListarComponent should create" duration="7"/>
+    <testCase name="ComplementaryInformationListarComponent Should have an td element " duration="7"/>
+  </file>
+  <file path="src/app/admin/admin-detail/admin-detail.component.spec.ts">
+    <testCase name="AdminDetailComponent should create" duration="5"/>
   </file>
   <file path="src/app/route/route-listar/route-listar.component.spec.ts">
-    <testCase name="RouteListarComponent should create" duration="13"/>
+    <testCase name="RouteListarComponent should create" duration="8"/>
+  </file>
+  <file path="src/app/post/post-detail/post-detail.component.spec.ts">
+    <testCase name="PostDetailComponent should create" duration="7"/>
+  </file>
+  <file path="src/app/client/client.service.spec.ts">
+    <testCase name="Service: Client getClient() should return 10 records" duration="1"/>
+  </file>
+  <file path="src/app/naturalPerson/natural-person-detail/natural-person-detail.component.spec.ts">
+    <testCase name="NaturalPersonDetailComponent should create" duration="5"/>
+  </file>
+  <file path="src/app/client/client-listar/client-listar.component.spec.ts">
+    <testCase name="ClientListarComponent should create" duration="6"/>
+  </file>
+  <file path="src/app/naturalPerson/naturalPerson.service.spec.ts">
+    <testCase name="Service: naturalPerson getNaturalPerson() should return 10 records" duration="1"/>
+  </file>
+  <file path="src/app/user/user-listar/user-listar.component.spec.ts">
+    <testCase name="UserListarComponent Should have an td element " duration="8"/>
+    <testCase name="UserListarComponent should create" duration="3"/>
+  </file>
+  <file path="src/app/review/review-listar/review-listar.component.spec.ts">
+    <testCase name="ReviewListarComponent should create" duration="7"/>
+    <testCase name="ReviewListarComponent Should have an td element " duration="4"/>
+  </file>
+  <file path="src/app/comment/comment-listar/comment-listar.component.spec.ts">
+    <testCase name="CommentListarComponent should create" duration="7"/>
+  </file>
+  <file path="src/app/multimedia/multimedia-listar/multimedia-listar.component.spec.ts">
+    <testCase name="MultimediaListarComponent Should have an td element " duration="6"/>
+    <testCase name="MultimediaListarComponent should create" duration="4"/>
+  </file>
+  <file path="src/app/review/review.service.spec.ts">
+    <testCase name="Service: Review getPost() should return 10 records" duration="2"/>
+  </file>
+  <file path="src/app/blog/blog.service.spec.ts">
+    <testCase name="BlogService getPost() should return 10 records" duration="1"/>
+  </file>
+  <file path="src/app/route/route.service.spec.ts">
+    <testCase name="Service: Location getPost() should return 10 records" duration="1"/>
+  </file>
+  <file path="src/app/guide/guide.service.spec.ts">
+    <testCase name="Service: Guide getPost() should return 10 records" duration="1"/>
+  </file>
+  <file path="src/app/transaction/transaction-detail/transaction-detail.component.spec.ts">
+    <testCase name="TransactionDetailComponent should create" duration="5"/>
+  </file>
+  <file path="src/app/calendar/calendar.service.spec.ts">
+    <testCase name="Service: Calendar getPost() should return 10 records" duration="1"/>
+  </file>
+  <file path="src/app/insurance/insurance-listar/insurance-listar.component.spec.ts">
+    <testCase name="InsuranceListarComponent Should have an td element " duration="8"/>
+    <testCase name="InsuranceListarComponent should create" duration="4"/>
+  </file>
+  <file path="src/app/quotation/quotation-listar/quotation-listar.component.spec.ts">
+    <testCase name="QuotationListarComponent should create" duration="9"/>
+    <testCase name="QuotationListarComponent Should have an td element " duration="5"/>
+  </file>
+  <file path="src/app/guide/guide-listar/guide-listar.component.spec.ts">
+    <testCase name="GuideListarComponent Should have an td element " duration="7"/>
+    <testCase name="GuideListarComponent should create" duration="5"/>
+  </file>
+  <file path="src/app/outing/outing-listar/outing-listar.component.spec.ts">
+    <testCase name="OutingListarComponent Should have an td element " duration="12"/>
+    <testCase name="OutingListarComponent should create" duration="5"/>
+  </file>
+  <file path="src/app/user/user.service.spec.ts">
+    <testCase name="Service: User getUser() should return 10 records" duration="1"/>
+  </file>
+  <file path="src/app/enterprise/enterprise.service.spec.ts">
+    <testCase name="Service: Enterprise getEnterprise() should return 10 records" duration="1"/>
+  </file>
+  <file path="src/app/multimedia/multimedia-detail/multimedia-detail.component.spec.ts">
+    <testCase name="MultimediaDetailComponent should create" duration="4"/>
+  </file>
+  <file path="src/app/person/person-listar/person-listar.component.spec.ts">
+    <testCase name="PersonListarComponent Should have an td element " duration="7"/>
+    <testCase name="PersonListarComponent should create" duration="4"/>
+  </file>
+  <file path="src/app/naturalPerson/natural-person-listar/natural-person-listar.component.spec.ts">
+    <testCase name="NaturalPersonListarComponent Should have an td element " duration="6"/>
+    <testCase name="NaturalPersonListarComponent should create" duration="5"/>
+  </file>
+  <file path="src/app/transaction/transaction.service.spec.ts">
+    <testCase name="Service: Post getPost() should return 10 records" duration="1"/>
+  </file>
+  <file path="src/app/itinerary/itinerary.service.spec.ts">
+    <testCase name="Service: Itinerary getItineraries() should return 10 records" duration="1"/>
+  </file>
+  <file path="src/app/user/user-detail/user-detail.component.spec.ts">
+    <testCase name="UserDetailComponent should create" duration="5"/>
+  </file>
+  <file path="src/app/home/home.component.spec.ts">
+    <testCase name="HomeComponent should create" duration="5"/>
+  </file>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should create the app" duration="11"/>
+    <testCase name="AppComponent should have as title 'front'" duration="8"/>
+  </file>
+  <file path="src/app/person/person-detail/person-detail.component.spec.ts">
+    <testCase name="PersonDetailComponent should create" duration="6"/>
+  </file>
+  <file path="src/app/location/location-listar/location-listar.component.spec.ts">
+    <testCase name="LocationListarComponent should create" duration="5"/>
+    <testCase name="LocationListarComponent Should have an td element " duration="5"/>
   </file>
 </testExecutions>

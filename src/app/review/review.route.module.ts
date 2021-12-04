@@ -2,6 +2,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
 import {ReviewListarComponent} from './review-listar/review-listar.component';
 import {ReviewDetailComponent} from './review-detail/review-detail.component';
+import {ReviewCreateComponent} from './review-create/review-create.component';
 
 
 const routes: Routes = [{
@@ -12,10 +13,10 @@ const routes: Routes = [{
       path: 'list',
       component: ReviewListarComponent
     },
-    /*{
+    {
       path: 'new',
       component: ReviewCreateComponent
-    },*/
+    },
     {
       path: ':id',
       component: ReviewDetailComponent,
