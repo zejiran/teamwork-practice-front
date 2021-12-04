@@ -6,7 +6,6 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { Review } from './review';
 import { Comment } from '../comment/comment';
 import { Route } from '../route/route';
-import { Outing } from '../outing/outing';
 
 describe('Service: Review', () => {
   let injector: TestBed;
@@ -33,13 +32,8 @@ describe('Service: Review', () => {
       const review = new Review(faker.datatype.number() ,
         new Comment(faker.datatype.number(), faker.lorem.sentence(), faker.datatype.number(), faker.datatype.number()),
         faker.datatype.number(),
-        new Route(faker.datatype.number(2),
-          faker.datatype.number(),
-          new Outing(faker.datatype.number(),
-            faker.lorem.sentence(),
-            faker.datatype.datetime(),
-            faker.lorem.sentence(),
-            faker.datatype.number()))
+        new Route(faker.datatype.number(), faker.datatype.string(), faker.datatype.number(2),
+          faker.datatype.number()),
       );
 
       mockPosts.push(review);
