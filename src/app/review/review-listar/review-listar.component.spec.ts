@@ -8,7 +8,6 @@ import { Review } from '../review';
 import * as faker from 'faker';
 import { Comment } from '../../comment/comment';
 import { Route } from 'src/app/route/route';
-import { Outing } from 'src/app/outing/outing';
 
 
 describe('ReviewListarComponent', () => {
@@ -36,15 +35,10 @@ describe('ReviewListarComponent', () => {
         ),
         faker.datatype.number(),
         new Route(
-          faker.datatype.number(2),
           faker.datatype.number(),
-          new Outing(
-            faker.datatype.number(),
-            faker.lorem.sentence(),
-            faker.datatype.datetime(),
-            faker.lorem.sentence(),
-            faker.datatype.number()
-          ),
+          faker.datatype.string(),
+          faker.datatype.number(2),
+          faker.datatype.number()
         )
       )
     ];

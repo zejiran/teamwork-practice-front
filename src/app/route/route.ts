@@ -1,20 +1,18 @@
-import { Outing } from '../outing/outing';
-
 enum Difficulty {
   EASY, AMATEUR, EXPERIMENTED
 }
 
 export class Route {
   id: number;
+  routeName: string;
   difficulty: Difficulty;
   estimatedDuration: number;
-  outing: Outing;
 
-  constructor(difficulty: Difficulty, estimatedDuration: number, outing: Outing){
-
+  constructor(id: number, routeName: string, difficulty: Difficulty, estimatedDuration: number) {
+    this.id = id;
+    this.routeName = routeName;
     this.difficulty = difficulty;
     this.estimatedDuration = estimatedDuration;
-    this.outing = outing;
   }
 
 

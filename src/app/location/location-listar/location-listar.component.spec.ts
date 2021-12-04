@@ -8,7 +8,6 @@ import { LocationListarComponent } from './location-listar.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import * as faker from 'faker';
 import { Route } from 'src/app/route/route';
-import { Outing } from 'src/app/outing/outing';
 
 describe('LocationListarComponent', () => {
   let component: LocationListarComponent;
@@ -34,15 +33,10 @@ describe('LocationListarComponent', () => {
         faker.datatype.number(),
         faker.datatype.number(),
         new Route(
+          faker.datatype.number(),
+          faker.datatype.string(),
           faker.datatype.number(2),
           faker.datatype.number(),
-          new Outing(
-            faker.datatype.number(),
-            faker.lorem.sentence(),
-            faker.datatype.datetime(),
-            faker.lorem.sentence(),
-            faker.datatype.number()
-          )
         )
       ),
     ];
