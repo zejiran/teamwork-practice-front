@@ -1,17 +1,70 @@
 <div class="container-fluid">
-  <p class="h3 p-3">{{guideDetail.name}}</p>
-  <div class="row">
-    <div class="col">
-      <dl>
-        <dt>Salidas</dt>
-          <dd *ngFor = "let a of guideDetail.outings">{{a.name}}</dd>
-        <dt>Edad</dt>
-        <td>{{ guideDetail.age }}</td>
-        <dt>Cant. de reviews</dt>
-        <td>{{ guideDetail.reviews }}</td>
-        <dt>Cant. de puntos</dt>
-        <td>{{ guideDetail.points }}</td>
-      </dl>
+  <div class="card my-5">
+    <div class="card-header p-3">
+      <p class="h2 text-center">{{guideDetail.name}}</p>
+    </div>
+    <div class="m-3">
+      <div class="my-2">
+        <table class="table">
+          <thead>
+
+              Datos del Guía
+
+          </thead>
+          <body>
+            <tr>
+              <td>Nombre</td>
+              <td>{{guideDetail.name}}</td>
+            </tr>
+            <tr>
+              <td>Edad</td>
+              <td>{{guideDetail.age}}</td>
+            </tr>
+            <tr>
+              <td>Cantidad de reviews</td>
+              <td>{{guideDetail.reviews}}</td>
+            </tr>
+            <tr>
+              <td>Puntos totales</td>
+              <td>{{guideDetail.points}}</td>
+            </tr>
+            <tr>
+              <td>Calificación</td>
+              <td>{{guideDetail.points/guideDetail.reviews}}</td>
+            </tr>
+          </body>
+        </table>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-c2ols-lg-5 mt-4 mx-1 mx-md-5">
+          <div class="col my-2" *ngFor="let u of guideDetail.outings">
+            <p>Las Salidas del Guía</p>
+            <div class="card" style="max-width: 20rem;">
+              <img src="https://www.efadeporte.com/blog/wp-content/uploads/2020/08/senderismo.jpg" class="card-img-top" >
+              <div class="card-body text-center mt-1">
+                <table class="table">
+                  <body>
+                    <tr>
+                      <td>Día</td>
+                      <td>{{u.date}}</td>
+                    </tr>
+                    <tr>
+                      <td>Nombre</td>
+                      <td>{{u.name}}</td>
+                    </tr>
+                    <tr>
+                      <td>Lugar</td>
+                      <td>{{u.place}}</td>
+                    </tr>
+                    <tr>
+                      <td>Costo de Participación</td>
+                      <td>{{u.participationCost}}</td>
+                    </tr>
+                  </body>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+

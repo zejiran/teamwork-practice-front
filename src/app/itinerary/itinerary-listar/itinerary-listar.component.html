@@ -1,23 +1,17 @@
 <div class="container-fluid">
-  <div class="card m-5">
-    <div class="card-header p-3">
-      <p class="h2 text-center">Itineraries</p>
+  <div class="row p-5">
+    <div *ngIf="selected">
+      <app-itinerary-detail [itineraryDetail]="selectedItinerary"></app-itinerary-detail>
     </div>
-    <div class="card-body m-3">
-      <table class="table resposive table-bordered text-center">
-        <thead>
-        <tr>
-          <th scope="col">lodging</th>
-          <th scope="col">transportation</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let b of itineraries">
-          <td>{{ b.lodging }}</td>
-          <td>{{ b.transportation }}</td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
+      <div class="card" style="width: 18rem;" *ngFor="let b of itineraries">
+        <div class="card-body">
+          <figure class="figure">
+            <p class="h3 p-3 text-danger">Id: {{b.id}}</p>
+            <p class="h3 p-3">Hospedaje: {{b.lodging}}</p>
+            <p class="h3 p-3">Transporte: {{b.transportation}}</p>
+            <th><button (click)="onSelected(b)">Ver Detalle</button></th>
+          </figure>
+        </div>
+      </div>
   </div>
 </div>

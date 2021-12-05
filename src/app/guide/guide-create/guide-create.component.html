@@ -1,0 +1,77 @@
+<div class="container-fluid">
+  <div class="col-4 p-3">
+    <div class="h4" i18n>Guide Creation</div>
+    <form
+      [formGroup]="guideForm"
+      (ngSubmit)="!guideForm.invalid && createGuide(guideForm.value)"
+    >
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="name"> Name* </label>
+        <input
+          novalidate
+          id="name"
+          class="form-control"
+          formControlName="name"
+          placeholder="Your Full Name"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            guideForm.get('name').hasError('required') &&
+            guideForm.get('name').touched
+          "
+        >
+          Name required
+        </div>
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            guideForm.get('name').hasError('minlength') &&
+            guideForm.get('name').touched
+          "
+        >
+          Name too short. It should be at least 2 characters
+        </div>
+      </div>
+
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="age"> Edad* </label>
+        <input
+          id="age"
+          type="text"
+          class="form-control"
+          formControlName="age"
+          placeholder="Your Age"
+        />
+
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            guideForm.get('age').hasError('age') &&
+            guideForm.get('age').touched
+          "
+        >
+          Age required
+        </div>
+      </div>
+
+
+      <div class="row m-3">
+        <button
+          type="submit"
+          class="btn btn-success"
+          [disabled]="!guideForm.valid"
+        >
+          Create
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger ml-3"
+          (click)="cancelCreation()"
+        >
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+ </div>

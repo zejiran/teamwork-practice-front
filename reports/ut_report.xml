@@ -47,8 +47,9 @@
   <file path="src/app/location/location-create/location-create.component.spec.ts">
     <testCase name="LocationCreateComponent should create" duration="5"/>
   </file>
-  <file path="src/app/transaction/transaction.service.spec.ts">
-    <testCase name="Service: Post getTransaction() should return 10 records" duration="3"/>
+  <file path="src/app/location/location-listar/location-listar.component.spec.ts">
+    <testCase name="LocationListarComponent Should have an td element " duration="41"/>
+    <testCase name="LocationListarComponent should create" duration="16"/>
   </file>
   <file path="src/app/activity/activity.service.spec.ts">
     <testCase name="Service: Activity getPost() should return 10 records" duration="2"/>

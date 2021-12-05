@@ -22,6 +22,9 @@ export class MultimediaService {
     return this.http.get<MultimediaDetail>(this.apiUrl + '/' + id.toString());
   }
 
+  getM(ciId): Observable<Multimedia>{
+    return this.http.get<Multimedia>(`${this.apiUrl}/${ciId}`);
+  }
   createMultimedia(multimedia: Multimedia): Observable<MultimediaDetail> {
     return this.http.post<MultimediaDetail>(this.apiUrl, multimedia);
   }

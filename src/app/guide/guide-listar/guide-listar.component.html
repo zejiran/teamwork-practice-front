@@ -1,29 +1,27 @@
+<div *ngIf="selected">
+  <app-guide-detail [guideDetail]="selectedGuide"></app-guide-detail>
+</div>
 <div class="container-fluid">
-  <div class="card m-5">
+  <div class="card my-5">
     <div class="card-header p-3">
-      <p class="h2 text-center">Guides</p>
+      <p class="h2 text-center">Guias</p>
     </div>
-    <div class="card-body m-3">
-      <table class="table resposive table-bordered text-center">
-        <thead>
-        <tr>
-          <th scope="col" >Name</th>
-          <th scope="col">Age</th>
-          <th scope="col">Rating</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let u of guides">
-          <td>{{ u.name }}</td>
-          <td>{{ u.age }}</td>
-          <td>{{ u.reviews }}</td>
-          <td><button (click)="onSelected(u)">Ver Detalle</button></td>
-        </tr>
-        </tbody>
-      </table>
-      <div *ngIf="selected">
-        <app-guide-detail [guideDetail]="selectedGuide"></app-guide-detail>
+    <div class="m-3">
+      <div class="my-2">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 mt-4 mx-1 mx-md-5">
+          <div class="col my-2" *ngFor="let u of guides">
+            <div class="card" style="max-width: 20rem;">
+              <img src="https://joeschmoe.io/api/v1/{{ u.name }}" class="card-img-top" alt="User image" (click)="onSelected(u)">
+              <div class="card-body text-center mt-1">
+                <h5 class="card-title">{{ u.name }}</h5>
+                <p class="card-text">Guía ID: {{ u.id }}</p>
+                <p class="card-text">Edad: {{ u.age }}</p>
+                <p class="card-text">Calificación: {{ u.points/u.reviews }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <app-guide-create></app-guide-create>
     </div>
   </div>
-</div>

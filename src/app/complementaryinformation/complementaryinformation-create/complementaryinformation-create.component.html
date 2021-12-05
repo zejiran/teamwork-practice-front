@@ -1,0 +1,81 @@
+<div class="container-fluid">
+  <div class="col-4 p-3">
+    <div class="h4" i18n>Customer Creation</div>
+    <form
+      [formGroup]="ciForm"
+      (ngSubmit)="!ciForm.invalid && createCI(ciForm.value)"
+    >
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="description"> Descripcion </label>
+        <input
+          novalidate
+          id="description"
+          class="form-control"
+          formControlName="description"
+          placeholder="Your Full Description"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            ciForm.get('description').hasError('required') &&
+            ciForm.get('description').touched
+          "
+        >
+          Description required
+        </div>
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            ciForm.get('description').hasError('minlength') &&
+            ciForm.get('description').touched
+          "
+        >
+          Description. It should be at least 2 characters
+        </div>
+      </div>
+
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="recommendation"> Recomendación </label>
+        <input
+          id="recommendation"
+          type="text"
+          class="form-control"
+          formControlName="recommendation"
+          placeholder="Your recommendation"
+        />
+
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            ciForm.get('recommendation').hasError('required') &&
+            ciForm.get('recommendation').touched
+          "
+        >
+          recommendationrequired
+        </div>
+      </div>
+
+
+      <div class="row m-3 small">
+        <p>* Required fields</p>
+      </div>
+
+      <div class="row m-3">
+        <button
+          type="submit"
+          class="btn btn-success"
+          [disabled]="!ciForm.valid"
+        >
+          Create
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger ml-3"
+          (click)="cancelCreation()"
+        >
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+ </div>

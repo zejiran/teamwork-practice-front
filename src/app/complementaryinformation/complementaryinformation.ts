@@ -15,8 +15,6 @@ export class ComplementaryInformation {
     this.description = description;
     this.recommendation = recommendation;
     this.homeImage = homeImage;
-    this.outing = outing;
-
   }
 
 }

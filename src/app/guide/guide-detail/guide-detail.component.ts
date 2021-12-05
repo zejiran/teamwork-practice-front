@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Guide } from '../guide';
-import { GuideDetail } from './guideDetail';
+import { GuideDetail } from '../guideDetail';
 
 @Component({
   selector: 'app-guide-detail',
@@ -14,7 +14,7 @@ export class GuideDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.guideDetail = new GuideDetail('', 0, 0 , 0);
+    console.log(this.guideDetail);
   }
 
 }
