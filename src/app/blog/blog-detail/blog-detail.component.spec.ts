@@ -1,6 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BlogDetailComponent } from './blog-detail.component';
+import {RouterTestingModule} from '@angular/router/testing';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {ActivatedRoute} from '@angular/router';
+import {of} from 'rxjs';
+import {BlogService} from '../blog.service';
 
 describe('BlogDetailComponent', () => {
   let component: BlogDetailComponent;
@@ -8,7 +13,18 @@ describe('BlogDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BlogDetailComponent ]
+      declarations: [ BlogDetailComponent ],
+      imports: [RouterTestingModule, HttpClientTestingModule],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {params: of([{id: 1}])}
+        },
+        {
+          provide: BlogService,
+          useValue: {getBlog: () => of({})}
+        },
+      ]
     })
     .compileComponents();
   }));

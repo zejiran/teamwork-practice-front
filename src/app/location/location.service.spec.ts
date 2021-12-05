@@ -9,7 +9,6 @@ import * as faker from 'faker';
 import { Locationn } from './locationn';
 import { environment } from '../../environments/environment';
 import { Route } from '../route/route';
-import { Outing } from '../outing/outing';
 
 describe('Service: Location', () => {
   let injector: TestBed;
@@ -42,15 +41,10 @@ describe('Service: Location', () => {
         faker.datatype.number(),
         faker.datatype.number(),
         new Route(
+          faker.datatype.number(),
+          faker.datatype.string(),
           faker.datatype.number(2),
           faker.datatype.number(),
-          new Outing(
-            faker.datatype.number(),
-            faker.lorem.sentence(),
-            faker.datatype.datetime(),
-            faker.lorem.sentence(),
-            faker.datatype.number()
-          )
         )
       );
 

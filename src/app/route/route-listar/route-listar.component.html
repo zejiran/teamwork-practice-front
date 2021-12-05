@@ -7,14 +7,14 @@
       <table class="table resposive table-bordered text-center">
         <thead>
           <tr>
-            <th scope="col">Outing Id</th>
+            <th scope="col">Route Name</th>
             <th scope="col">Difficulty</th>
             <th scope="col">Estimated Duration</th>
           </tr>
           </thead>
           <tbody>
           <tr *ngFor="let b of routes">
-            <td>{{ b.outing.id }}</td>
+            <td>{{b.routeName}}</td>
             <td>{{ b.difficulty }}</td>
             <td>{{ b.estimatedDuration }}</td>
             <th><button (click)="onSelected(b)">Ver Detalle</button></th>

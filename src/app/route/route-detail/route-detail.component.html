@@ -3,13 +3,6 @@
   <div class="row">
     <div class="col">
       <dl>
-        <dt>Outing: </dt>
-          <dt>NombreOuting:</dt> <dd>{{routeDetail.outing.name}}</dd>
-          <dt>FechaOuting:</dt> <dd>{{routeDetail.outing.date}}</dd>
-          <dt>LugarOuting:</dt> <dd>{{routeDetail.outing.place}}</dd>
-          <dt>CostoOuting:</dt> <dd>{{routeDetail.outing.participationCost}}</dd>
-        <dt>Medias</dt>
-
         <dt>Reviews</dt>
         <dd *ngFor = "let a of routeDetail.reviews">
           {{a.comment}}
@@ -30,4 +23,5 @@
       </dl>
     </div>
   </div>
+  <app-review-create [routeDetail]="routeDetail"></app-review-create>
 </div>

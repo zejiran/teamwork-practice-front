@@ -2,14 +2,17 @@
   <div class="row">
     <div class="col">
       <div class="card-body m-3">
-        <dl>
-            <dt>{{comment.username}}  {{comment.date}} </dt>
-            <dt>{{comment.text}}</dt>
-            <dt><button (click)="onSelected()">Ver respuestas</button></dt>
-          <div *ngIf="selected">
-            <app-comment-replies [idComment]="comment.id"></app-comment-replies>
-          </div>
-        </dl>
+          <dd>{{comment.username}}  {{comment.date}} </dd>
+          <dd>{{comment.text}}</dd>
+        <div *ngIf="selected; else contraer">
+          <dd><a (click)="onSelected()" >contraer</a></dd>
+          <app-comment-replies [idComment]="comment.id"></app-comment-replies>
+          <app-comment-create [tread]="comment" aria-label="left"></app-comment-create>
+        </div>
+        <ng-template #contraer>
+          <dd><a (click)="onSelected()" >respuestas</a></dd>
+        </ng-template>
+        <a></a>
       </div>
     </div>
   </div>

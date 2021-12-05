@@ -10,7 +10,7 @@ import { CalendarDetail } from '../calendar-detail';
 })
 export class CalendarListarComponent implements OnInit {
 
-  selectedCalendar: Calendar;
+  selectedCalendar: CalendarDetail;
   selected = false;
   calendars: Array<Calendar>;
 
@@ -30,10 +30,10 @@ export class CalendarListarComponent implements OnInit {
   }
 
   selectHistory(calendar: Calendar): void {
-    if (this.selectedCalendar != calendar || !(this.selected)){
+    if (this.selectedCalendar !== calendar || !(this.selected)){
       this.calendarService.getCalendar(this.selectedCalendar.id)
-      .subscribe(CalendarDetail => {
-        this.selectedCalendar = CalendarDetail;
+      .subscribe( calendarD => {
+        this.selectedCalendar = calendarD;
       });
       this.selected = true;
     }

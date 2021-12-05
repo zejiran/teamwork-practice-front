@@ -9,14 +9,18 @@ import {CommentService} from '../comment.service';
 })
 export class CommentRepliesComponent implements OnInit {
   replies: Array<Comment> = [];
-  @Input() idComment: number;
+  @Input() idComment;
   constructor(private commentService: CommentService) { }
 
   ngOnInit(): void {
-    if (this.idComment !== null){
+    if (this.idComment !== null && this.idComment !== undefined){
     this.commentService.getComment(this.idComment)
       .subscribe(commentDetail => {
         this.replies = commentDetail.replies;
+      });
+    }else{
+      this.commentService.getComments().subscribe(comments => {
+        this.replies = comments;
       });
     }
   }

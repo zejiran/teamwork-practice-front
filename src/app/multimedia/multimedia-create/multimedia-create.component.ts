@@ -42,6 +42,8 @@ export class MultimediaCreateComponent implements OnInit {
   ngOnInit(): void {
     this.multimediaForm = this.formBuilder.group({
       fileName: ['', [Validators.required, Validators.minLength(3)]],
+      mediaType: ['IMAGE'],
+      extension: ['not processed'],
     });
   }
 

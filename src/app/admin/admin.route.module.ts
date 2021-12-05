@@ -2,6 +2,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
 import {AdminDetailComponent} from './admin-detail/admin-detail.component';
 import {AdminListarComponent} from './admin-listar/admin-listar.component';
+import {AdminCreateComponent} from './admin-create/admin-create.component';
 
 const routes: Routes = [{
   path: 'admins',
@@ -11,10 +12,10 @@ const routes: Routes = [{
       path: 'list',
       component: AdminListarComponent
     },
-    /*{
+    {
       path: 'new',
       component: AdminCreateComponent
-    },*/
+    },
     {
       path: ':id',
       component: AdminDetailComponent,
