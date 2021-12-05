@@ -1,0 +1,22 @@
+<div class="container-fluid" align="left">
+    <form
+      [formGroup]="form"
+      (ngSubmit)="!form.invalid && createComment(form.value)"
+    >
+        <input
+          id="text"
+          class="form-control"
+          formControlName="text"
+          placeholder="Your user"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            form.get('text').hasError('maxlength') &&
+            form.get('text').touched
+          "
+        >
+          el comentario solo puede tener maximo 1000 caracteres
+        </div>
+    </form>
+</div>

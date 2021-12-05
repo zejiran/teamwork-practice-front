@@ -1,0 +1,69 @@
+<div class="container-fluid">
+  <div class="col-4 p-3">
+    <div class="h4" i18n>Review Creation</div>
+    <form
+      [formGroup]="form"
+      (ngSubmit)="!form.invalid && createReview(form.value)"
+    >
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="text"> text </label>
+        <input
+          id="text"
+          class="form-control"
+          formControlName="text"
+          placeholder="Your opinion"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            form.get('text').hasError('required') &&
+            form.get('text').touched
+          "
+        >
+          text required
+        </div>
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            form.get('text').hasError('maxlength') &&
+            form.get('text').touched
+          "
+        >
+          text is too large. It should be at most 500 characters
+        </div>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="score"> score </label>
+        <input
+          id="score"
+          class="form-control"
+          type = "number"
+          formControlName="score"
+          placeholder="the score 1-5"
+        />
+      </div>
+
+
+      <div class="row m-3 small">
+        <p>* Required fields</p>
+      </div>
+
+      <div class="row m-3">
+        <button
+          type="submit"
+          class="btn btn-success"
+          [disabled]="!form.valid"
+        >
+          Create
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger ml-3"
+          (click)="cancelCreation()"
+        >
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

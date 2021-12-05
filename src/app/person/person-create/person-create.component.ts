@@ -42,6 +42,9 @@ export class PersonCreateComponent implements OnInit {
   ngOnInit(): void {
     this.personForm = this.formBuilder.group({
       name: ['', [Validators.required, Validators.minLength(4)]],
+      idNumber: ['', [Validators.required, Validators.minLength(6)]],
+      idType: ['', [Validators.required, Validators.minLength(2)]],
+      address: ['', [Validators.required, Validators.minLength(5)]],
     });
   }
 

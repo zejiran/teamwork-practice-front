@@ -1,7 +1,8 @@
 <div class="container-fluid create">
   <div class="py-5">
     <div class="h4 pb-1">Crear nueva persona natural</div>
-    <p class="font-italic">Nota: la nueva persona natural creada será asociada posteriormente con una persona.</p>
+    <p class="font-italic">Nota: la nueva persona natural creada será asociada posteriormente con una persona si esta no
+      existe con anterioridad.</p>
     <form [formGroup]="naturalPersonForm"
       (ngSubmit)="!naturalPersonForm.invalid && createNaturalPerson(naturalPersonForm.value)">
       <div class="form-group mx-sm-3 mb-2"></div>

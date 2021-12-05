@@ -4,18 +4,22 @@ import { ReviewListarComponent } from './review-listar/review-listar.component';
 import { ReviewDetailComponent } from './review-detail/review-detail.component';
 import {CommentModule} from '../comment/comment.module';
 import {ReviewRoutingModule} from './review.route.module';
+import { ReviewCreateComponent } from './review-create/review-create.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
-  declarations: [ReviewListarComponent, ReviewDetailComponent],
+  declarations: [ReviewListarComponent, ReviewDetailComponent, ReviewCreateComponent],
   exports: [
-    ReviewListarComponent
+    ReviewListarComponent,
+    ReviewCreateComponent
   ],
-    imports: [
-        CommonModule,
-        CommentModule,
-      ReviewRoutingModule
-    ]
+  imports: [
+    CommonModule,
+    CommentModule,
+    ReviewRoutingModule,
+    ReactiveFormsModule
+  ]
 })
 export class ReviewModule {
 }

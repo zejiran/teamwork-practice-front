@@ -5,8 +5,8 @@ export class CommentDetail extends Comment{
   userId: string;
   replies: Array<Comment>;
 
-  constructor(userType: string,
-              userId: string, replies: Array<Comment>) {
+  constructor(userType?: string,
+              userId?: string, replies?: Array<Comment>) {
     super();
     this.userType = userType;
     this.userId = userId;

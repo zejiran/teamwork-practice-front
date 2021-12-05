@@ -22,4 +22,8 @@ export class CalendarService {
   getCalendar(calendarId): Observable<CalendarDetail> {
     return this.http.get<CalendarDetail>(`${this.apiUrl}/${calendarId}`);
   }
+
+  createCalendar(): Observable<CalendarDetail> {
+    return this.http.post<CalendarDetail>(this.apiUrl, {});
+  }
 }

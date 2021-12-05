@@ -22,4 +22,8 @@ export class RouteService {
   getRoute(routeId): Observable<RouteDetail> {
     return this.http.get<RouteDetail>(`${this.apiUrl}/${routeId}`);
   }
+
+  createRoute(): Observable<RouteDetail> {
+    return this.http.post<RouteDetail>(this.apiUrl, {});
+  }
 }

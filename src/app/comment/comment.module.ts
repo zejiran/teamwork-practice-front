@@ -5,17 +5,20 @@ import { CommentDetailComponent } from './comment-detail/comment-detail.componen
 import { CommentBasicComponent } from './comment-basic/comment-basic.component';
 import { CommentRepliesComponent } from './comment-replies/comment-replies.component';
 import {CommentRoutingModule} from './comment.route.module';
+import { CommentCreateComponent } from './comment-create/comment-create.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    CommentRoutingModule
-  ],
+    imports: [
+        CommonModule,
+        CommentRoutingModule,
+        ReactiveFormsModule
+    ],
     exports: [
         CommentListarComponent,
         CommentRepliesComponent
     ],
-  declarations: [CommentListarComponent, CommentDetailComponent, CommentBasicComponent, CommentRepliesComponent]
+  declarations: [CommentListarComponent, CommentDetailComponent, CommentBasicComponent, CommentRepliesComponent, CommentCreateComponent]
 })
 export class CommentModule {
 }

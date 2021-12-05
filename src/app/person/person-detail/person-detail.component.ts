@@ -15,11 +15,14 @@ export class PersonDetailComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private personService: PersonService) { }
 
   ngOnInit(): void {
-    const id: number = +this.activatedRoute.snapshot.paramMap.get('id') || 0;
-    this.personService.getPerson(id)
+    let id = 0;
+    this.activatedRoute.params.subscribe(params => {
+      id = +params.id || 0;
+      this.personService.getPerson(id)
       .subscribe(personDetail => {
         this.personDetail = personDetail;
       });
+    });
   }
 
 }

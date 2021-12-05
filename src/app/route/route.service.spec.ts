@@ -8,7 +8,6 @@ import { HttpClientTestingModule, HttpTestingController, } from '@angular/common
 import * as faker from 'faker';
 import { Route } from './route';
 import { environment } from '../../environments/environment';
-import { Outing } from '../outing/outing';
 
 describe('Service: Location', () => {
   let injector: TestBed;
@@ -35,15 +34,10 @@ describe('Service: Location', () => {
 
     for (let i = 1; i < 11; i++) {
       const route = new Route(
-        faker.datatype.number(2),
         faker.datatype.number(),
-        new Outing(
-          faker.datatype.number(),
-          faker.lorem.sentence(),
-          faker.datatype.datetime(),
-          faker.lorem.sentence(),
-          faker.datatype.number()
-        )
+        faker.lorem.sentence(),
+        faker.datatype.number(2),
+        faker.datatype.number()
       );
 
       mockPosts.push(route);
