@@ -45,7 +45,8 @@ describe('Service: Complementary Information', () => {
           faker.lorem.sentence(),
           faker.datatype.datetime(),
           faker.lorem.sentence(),
-          faker.datatype.number()
+          faker.datatype.number(),
+          null
         ),
       );
 

@@ -88,8 +88,104 @@
               </div>
             </div>
 
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="itinerary"> Itinerario* </label>
+              <select
+                class="form-control"
+                id="itinerary"
+                rows="3"
+                formControlName="itinerary"
+              >
+                <option value="">Escoge el itinerario</option>
+                <option [value]="a.id" *ngFor="let a of itineraries">
+                  {{ a.transportation }}
+                </option>
+              </select>
+              <div
+                class="alert alert-danger alert-dismissible fade show"
+                *ngIf="
+                  outingForm.get('itinerary').hasError('required') &&
+                  outingForm.get('itinerary').touched
+                "
+              >
+                Debes escoger un itinerario
+              </div>
+            </div>
+
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="complementaryInformation"> Información complementaria* </label>
+              <select
+                class="form-control"
+                id="complementaryInformation"
+                rows="3"
+                formControlName="complementaryInformation"
+              >
+                <option value="">Escoge la informacion complementaria</option>
+                <option [value]="a.id" *ngFor="let a of complementaryInformation">
+                  {{ a.description }}
+                </option>
+              </select>
+              <div
+                class="alert alert-danger alert-dismissible fade show"
+                *ngIf="
+                  outingForm.get('participationCost').hasError('required') &&
+                  outingForm.get('participationCost').touched
+                "
+              >
+                Debes ponerle un costo a tu salida
+              </div>
+            </div>
+
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="guides"> Guias* </label>
+              <select
+                class="form-control"
+                id="guides"
+                rows="3"
+                formControlName="guides"
+              >
+                <option value="">Escoge el guía</option>
+                <option [value]="a.id" *ngFor="let a of guides">
+                  {{ a.name }}
+                </option>
+              </select>
+              <div
+                class="alert alert-danger alert-dismissible fade show"
+                *ngIf="
+                  outingForm.get('guides').hasError('required') &&
+                  outingForm.get('guides').touched
+                "
+              >
+                Debes escoger un guía para tu salida
+              </div>
+            </div>
+
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="routes"> Rutas* </label>
+              <select
+                class="form-control"
+                id="routes"
+                rows="3"
+                formControlName="routes"
+              >
+                <option value="">Escoge la ruta</option>
+                <option [value]="a.id" *ngFor="let a of routes">
+                  {{ a.routeName }}
+                </option>
+              </select>
+              <div
+                class="alert alert-danger alert-dismissible fade show"
+                *ngIf="
+                  outingForm.get('guides').hasError('required') &&
+                  outingForm.get('guides').touched
+                "
+              >
+                Debes escoger un guía para tu salida
+              </div>
+            </div>
+
             <div class="row m-3 small">
-              <p class = "text-danger">* Required fields</p>
+              <p class="text-danger">* Required fields</p>
             </div>
 
             <div class="row m-3">
@@ -119,9 +215,12 @@
         </div>
       </div>
     </div>
-    <div class = "col">
+    <div class="col">
       <div class="card my-5">
-        <img src="https://www.efadeporte.com/blog/wp-content/uploads/2020/08/senderismo.jpg" class="card-img-top" />
+        <img
+          src="https://www.efadeporte.com/blog/wp-content/uploads/2020/08/senderismo.jpg"
+          class="card-img-top"
+        />
         <div class="card-body">
           <p class="h3 p-3">{{ outingForm.value.name | titlecase }}</p>
           <div class="row">
@@ -136,23 +235,25 @@
                 <dt>Costo de participación</dt>
                 <dd>{{ outingForm.value.participationCost | number }}</dd>
                 <hr />
+                <dt>Itinerario</dt>
+                <dd> {{ outingForm.value.itinerary | number }}</dd>
+                <hr />
+                <dt>Informacion complementaria</dt>
+                <dd>{{ outingForm.value.complementaryInformation | number }}</dd>
+                <hr />
+                <dt>Guides</dt>
+                <dd>{{ outingForm.value.guides | number }}</dd>
+                <hr />
+                <dt>Routes</dt>
+                <dd>{{ outingForm.value.routes | number}}</dd>
+                <hr />
                 <!--
                 <dt>Activities</dt>
                 <dd *ngFor="let a of outingDetail.activities">{{ a.name }}</dd>
                 <hr />
-                <dt>Complementary information</dt>
-                <dd *ngFor="let b of outingDetail.complementaryInformation">
-                  {{ b.description }}
-                </dd>
-                <hr />
-                <dt>Guides</dt>
-                <dd *ngFor="let c of outingDetail.guides">{{ c.name }}</dd>
-                <hr />
-                <dt class="bold">Routes</dt>
-                <dd *ngFor="let f of outingDetail.routes">
-                  {{ f.estimatedDuration }}
-                </dd>
-                <hr />
+
+
+
                 -->
               </dl>
             </div>
