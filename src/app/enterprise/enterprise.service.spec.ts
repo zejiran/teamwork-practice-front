@@ -36,8 +36,11 @@ describe('Service: Enterprise', () => {
 
     for (let i = 1; i < 11; i++) {
       const enterprise = new Enterprise(
-        new Person(faker.datatype.number(), faker.datatype.string()), faker.datatype.string()
-        );
+        faker.datatype.number(),
+        new Person(faker.datatype.number(), faker.datatype.string()),
+        faker.lorem.sentence(),
+        new Calendar(faker.datatype.number())
+      );
 
       mockPosts.push(enterprise);
     }

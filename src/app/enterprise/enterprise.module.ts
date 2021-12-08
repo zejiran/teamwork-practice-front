@@ -4,6 +4,7 @@ import { EnterpriseListarComponent } from './enterprise-listar/enterprise-listar
 import { EnterpriseRoutingModule } from './enterprise-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EnterpriseCreateComponent } from './enterprise-create/enterprise-create.component';
+import { EnterpriseDetailComponent } from './enterprise-detail/enterprise-detail.component';
 
 
 @NgModule({
@@ -12,8 +13,8 @@ import { EnterpriseCreateComponent } from './enterprise-create/enterprise-create
     EnterpriseRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: [EnterpriseListarComponent, EnterpriseCreateComponent],
-  exports: [EnterpriseListarComponent, EnterpriseCreateComponent],
+  declarations: [EnterpriseListarComponent, EnterpriseCreateComponent, EnterpriseDetailComponent],
+  exports: [EnterpriseListarComponent, EnterpriseCreateComponent, EnterpriseDetailComponent],
 })
 export class EnterpriseModule { }
 

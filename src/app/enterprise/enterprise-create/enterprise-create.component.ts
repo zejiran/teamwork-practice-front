@@ -31,7 +31,7 @@ export class EnterpriseCreateComponent implements OnInit {
   }
 
   showSuccess(e: Enterprise) {
-    this.toastr.success('Creado exitosamente!', `${e.representative}`, { progressBar: true, timeOut: 3000 });
+    this.toastr.success('Creado exitosamente!', `${e.user}`, { progressBar: true, timeOut: 3000 });
     setTimeout((): void => {
       location.reload();
     }, 3000);
