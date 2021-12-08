@@ -38,8 +38,8 @@ describe('Service: Outing', () => {
         faker.lorem.sentence(),
         faker.date.past(),
         faker.lorem.sentence(),
-        faker.datatype.number()/*,
-       null*/
+        faker.datatype.number(),
+       null
       );
 
       mockPosts.push(outing);

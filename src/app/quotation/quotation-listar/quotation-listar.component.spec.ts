@@ -29,7 +29,8 @@ describe('QuotationListarComponent', () => {
       faker.lorem.sentence(),
       faker.date.past(),
       faker.lorem.sentence(),
-      faker.datatype.number()
+      faker.datatype.number(),
+      null
     );
     component.quotations = [
       new Quotation(
