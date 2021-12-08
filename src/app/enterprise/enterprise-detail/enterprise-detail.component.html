@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <p class="h3 p-3">Detalles de la empresa</p>
+  <div class="row">
+    <div class="col">
+      <dl>
+        <dt>ID: </dt>
+        <dd>{{enterpriseDetail.id}}</dd>
+        <dt>Representante: </dt>
+        <dd *ngIf="enterpriseDetail.representative != null">{{enterpriseDetail.representative.id}}</dd>
+        <dt>Usuario: </dt>
+        <dd>{{enterpriseDetail.user}}</dd>
+        <dt>Calendario: </dt>
+        <dd *ngIf="enterpriseDetail.calendar != null" >{{enterpriseDetail.calendar.id}}</dd>
+        <dt>Contraseña: </dt>
+        <dd>{{enterpriseDetail.password}}</dd>
+        <dt>Correo: </dt>
+        <dd>{{enterpriseDetail.mail}}</dd>
+      </dl>
+    </div>
+  </div>
+</div>
