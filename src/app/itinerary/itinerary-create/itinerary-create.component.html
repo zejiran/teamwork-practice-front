@@ -1,0 +1,80 @@
+<div class="container-fluid">
+  <div class="col-4 p-3">
+    <div class="h4" i18n>Creacion de itinerarios</div>
+    <form
+      [formGroup] = "itineraryForm"
+      (ngSubmit)="!itineraryForm.invalid && createItinerary(itineraryForm.value)"
+    >
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="lodging"> Estadia </label>
+        <input
+          novalidate
+          id="lodging"
+          class="form-control"
+          formControlName="lodging"
+          placeholder="Your Full lodging"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+          itineraryForm.get('lodging').hasError('lodging') &&
+          itineraryForm.get('lodging').touched
+          "
+        >
+        lodging required
+        </div>
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+          itineraryForm.get('lodging').hasError('minlength') &&
+          itineraryForm.get('lodging').touched
+          "
+        >
+          Name too short. It should be at least 2 characters
+        </div>
+      </div>
+
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="transportation"> transportation</label>
+        <input
+          id="transportation"
+          type="text"
+          class="form-control"
+          formControlName="transportation"
+          placeholder="Your transportation"
+        />
+
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+          itineraryForm.get('transportation').hasError('required') &&
+          itineraryForm.get('transportation').touched
+          "
+        >
+        transportationrequired
+        </div>
+      </div>
+
+      <div class="row m-3 small">
+        <p>* Required fields</p>
+      </div>
+
+      <div class="row m-3">
+        <button
+          type="submit"
+          class="btn btn-success"
+          [disabled]="!itineraryForm.valid"
+        >
+          Create
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger ml-3"
+          (click)="cancelCreation()"
+        >
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+ </div>
