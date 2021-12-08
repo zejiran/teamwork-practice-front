@@ -1,7 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Enterprise } from '../enterprise';
 import { EnterpriseService } from '../enterprise.service';
-import { EnterpriseDetail } from '../enterprise-detail/enterpriseDetail';
 
 @Component({
   selector: 'app-enterprise-listar',
@@ -9,9 +8,10 @@ import { EnterpriseDetail } from '../enterprise-detail/enterpriseDetail';
   styleUrls: ['./enterprise-listar.component.css']
 })
 export class EnterpriseListarComponent implements OnInit {
-  @Input() enterprises: Array<Enterprise>;
-  selectedEnterprise: EnterpriseDetail;
-  selected = false;
+
+  enterprises: Array<Enterprise>;
+
+
   constructor(private enterpriseService: EnterpriseService) {
   }
 
@@ -21,15 +21,6 @@ export class EnterpriseListarComponent implements OnInit {
         this.enterprises = enterprises;
       });
   }
-
-  onSelected(enterprise: Enterprise): void {
-    this.enterpriseService.getEnterprise(enterprise.id)
-    .subscribe(enterpriseDetail => {
-      this.selectedEnterprise = enterpriseDetail;
-    });
-    this.selected = true;
-  }
-
   ngOnInit(): void {
     this.getEnterprises();
   }

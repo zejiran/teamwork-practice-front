@@ -1,22 +1,17 @@
 import { Calendar } from '../calendar/calendar';
+import { Client } from '../client/client';
 import { Person } from '../person/person';
 
 export class Enterprise {
-  id: number;
   representative: Person;
   user: string;
-  calendar: Calendar;
 
   constructor(
-    id: number,
     representative: Person,
-    user: string,
-    calendar: Calendar
+    user: string
   ) {
-    this.id = id;
     this.representative = representative;
     this.user = user;
-    this.calendar = calendar;
   }
 
 }
