@@ -23,7 +23,7 @@ export class OutingService {
     return this.http.get<OutingDetail>(`${this.apiUrl}/${outingId}`);
   }
 
-  createOuting(outing): Observable<Outing> {
+  createOuting(outing: Outing): Observable<Outing> {
     return this.http.post<Outing>(this.apiUrl, outing);
   }
 

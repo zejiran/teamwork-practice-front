@@ -14,7 +14,7 @@ export class QuotationDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.quotationDetail = new QuotationDetail(0, 0, 0, 0, new Outing(0, '', null, '', 0, null));
+    this.quotationDetail = new QuotationDetail(0, 0, 0, 0, new Outing(0, '', null, '', 0));
   }
 
 }

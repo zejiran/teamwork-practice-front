@@ -7,6 +7,7 @@ import { OutingListarComponent } from './outing-listar/outing-listar.component';
 import { OutingDetailComponent } from './outing-detail/outing-detail.component';
 import { OutingRoutingModule } from './outing-routing.module';
 
+
 @NgModule({
   imports: [
     CommonModule,
