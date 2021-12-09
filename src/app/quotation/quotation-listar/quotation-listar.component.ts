@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Quotation } from '../quotation';
 import { QuotationDetail } from '../quotation-detail';
 import { QuotationService } from '../quotation.service';
+import 'jquery';
+import '@popperjs/core'; // Edit here
+import 'bootstrap/dist/js/bootstrap.bundle';
 
 @Component({
   selector: 'app-quotation-listar',
@@ -26,6 +29,10 @@ export class QuotationListarComponent implements OnInit {
 
   ngOnInit(): void {
     this.getQuotations();
+  }
+
+  createQuotation(){
+    ($('#exampleModal') as any).modal('show')
   }
 
   onSelected(quotation: Quotation): void{

@@ -1,0 +1,150 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div class="card my-5">
+        <div class="card-body">
+          <form
+            [formGroup]="quotationForm"
+            (ngSubmit)="!quotationForm.invalid && createQuotation(quotationForm.value)"
+          >
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="participants"> Participantes* </label>
+              <input
+                novalidate
+                id="participants"
+                class="form-control"
+                formControlName="participants"
+                placeholder="Participantes"
+              />
+              <div
+                class="alert alert-danger alert-dismissible fade show"
+                *ngIf="
+                  quotationForm.get('participants').hasError('required') &&
+                  quotationForm.get('participants').touched
+                "
+              >
+                Debes ponerle participantes a tu cotizacion
+              </div>
+            </div>
+
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="participants"> Costo* </label>
+              <input
+                type = "number"
+                id="totalCost"
+                class="form-control"
+                formControlName="totalCost"
+                placeholder="Costo total"
+              />
+              <div
+                class="alert alert-danger alert-dismissible fade show"
+                *ngIf="
+                  quotationForm.get('participants').hasError('required') &&
+                  quotationForm.get('participants').touched
+                "
+              >
+                Debes ponerle costo tu cotizacion
+              </div>
+            </div>
+
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="status"> Estatus* </label>
+              <input
+                type = "number"
+                id="status"
+                class="form-control"
+                formControlName="status"
+                placeholder="Estatus"
+              />
+              <div
+                class="alert alert-danger alert-dismissible fade show"
+                *ngIf="
+                  quotationForm.get('status').hasError('required') &&
+                  quotationForm.get('status').touched
+                "
+              >
+                Debes ponerle estatus tu cotizacion
+              </div>
+            </div>
+
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="outing"> Salida* </label>
+              <select
+                class="form-control"
+                id="outing"
+                rows="3"
+                formControlName="outing"
+              >
+                <option value="">Escoge tu salida</option>
+                <option [value]="a.id" *ngFor="let a of outings">
+                  {{ a.name }}
+                </option>
+              </select>
+              <div
+                class="alert alert-danger alert-dismissible fade show"
+                *ngIf="
+                  quotationForm.get('outing').hasError('required') &&
+                  quotationForm.get('outing').touched
+                "
+              >
+                Debes escoger un outing
+              </div>
+            </div>
+
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="insurance"> Seguro* </label>
+              <select
+                class="form-control"
+                id="insurance"
+                rows="3"
+                formControlName="insurance"
+              >
+                <option value="">Escoge el seguro</option>
+                <option [value]="a.id" *ngFor="let a of insurances">
+                  {{ a.name }}
+                </option>
+              </select>
+              <div
+                class="alert alert-danger alert-dismissible fade show"
+                *ngIf="
+                  quotationForm.get('insurance').hasError('required') &&
+                  quotationForm.get('insurance').touched
+                "
+              >
+                Debes escoger un seguro
+              </div>
+            </div>
+
+            <div class="row m-3 small">
+              <p class="text-danger">* Required fields</p>
+            </div>
+
+            <div class="row m-3">
+              <button
+                type="submit"
+                class="btn btn-success"
+                [disabled]="!quotationForm.valid"
+              >
+                Crear
+              </button>
+              <button
+                type="button"
+                class="btn btn-danger mt-3 ml-3"
+                (click)="cancelCreation()"
+              >
+                Cancelar
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary mt-3 ml-3"
+
+              >
+                Volver
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

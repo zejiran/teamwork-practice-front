@@ -22,4 +22,8 @@ export class QuotationService {
   getQuotation(quotationId: number): Observable<QuotationDetail> {
     return this.http.get<QuotationDetail>(`${this.apiUrl}/${quotationId}`);
   }
+
+  createQuotation(quotation): Observable<QuotationDetail> {
+    return this.http.post<QuotationDetail>(this.apiUrl, quotation);
+  }
 }
