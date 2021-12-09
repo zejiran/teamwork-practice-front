@@ -1,6 +1,5 @@
 <div class="container-fluid">
   <div class="card m-5">
-    <button routerLink="/reviews/new">Agregar Review</button>
     <div class="card-body m-3">
         <div *ngFor="let u of reviews">
           <app-review-detail [reviewDetail]="u"></app-review-detail>

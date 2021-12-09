@@ -47,6 +47,7 @@ export class ReviewCreateComponent implements OnInit {
     c.text = this.form.value.text;
     this.commentService.createComment(c).subscribe();
     review.comment = c;
+    review.route = this.routeDetail;
     this.reviewService.createReview( review)
       .subscribe(() => {
         this.toastrService.success('The review was created successfully');
