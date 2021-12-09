@@ -18,7 +18,7 @@
     </div>
   </div>
 </div>
-<button (click)="createQuotation()">Crear cotizaciones</button>
+
 <div class="container-fluid">
   <div class="card m-5">
     <div class="card-header p-3">
@@ -44,8 +44,10 @@
           <td id="o">{{ b.outing }}</td>
           <td><button (click)="onSelected(b)">Ver Detalle</button></td>
         </tr>
+
         </tbody>
       </table>
+      <button class = "btn btn-secondary mt-3 ml-3" (click)="createQuotation()">Crear cotizaciones</button>
       <div *ngIf="selected">
         <app-quotation-detail [quotationDetail]="selectedQuotation"></app-quotation-detail>
       </div>
