@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { ReviewService } from '../review.service';
 import {ReviewDetail} from '../reviewDetail';
+import {Review} from '../review';
 
 @Component({
   selector: 'app-review-listar',
@@ -8,7 +9,7 @@ import {ReviewDetail} from '../reviewDetail';
   styleUrls: ['./review-listar.component.css']
 })
 export class ReviewListarComponent implements OnInit {
-  reviews: Array<ReviewDetail>;
+  @Input() reviews: Array<Review>;
   selected = false;
   selectedReview: ReviewDetail;
   selectedComment: number;
@@ -17,10 +18,6 @@ export class ReviewListarComponent implements OnInit {
   }
 
   getReviews(): void {
-    this.reviewService.getReviews()
-      .subscribe(reviews => {
-        this.reviews = reviews;
-      });
   }
 
   ngOnInit(): void {

@@ -1,14 +1,10 @@
 <div class="container-fluid">
   <div class="card m-5">
-    <div class="card-header p-3">
-      <p class="h2 text-center">Reviews</p>
-    </div>
-    <button routerLink="/reviews/new"></button>
+    <button routerLink="/reviews/new">Agregar Review</button>
     <div class="card-body m-3">
         <div *ngFor="let u of reviews">
           <app-review-detail [reviewDetail]="u"></app-review-detail>
         </div>
-
     </div>
   </div>
 </div>

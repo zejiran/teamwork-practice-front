@@ -4,16 +4,7 @@
     <div class="col">
       <dl>
         <dt>Reviews</dt>
-        <dd *ngFor = "let a of routeDetail.reviews">
-          {{a.comment}}
-          {{a.score}}
-          {{a.route}}
-        </dd>
-        <dt>Reviews</dt>
-        <dd *ngFor = "let a of routeDetail.reviews">
-          {{a.comment}}
-          {{a.score}}
-        </dd>
+        <app-review-listar [reviews]="routeDetail.reviews">Agregar Review</app-review-listar>
         <dt>Locations</dt>
         <dd *ngFor = "let a of routeDetail.locations">
           {{a.locationName}}
@@ -23,5 +14,4 @@
       </dl>
     </div>
   </div>
-  <app-review-create [routeDetail]="routeDetail"></app-review-create>
 </div>
