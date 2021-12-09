@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Review } from '../review';
 import { ReviewService } from '../review.service';
 import {ReviewDetail} from '../reviewDetail';
 
@@ -9,9 +8,9 @@ import {ReviewDetail} from '../reviewDetail';
   styleUrls: ['./review-listar.component.css']
 })
 export class ReviewListarComponent implements OnInit {
-  reviews: Array<Review>;
+  reviews: Array<ReviewDetail>;
   selected = false;
-  selectedReview: ReviewDetail = new ReviewDetail();
+  selectedReview: ReviewDetail;
   selectedComment: number;
 
   constructor(private reviewService: ReviewService) {
@@ -28,7 +27,7 @@ export class ReviewListarComponent implements OnInit {
     this.getReviews();
   }
 
-  onSelected(review: Review): void{
+  onSelected(review: ReviewDetail): void{
     if (this.selected){
       this.selectedReview.comment.id = 0;
       this.selected = false;

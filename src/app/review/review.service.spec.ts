@@ -3,9 +3,10 @@ import { getTestBed, TestBed } from '@angular/core/testing';
 import { ReviewService } from './review.service';
 import { environment } from '../../environments/environment';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { Review } from './review';
 import { Comment } from '../comment/comment';
 import { Route } from '../route/route';
+import {ReviewDetail} from './reviewDetail';
+import {FilesContainer} from '../FilesContainer/filesContainer';
 
 describe('Service: Review', () => {
   let injector: TestBed;
@@ -26,14 +27,15 @@ describe('Service: Review', () => {
   });
 
   it('getPost() should return 10 records', () => {
-    const mockPosts: Review[] = [];
+    const mockPosts: ReviewDetail[] = [];
 
     for (let i = 1; i < 11; i++) {
-      const review = new Review(faker.datatype.number() ,
+      const review = new ReviewDetail(faker.datatype.number() ,
         new Comment(faker.datatype.number(), faker.lorem.sentence(), faker.datatype.number(), faker.datatype.number()),
         faker.datatype.number(),
         new Route(faker.datatype.number(), faker.datatype.string(), faker.datatype.number(2),
           faker.datatype.number()),
+        new FilesContainer()
       );
 
       mockPosts.push(review);

@@ -5,30 +5,10 @@
     </div>
     <button routerLink="/reviews/new"></button>
     <div class="card-body m-3">
-      <table class="table resposive table-bordered text-center">
-        <caption>reviews</caption>
-        <thead>
-        <tr>
-          <th scope="col">Text</th>
-          <th scope="col">Score</th>
-          <th scope="col">Likes</th>
-          <th scope="col">Dislikes</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let u of reviews">
-          <td>{{ u.comment.text }}</td>
-          <td>{{ u.score }}</td>
-          <td>{{ u.comment.likes }}</td>
-          <td>{{ u.comment.dislikes }}</td>
-          <td><button (click)="onSelected(u)">Ver Detalle</button></td>
-        </tr>
-        </tbody>
-      </table>
-      <div *ngIf="selected">
-        <app-comment-replies [idComment]="selectedComment"></app-comment-replies>
-        <app-review-detail [reviewDetail]="selectedReview"></app-review-detail>
-      </div>
+        <div *ngFor="let u of reviews">
+          <app-review-detail [reviewDetail]="u"></app-review-detail>
+        </div>
+
     </div>
   </div>
 </div>

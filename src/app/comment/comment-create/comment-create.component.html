@@ -1,4 +1,4 @@
-<div class="container-fluid" align="left">
+<div class="container-fluid">
     <form
       [formGroup]="form"
       (ngSubmit)="!form.invalid && createComment(form.value)"
@@ -7,7 +7,7 @@
           id="text"
           class="form-control"
           formControlName="text"
-          placeholder="Your user"
+          placeholder="Your comment"
         />
         <div
           class="alert alert-danger alert-dismissible fade show"

@@ -1,7 +1,16 @@
 <div class="container-fluid">
-  <p class="h3 p-3">Admin details:</p>
   <div class="row">
     <div class="col">
+      <dt>Comment</dt>
+      <dd>{{reviewDetail.comment.text}}</dd>
+      <dt>Score</dt>
+      <dd>{{reviewDetail.score}}</dd>
+      <dt>Date</dt>
+      <dd>{{reviewDetail.comment.date}}</dd>
+      <dt>Likes</dt>
+      <dd>{{reviewDetail.comment.likes}}</dd>
+      <dt>Dislikes</dt>
+      <app-comment-replies [idComment]="reviewDetail.comment.id"></app-comment-replies>
       <dl>
         <dt>container:</dt> <dd>{{reviewDetail.container}}</dd>
       </dl>

@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Review } from './review';
 import {ReviewDetail} from './reviewDetail';
 
 @Injectable({
@@ -13,8 +12,8 @@ export class ReviewService {
   constructor(private http: HttpClient) {
   }
 
-  getReviews(): Observable<Review[]> {
-    return this.http.get<Review[]>(this.apiUrl);
+  getReviews(): Observable<ReviewDetail[]> {
+    return this.http.get<ReviewDetail[]>(this.apiUrl);
   }
 
   getReview(reviewId): Observable<ReviewDetail> {
