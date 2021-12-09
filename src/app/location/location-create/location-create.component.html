@@ -1,3 +1,67 @@
 <div class="container-fluid create">
+  <div class="py-5">
+    <div class="h4 pb-1">Crear nueva locación</div>
+    <form [formGroup]="locationForm" (ngSubmit)="!locationForm.invalid && createLocation(locationForm.value)">
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="locationName">Nombre de la locación*</label>
+        <input novalidate id="locationName" class="form-control" formControlName="locationName" placeholder="El nombre de la locación" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            locationForm.get('locationName').hasError('required') &&
+            locationForm.get('locationName').touched
+          ">
+          Se requiere un nombre para la locación!
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            locationForm.get('locationName').hasError('minlength') &&
+            locationForm.get('locationName').touched
+          ">
+          Nombre de la locación muy corto. Deberia ser de al menos 4 caracteres!
+        </div>
 
+
+        <label for="latitude">Latitud*</label>
+        <input novalidate id="latitude" class="form-control" formControlName="latitude" placeholder="2" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            locationForm.get('latitude').hasError('required') &&
+            locationForm.get('latitude').touched
+          ">
+          Se requiere una latitud!.
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            locationForm.get('latitude').hasError('minlength') &&
+            locationForm.get('latitude').touched
+          ">
+          La latitud es muy corta!.
+        </div>
+      </div>
+
+      <label for="longitude">Longitud*</label>
+      <input novalidate id="longitude" class="form-control" formControlName="longitude" placeholder="2" />
+      <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+          locationForm.get('longitude').hasError('required') &&
+          locationForm.get('longitude').touched
+        ">
+        Se requiere una longitud!.
+      </div>
+      <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+          locationForm.get('longitude').hasError('minlength') &&
+          locationForm.get('longitude').touched
+        ">
+        La longitud es muy corta!.
+      </div>
+
+      <div class="row m-3 small">
+        <p>* Campos requeridos</p>
+      </div>
+
+      <div class="row m-3">
+        <button type="submit" class="btn btn-success" [disabled]="!locationForm.valid">
+          Crear
+        </button>
+        <button type="button" class="btn btn-danger mt-3 ml-3" (click)="cancelCreation()">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
 </div>

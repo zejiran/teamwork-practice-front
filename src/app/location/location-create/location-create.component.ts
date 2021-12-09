@@ -18,7 +18,7 @@ export class LocationCreateComponent implements OnInit {
               private locationService: LocationService) { }
 
   createLocation(newLocation: Locationn): void {
-    console.warn('Una persona natural fue creada', newLocation);
+    console.warn('Una locación fue creada', newLocation);
     this.locationService.createLocation().subscribe(Locationn => {
       this.showSuccess(Locationn);
     });
@@ -27,7 +27,7 @@ export class LocationCreateComponent implements OnInit {
   }
 
   showSuccess(p: Locationn): void {
-    this.toastr.success('¡Creación exitosa!', `Persona natural ${p.id}`, { progressBar: true, timeOut: 3000 });
+    this.toastr.success('¡Creación exitosa!', `Locación ${p.id}`, { progressBar: true, timeOut: 3000 });
     setTimeout((): void => {
       location.reload();
     }, 3000);
@@ -39,7 +39,11 @@ export class LocationCreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.locationForm = this.formBuilder.group({});
+    this.locationForm = this.formBuilder.group({
+      idLocation: ['', [Validators.required, Validators.minLength(1)]],
+      locationName: ['', [Validators.required, Validators.minLength(3)]],
+      latitude: ['', [Validators.required]],
+      longitude: ['', [Validators.required]],
+    });
   }
-
 }

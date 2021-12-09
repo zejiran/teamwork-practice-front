@@ -1,2 +1,58 @@
 <div class="container-fluid create">
+  <div class="py-5">
+    <div class="h4 pb-1">Crear nueva ruta</div>
+    <form [formGroup]="routeForm" (ngSubmit)="!routeForm.invalid && createRoute(routeForm.value)">
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="routeName">Nombre de la ruta*</label>
+        <input novalidate id="routeName" class="form-control" formControlName="routeName" placeholder="El nombre de la ruta" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            routeForm.get('routeName').hasError('required') &&
+            routeForm.get('routeName').touched
+          ">
+          Se requiere un nombre para la ruta!
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            routeForm.get('routeName').hasError('minlength') &&
+            routeForm.get('routeName').touched
+          ">
+          Nombre de la ruta muy corto. Deberia ser de al menos 4 caracteres!
+        </div>
+
+      <div></div>
+      <label for="difficulty">Dificultad*</label>
+        <select class="form-select" formControlName="difficulty">
+          <option selected>Escoger Dificultad</option>
+          <option *ngFor="let difficulty of Difficulty" [ngValue]="difficulty">{{difficulty}}</option>
+       </select>
+
+        <label for="estimatedDuration">Duración estimada en minutos*</label>
+        <input novalidate id="estimatedDuration" class="form-control" formControlName="estimatedDuration" placeholder="2" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            routeForm.get('estimatedDuration').hasError('required') &&
+            routeForm.get('estimatedDuration').touched
+          ">
+          Se requiere una duración estimada!.
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            routeForm.get('estimatedDuration').hasError('minlength') &&
+            routeForm.get('estimatedDuration').touched
+          ">
+          La duración estimada es muy corta!.
+        </div>
+      </div>
+
+      <div class="row m-3 small">
+        <p>* Campos requeridos</p>
+      </div>
+
+      <div class="row m-3">
+        <button type="submit" class="btn btn-success" [disabled]="!routeForm.valid">
+          Crear
+        </button>
+        <button type="button" class="btn btn-danger mt-3 ml-3" (click)="cancelCreation()">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
 </div>
