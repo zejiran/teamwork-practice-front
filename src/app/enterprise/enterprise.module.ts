@@ -13,8 +13,9 @@ import { EnterpriseDetailComponent } from './enterprise-detail/enterprise-detail
     EnterpriseRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: [EnterpriseListarComponent, EnterpriseCreateComponent, EnterpriseDetailComponent],
-  exports: [EnterpriseListarComponent, EnterpriseCreateComponent, EnterpriseDetailComponent],
+  declarations: [EnterpriseListarComponent, EnterpriseDetailComponent, EnterpriseCreateComponent],
+  exports: [EnterpriseListarComponent, EnterpriseDetailComponent, EnterpriseCreateComponent],
 })
-export class EnterpriseModule { }
+export class EnterpriseModule {
+}
 
