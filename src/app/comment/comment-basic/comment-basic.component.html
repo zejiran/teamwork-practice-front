@@ -4,13 +4,13 @@
       <div class="card-body m-3">
           <dd>{{comment.username}}  {{comment.date}} </dd>
           <dd>{{comment.text}}</dd>
-        <div *ngIf="selected; else contraer">
-          <dd><a (click)="onSelected()" >contraer</a></dd>
+        <div *ngIf="selected; else contraer" >
+          <dd><a (click)="onSelected()" class="ca">contraer</a></dd>
           <app-comment-replies [idComment]="comment.id"></app-comment-replies>
           <app-comment-create [tread]="comment" aria-label="left"></app-comment-create>
         </div>
         <ng-template #contraer>
-          <dd><a (click)="onSelected()" >respuestas</a></dd>
+          <dd><a (click)="onSelected()" class="ca" >respuestas</a></dd>
         </ng-template>
         <a></a>
       </div>

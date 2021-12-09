@@ -11,6 +11,8 @@
         <dd>{{postDetail.comment.text}}</dd>
         <dt>Rating: </dt>
         <dd>{{postDetail.ratings}}</dd>
+        <dt>Comments</dt>
+        <app-comment-replies [idComment]="postDetail.comment.id"></app-comment-replies>
       </dl>
     </div>
   </div>
